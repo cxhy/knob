@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-11",
+  "issue": "knob-ail",
+  "implementation_commit": "95744e3",
+  "spec_version": "1.2",
+  "guide": "docs/design/integration-guide.md",
+  "guide_sha256": "1784622074945728d69b9f670518978c60d5f958cedfb27ea777a77af8470076",
+  "evidence": "docs/design/evidence/integration-guide-v1.2",
+  "run_directory": "runs/integration-guide-JRKramLs",
+  "source_hashes": {
+    "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed",
+    "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+    "examples/host/tb.sv": "de495dd6a43b8dc9159d15438ce97951a2a89a322dcbcfd3efae7571deae49fd",
+    "examples/host/compile.sh": "2405df239653de5b4d983b1efa1dbfa1edbddc2680c9fafb51d4a1dc98c1ee32",
+    "examples/host/run.sh": "316688cea751c212c13923ff07869ec81aab906d9bd6cb942e0813d495b2d1ea",
+    "examples/host/knob.cfg": "41bc807852f9c364aa3dfc59bdae036902bde5fa946207f102d8a8d81fe7f822"
+  },
+  "validation": {
+    "shell_blocks_syntax": "pass",
+    "api_and_sv_fragments": "manually checked against current API and host source; fragments not compiled as a separate program",
+    "documented_run_steps": "extracted from guide; compile-host skipped after source/build identity verification",
+    "new_compilation": false,
+    "compile_evidence": "docs/design/evidence/review-fixes-v1.2/build/host",
+    "artifact_hashes_unchanged": true,
+    "replay_files_equal": [
+      "transactions.log",
+      "sequences.log",
+      "timing.log",
+      "frames.log"
+    ],
+    "vcs_cases": [
+      {
+        "case": "a",
+        "raw_status": 0,
+        "test_result": "pass",
+        "runtime_result": "ok",
+        "transactions": 8
+      },
+      {
+        "case": "b",
+        "raw_status": 0,
+        "test_result": "pass",
+        "runtime_result": "ok",
+        "transactions": 10
+      },
+      {
+        "case": "replay",
+        "raw_status": 0,
+        "test_result": "pass",
+        "runtime_result": "ok",
+        "transactions": 10
+      },
+      {
+        "case": "invalid",
+        "raw_status": 0,
+        "test_result": "fail",
+        "runtime_result": "ok",
+        "transactions": 0
+      }
+    ],
+    "full_regression_rerun": false,
+    "local_links_checked": 24
+  },
+  "limitations": [
+    "Documentation-only change; existing 100-case VCS and 16-case shell evidence remains associated with implementation commit 95744e3.",
+    "Four new runs check documentation operations on the example, not integration with a real DUT."
+  ]
+}

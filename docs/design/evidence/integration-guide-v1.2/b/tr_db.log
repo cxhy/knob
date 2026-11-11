@@ -1,0 +1,4 @@
+  CREATE_STREAM @0 {NAME:seq_0_0 T:Transactions SCOPE:uvm_test_top.env.link0.sequencer STREAM:738}
+  CREATE_STREAM @5000 {NAME:seq_0_1 T:Transactions SCOPE:uvm_test_top.env.link1.sequencer STREAM:807}
+  CREATE_STREAM @5000 {NAME:seq_1_0 T:Transactions SCOPE:uvm_test_top.env.link0.sequencer STREAM:819}
+  CREATE_STREAM @10000 {NAME:seq_1_1 T:Transactions SCOPE:uvm_test_top.env.link1.sequencer STREAM:849}

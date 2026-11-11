@@ -1,0 +1,13 @@
+test_result=pass
+runtime_result=ok
+process_status=0
+test_result=pass
+runtime_result=ok
+process_status=0
+test_result=pass
+runtime_result=ok
+process_status=0
+test_result=fail
+runtime_result=ok
+process_status=0
+运行证据目录：runs/integration-guide-JRKramLs
