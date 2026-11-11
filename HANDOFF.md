@@ -4,6 +4,14 @@
 
 ## 当前阶段
 
+用户要求参考公开开源项目完善 README，事项 knob-4o1 已完成。研究 SVUnit、VUnit、CLI11 和 Standard Readme 第一方资料，参考记录在 docs/design/readme-reference-notes.md。README 现在包含用途与配置例子、兼容环境、外部用户快速体验、成熟工程接入清单、配置规则、文档导航、开发验证、反馈与 AGPL 许可证入口；没有增加未经验证的兼容性或 CI 徽章。
+
+本轮从 README 提取独立宿主编译与运行命令，在现有 checkout 中执行（未重复 clone），通过环境变量指定本机 VCS 包装入口。新增编译 build/readme-host 无 VCS Warning-/Error-；两次实际运行目录 runs/readme-hhQmIaZJ，配置 A 为 8 条事务，配置 B 为 10 条 link0/长度256 事务，两次均 pass/raw0，运行间产物哈希不变。5 个 Bash 块语法、23 个本地链接及 8 个章节锚点通过。产品代码未变，未重跑完整回归。
+
+检查记录 docs/harness/knob-readme-checks.json；证据 docs/design/evidence/readme-quickstart-v1.2/ 包含 32 个文件及 manifest。本轮更新前的交接保存在 docs/harness/handoffs/HANDOFF-before-readme-refresh-20261111.md。本轮基线 a11c359，完成后按已授权远端 master 流程提交同步。
+
+## 上一阶段：远端与接入指南
+
 用户已明确授权将项目推送到 https://github.com/cxhy/knob，并要求统一使用 master。事项 knob-3bj 已完成：远端原 main 已重命名为 master，GitHub 默认分支为 master；本地 master 跟踪 origin/master。远端原初始化提交 0f7f7b1 只有 LICENSE，已通过合并提交 03d4c2d 保留双方历史与原 LICENSE，随后普通推送成功，未强制推送。交接和事项导出更新后继续同步到同一远端。
 
 本轮只变更 Git 远端、分支和交接状态，未修改产品代码，未重新执行仿真。Beads 数据库仍为本地管理；Git 中的 issues.jsonl 是导出快照，本次未配置或推送 Dolt 数据库远端。推送前交接已归档到 docs/harness/handoffs/HANDOFF-before-github-push-20261111.md。

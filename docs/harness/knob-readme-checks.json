@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-11",
+  "issue": "knob-4o1",
+  "baseline_commit": "a11c359",
+  "source_unchanged": true,
+  "readme_sha256": "b88541b95e7103322bf2f5ee717e74a985fc77d86adefc761a8c2cc4589a3ad4",
+  "research": "docs/design/readme-reference-notes.md",
+  "run_directory": "runs/readme-hhQmIaZJ",
+  "evidence": "docs/design/evidence/readme-quickstart-v1.2",
+  "environment": {
+    "vcs": "W-2024.09-SP1",
+    "uvm": "1.2"
+  },
+  "verification": {
+    "bash_blocks_syntax": 5,
+    "quickstart_execution": "README compile and two runs extracted verbatim; used existing checkout instead of clone/CD; local VCS wrapper supplied by environment",
+    "new_compilation": true,
+    "compiler_warning_error_diagnostics": 0,
+    "cases": [
+      {
+        "case": "a",
+        "transactions": 8,
+        "raw_status": 0,
+        "test_result": "pass",
+        "runtime_result": "ok"
+      },
+      {
+        "case": "b",
+        "transactions": 10,
+        "raw_status": 0,
+        "test_result": "pass",
+        "runtime_result": "ok"
+      }
+    ],
+    "artifact_hashes_unchanged": true,
+    "sv_fragment": "checked against public API and host example; not a standalone testbench",
+    "full_regression_rerun": false,
+    "local_links": 23,
+    "heading_anchors": 8,
+    "archived_files": 32
+  },
+  "simv_sha256": "58c31acc5d76490e5560228b9e8602b9139f5179dd41f3839dbeb24fcdbe6786",
+  "source_sha256": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed"
+}

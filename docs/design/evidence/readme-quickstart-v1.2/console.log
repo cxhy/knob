@@ -1,0 +1,10 @@
+Compiled independent host: /home/guodz/workspace/knob/build/readme-host
+test_result=pass
+runtime_result=ok
+process_status=0
+test_result=pass
+runtime_result=ok
+process_status=0
+  8 runs/readme-hhQmIaZJ/a/transactions.log
+ 10 runs/readme-hhQmIaZJ/b/transactions.log
+ 18 total
