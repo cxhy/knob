@@ -1,0 +1,34 @@
+{
+  "status": "deployed",
+  "root": "/home/guodz/workspace/knob/build/git-delivery/remote-shared",
+  "input_kind": "archive",
+  "node": "20.19.2",
+  "git_required": false,
+  "downloaded": false,
+  "releases": [
+    {
+      "component": "uvmf",
+      "version": "2023.4_2",
+      "manifest_sha256": "4d425be71e8329b7607d32e020722a234654aa53c653cfcf678dfa9ad5bbe468",
+      "content_sha256": "8e24ff4a4593e7c1e90591781f70bc24b5b15e25c2f1825237e7710722829117",
+      "status": "published",
+      "path": "/home/guodz/workspace/knob/build/git-delivery/remote-shared/uvmf/2023.4_2"
+    },
+    {
+      "component": "framework",
+      "version": "0.3.0",
+      "manifest_sha256": "495b599ddde3079d36fb58586d872a0ce25c305c0a7272e500296fa68408b14a",
+      "content_sha256": "05232b7e494b0e4c8db4ad4106db3c5bb1d13eaa11cee3e5cef6624a6a67a4a1",
+      "status": "published",
+      "path": "/home/guodz/workspace/knob/build/git-delivery/remote-shared/framework/0.3.0"
+    },
+    {
+      "component": "knob",
+      "version": "1.2.0",
+      "manifest_sha256": "14941b59640b07025ad8e6c610511349e271c5c03122c5d3de80a1317dc1829d",
+      "content_sha256": "aa36c0310bca5284ac32fe37ab789bb36b33216a220ea0a3ee0b4ce4d9af7726",
+      "status": "published",
+      "path": "/home/guodz/workspace/knob/build/git-delivery/remote-shared/knob/1.2.0"
+    }
+  ]
+}

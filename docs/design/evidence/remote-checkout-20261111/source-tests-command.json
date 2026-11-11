@@ -1,0 +1,12 @@
+{
+  "command": "/usr/bin/node",
+  "args": [
+    "--test",
+    "tests/shared-deps.test.mjs",
+    "tests/project-entry.test.mjs"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/git-delivery/remote-checkout",
+  "raw_exit": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {spawnSync}from'node:child_process';
+const repo=process.cwd(),out=repo+'/build/git-delivery',clone=out+'/remote-checkout',root=out+'/remote-shared',project=out+'/remote-project';
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const json=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');
+function run(label,command,args,{cwd=out,env=process.env}={}){
+  const r=spawnSync(command,args,{cwd,env,encoding:'utf8',timeout:240000,maxBuffer:32*1024*1024});
+  fs.writeFileSync(out+'/'+label+'.log',(r.stdout??'')+(r.stderr??''));json(out+'/'+label+'-command.json',{command,args,cwd,raw_exit:r.status,signal:r.signal,error:r.error?.message??null});
+  assert.equal(r.status,0,label+': '+r.stderr);return r.stdout;
+}
+const sourceCommit=run('clone-head','git',['-C',clone,'rev-parse','HEAD']).trim();
+assert.equal(sourceCommit,'693b39f7fa573eed09eefbc38639572600807451');
+assert.equal(run('clone-shallow','git',['-C',clone,'rev-parse','--is-shallow-repository']).trim(),'true');
+assert.equal(run('clone-tags','git',['-C',clone,'tag','--list']).trim(),'');
+assert(!fs.existsSync(clone+'/build')&&!fs.existsSync(clone+'/runs'));
+const expected=JSON.parse(fs.readFileSync(clone+'/docs/harness/checkout-deployment-checks.json'));
+for(const[f,h]of Object.entries(expected.source_hashes))assert.equal(hash(clone+'/'+f),h,f);
+const result=JSON.parse(run('deploy-from-github','/bin/bash',[clone+'/scripts/prepare-shared-deps.sh',root,out+'/inputs/UVMF_2023.4_2.tar.gz'],{env:{PATH:out+'/tools',LANG:'C',LC_ALL:'C'}}));
+assert.equal(result.status,'deployed');assert.equal(result.git_required,false);assert.equal(result.downloaded,false);
+run('source-tests',process.execPath,['--test','tests/shared-deps.test.mjs','tests/project-entry.test.mjs'],{cwd:clone});
+const cli=root+'/framework/0.3.0/payload/bin/knob-project.mjs';
+const args=['--root',root,'--project',project];
+run('init',process.execPath,[cli,'init',...args,'--template','alu']);
+run('runtime-check',process.execPath,[root+'/framework/0.3.0/payload/bin/knob-deps.mjs','check',...args,'--uv','/home/guodz/bin/uv']);
+run('generate',process.execPath,[cli,'generate',...args,'--uv','/home/guodz/bin/uv']);
+run('compile',process.execPath,[cli,'compile',...args,'--build','fresh','--env','/home/guodz/install_vcs/vcs_env.sh','--vcs','/home/guodz/install_vcs/bin/vcs']);
+const sim=JSON.parse(run('simulate',process.execPath,[cli,'run',...args,'--build','fresh','--name','seed101','--seed','101']));
+assert(sim.functional_pass);assert.equal(sim.raw_exit,0);
+const log=fs.readFileSync(project+'/runs/seed101/run.log','utf8');assert.equal([...log.matchAll(/\[SEQ\] Response:/g)].length,25);assert.match(log,/PREDICTED_TRANSACTIONS=21 MATCHES=21 MISMATCHES=0/);
+assert.match(log,/^UVM_ERROR\s*:\s*0/m);assert.match(log,/^UVM_FATAL\s*:\s*0/m);
+const before=JSON.parse(fs.readFileSync(project+'/runs/seed101/artifacts-before.json')),after=JSON.parse(fs.readFileSync(project+'/runs/seed101/artifacts-after.json'));assert.deepEqual(after,before);
+for(const[f,h]of Object.entries(before))assert.equal(hash(project+'/build/fresh/'+f),h);
+assert.equal(run('clone-clean','git',['-C',clone,'status','--porcelain']).trim(),'');
+const record={checked_at:new Date().toISOString(),origin:'https://github.com/cxhy/knob.git',source_commit:sourceCommit,actual_remote_clone:true,shallow:true,tags:[],source_hashes_verified:expected.source_hashes,bootstrap_tools:['bash','node','tar','gzip'],explicit_uvmf_archive_sha256:hash(out+'/inputs/UVMF_2023.4_2.tar.gz'),deployment:result,runtime:{requests:25,matches:21,uvm_errors:0,uvm_fatals:0,raw_exit:0,artifacts:before},tests:15,clone_clean:true,project};
+json(out+'/results.json',record);console.log(JSON.stringify({source_commit:sourceCommit,actual_remote_clone:true,deployment:'passed',tests:15,requests:25,matches:21,raw_exit:0},null,2));

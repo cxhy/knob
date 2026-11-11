@@ -1,0 +1,21 @@
+{
+  "command": "/usr/bin/node",
+  "args": [
+    "/home/guodz/workspace/knob/build/git-delivery/remote-shared/framework/0.3.0/payload/bin/knob-project.mjs",
+    "compile",
+    "--root",
+    "/home/guodz/workspace/knob/build/git-delivery/remote-shared",
+    "--project",
+    "/home/guodz/workspace/knob/build/git-delivery/remote-project",
+    "--build",
+    "fresh",
+    "--env",
+    "/home/guodz/install_vcs/vcs_env.sh",
+    "--vcs",
+    "/home/guodz/install_vcs/bin/vcs"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/git-delivery",
+  "raw_exit": 0,
+  "signal": null,
+  "error": null
+}

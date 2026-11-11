@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "functional_pass": true,
+  "reasons": [],
+  "seed": "101",
+  "build": "fresh",
+  "fingerprint": "90eeaf8f1ad25737e7577772f9534db7a0aa9ebce97a9bd6c17a0ce3a8160b89",
+  "kind": "functional",
+  "raw_exit": 0,
+  "evidence": "/home/guodz/workspace/knob/build/git-delivery/remote-project/runs/seed101"
+}

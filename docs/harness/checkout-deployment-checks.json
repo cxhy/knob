@@ -1,23 +1,10 @@
 {
   "checked_at": "2026-11-11T14:50:55.611Z",
   "task": "knob-uv7.16",
-  "product_head": "8847bc73dee4bced619ee1ef526150c441e37fcd",
-  "product_commit_contains_runtime": false,
-  "missing_runtime_files_in_head": [
-    "deployment/README.md",
-    "deployment/inputs.json",
-    "framework/LICENSE",
-    "framework/README.md",
-    "framework/adapters/vcs-compile.sh",
-    "framework/adapters/vcs-run.sh",
-    "framework/bin/knob-deps.mjs",
-    "framework/bin/knob-project.mjs",
-    "framework/release.json",
-    "framework/templates/alu/project.json",
-    "scripts/deploy-shared-deps.mjs",
-    "scripts/prepare-shared-deps.sh"
-  ],
-  "git_delivery_pending": true,
+  "product_head": "693b39f7fa573eed09eefbc38639572600807451",
+  "product_commit_contains_runtime": true,
+  "missing_runtime_files_in_head": [],
+  "git_delivery_pending": false,
   "candidate_result": {
     "checked_at": "2026-11-11T14:48:17.974Z",
     "candidate_clone": true,
@@ -109,5 +96,21 @@
     "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed",
     "tests/deployment-portability.mjs": "b6206f17702076d07d3abdc75cfefee33cdad01412164528f97b07905bdb2f92",
     "README.md": "0640bcc866ad44988be1acb3b7d3ad8bec7426b1df8c61de6fa538d1397a3c43"
-  }
+  },
+  "pre_delivery_head": "8847bc73dee4bced619ee1ef526150c441e37fcd",
+  "pre_delivery_missing_runtime_files": [
+    "deployment/README.md",
+    "deployment/inputs.json",
+    "framework/LICENSE",
+    "framework/README.md",
+    "framework/adapters/vcs-compile.sh",
+    "framework/adapters/vcs-run.sh",
+    "framework/bin/knob-deps.mjs",
+    "framework/bin/knob-project.mjs",
+    "framework/release.json",
+    "framework/templates/alu/project.json",
+    "scripts/deploy-shared-deps.mjs",
+    "scripts/prepare-shared-deps.sh"
+  ],
+  "actual_remote_check": "docs/harness/remote-checkout-checks.json"
 }

@@ -1,0 +1,12 @@
+{
+  "template": "alu",
+  "uvmf": {
+    "component": "uvmf",
+    "version": "2023.4_2",
+    "manifest_sha256": "4d425be71e8329b7607d32e020722a234654aa53c653cfcf678dfa9ad5bbe468",
+    "content_sha256": "8e24ff4a4593e7c1e90591781f70bc24b5b15e25c2f1825237e7710722829117"
+  },
+  "legacy_monitor_marker_repair": true,
+  "business": "Upstream completed tutorial custom blocks; not automatic protocol synthesis",
+  "dut_connection": "Existing tutorial connection; graph-driven mapping not yet implemented"
+}

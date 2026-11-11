@@ -1,0 +1,12 @@
+{
+  "command": "/bin/bash",
+  "args": [
+    "/home/guodz/workspace/knob/build/git-delivery/remote-checkout/scripts/prepare-shared-deps.sh",
+    "/home/guodz/workspace/knob/build/git-delivery/remote-shared",
+    "/home/guodz/workspace/knob/build/git-delivery/inputs/UVMF_2023.4_2.tar.gz"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/git-delivery",
+  "raw_exit": 0,
+  "signal": null,
+  "error": null
+}

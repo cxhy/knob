@@ -1,0 +1,17 @@
+{
+  "command": "/usr/bin/node",
+  "args": [
+    "/home/guodz/workspace/knob/build/git-delivery/remote-shared/framework/0.3.0/payload/bin/knob-project.mjs",
+    "generate",
+    "--root",
+    "/home/guodz/workspace/knob/build/git-delivery/remote-shared",
+    "--project",
+    "/home/guodz/workspace/knob/build/git-delivery/remote-project",
+    "--uv",
+    "/home/guodz/bin/uv"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/git-delivery",
+  "raw_exit": 0,
+  "signal": null,
+  "error": null
+}

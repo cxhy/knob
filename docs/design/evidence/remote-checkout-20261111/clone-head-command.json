@@ -1,0 +1,13 @@
+{
+  "command": "git",
+  "args": [
+    "-C",
+    "/home/guodz/workspace/knob/build/git-delivery/remote-checkout",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/git-delivery",
+  "raw_exit": 0,
+  "signal": null,
+  "error": null
+}

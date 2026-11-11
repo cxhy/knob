@@ -89,7 +89,7 @@
   "local_links_checked": 32,
   "dependency_edges_checked": 8,
   "dependency_cycle": false,
-  "next_ready": null,
+  "next_ready": "knob-uv7.12",
   "product_and_v12_spec_unchanged": true,
   "document_hashes": {
     "uvmf-framework-spec.md": "d4e8400cb379198871c02b6c58a4d53d9698554dd46596307e8f6f44593efe6c",
@@ -99,6 +99,7 @@
     "phase2-acceptance-interview.md": "4ca7b4f3021b00ad8680ab5cc9d95efba95fa940757ed6e0aedd89a66a53c14e"
   },
   "spec_version": "1.2",
-  "active_task": "knob-uv7.16",
-  "delivery_pending": true
+  "active_task": null,
+  "delivery_pending": false,
+  "actual_remote_source_commit": "693b39f7fa573eed09eefbc38639572600807451"
 }
