@@ -8,7 +8,7 @@
 
 本轮核对 API 与宿主源码，检查 2 个 Bash 代码块语法和 24 个文档链接。复用源码与构建输入均一致的 95744e3 产物，按指南执行 4 次实际 VCS 运行：配置 A 发出 8 条事务；配置 B 发出 10 条、均来自 link0 且长度 256；同 seed 重放四类轨迹一致；未知键在零事务时触发 KNOB_UNKNOWN，原始码仍为 0。产物哈希未变。本轮未重新编译，未重跑完整回归。
 
-文档验证目录为 runs/integration-guide-JRKramLs；稳定证据 docs/design/evidence/integration-guide-v1.2/ 包含 60 个文件及 manifest；检查记录 docs/harness/knob-integration-guide-checks.json。本次文档更新前完整交接已归档到 docs/harness/handoffs/HANDOFF-before-integration-guide-20261111.md。
+文档验证目录为 runs/integration-guide-JRKramLs；稳定证据 docs/design/evidence/integration-guide-v1.2/ 包含 56 个文件及 manifest；检查记录 docs/harness/knob-integration-guide-checks.json。本次文档更新前完整交接已归档到 docs/harness/handoffs/HANDOFF-before-integration-guide-20261111.md。
 
 ## 已完成的实现修复
 
