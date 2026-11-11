@@ -1,0 +1,6 @@
+PASS core_negative
+PASS framework_negative
+Both reviewed verdict functions printed PASS despite raw=124 and warning-only diagnostics.
+core_negative	KNOB_STATE	1	124
+framework_negative	KNOB_STATE	1	124
+fixture=/tmp/knob-review-verdict-aKPQKYaj

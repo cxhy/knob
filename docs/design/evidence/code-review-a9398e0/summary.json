@@ -1,0 +1,38 @@
+{
+  "snapshot": "a9398e094b559f14d25396526ea7eeb7c0e43715",
+  "date": "2026-11-11",
+  "runtime_run": "/home/guodz/workspace/knob/runs/review-a9398e0-ODM9wxyS",
+  "shell_fixture": "/tmp/knob-review-verdict-aKPQKYaj",
+  "real_vcs_probes": 5,
+  "real_vcs_findings": [
+    {
+      "name": "nul_suffix",
+      "expected": "configuration failure before stimulus",
+      "actual": "test_result=pass; runtime_result=ok; raw=0; link0.tx.count=1; HOST_TX=6"
+    }
+  ],
+  "not_reproduced": [
+    "numeric seed plus automatic, both orders; replay and numeric-only traces identical"
+  ],
+  "control": [
+    "NUL on first value does not hide duplicate key on the next line: KNOB_DUPLICATE"
+  ],
+  "shell_only_findings": [
+    {
+      "name": "core_negative",
+      "reported": "PASS",
+      "raw": 124,
+      "severity": "UVM_WARNING"
+    },
+    {
+      "name": "framework_negative",
+      "reported": "PASS",
+      "raw": 124,
+      "severity": "UVM_WARNING"
+    }
+  ],
+  "limitations": [
+    "Shell stand-in exit124 is synthetic, not an actual VCS timeout.",
+    "No code fixes; review probes do not constitute a full regression rerun."
+  ]
+}

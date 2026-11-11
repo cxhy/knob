@@ -1,0 +1,6 @@
+HOST_FRAME port=link0 input_length=120 output_length=120
+HOST_FRAME port=link1 input_length=114 output_length=114
+HOST_FRAME port=link1 input_length=92 output_length=92
+HOST_FRAME port=link0 input_length=118 output_length=118
+HOST_FRAME port=link1 input_length=126 output_length=126
+HOST_FRAME port=link1 input_length=90 output_length=90

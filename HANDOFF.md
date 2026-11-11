@@ -6,7 +6,16 @@
 
 用户批准将 knob 扩展为验证环境中通用的运行期配置接口。规格现为 `docs/design/knob-spec.md` v1.2；实施事项 `knob-l8r` 与范围决定 `knob-vjr` 已关闭。事项 knob-l8r 的正文与现行规格逐字一致；已完成的 v1.1 母事项 knob-be2 改为引用历史 `docs/design/knob-spec-v1.1.md`，其旧规格正文保留。
 
-核心库没有修改，公共接口本来就不依赖 sequence 类型。本轮同步范围说明并在独立宿主验证非 sequence 使用方；独立代码审查尚未执行。
+核心库没有修改，公共接口本来就不依赖 sequence 类型。v1.2 范围说明和非 sequence 验收完成后，用户要求 review 全部代码；已对固定快照 a9398e0 完成独立 Standards/Spec 双轴审查。审查事项 knob-xvs 已关闭，确认的 2 个 P2 缺陷尚未修复，见下一节。
+
+## 全量审查发现与待修复事项
+
+报告为 `docs/design/code-review-a9398e0.md`，证据为 `docs/design/evidence/code-review-a9398e0/`。Standards 轴 1 项、Spec 轴 2 项，其中 1 项重复；独立缺陷共 2 个，均为 P2，已标记 ready-for-agent。
+
+- `knob-8nh`：src/knob_pkg.sv:248-250，配置 `link0.tx.count=1` 后接 NUL 与 junk 时，非法尾缀未被拒绝，真实 VCS 运行接受 count=1 并产生 6 条事务。需保证原始输入完整参与校验，非法配置在激励前失败。
+- `knob-zkf`：scripts/test.sh:27-30、scripts/test-framework.sh:19-22，负例回归只检查汇总状态和预期 ID。仅输出同 ID 的 warning 并退出 124 的脚本替身，被两个判定函数记为 PASS。需独立检查原始进程状态和致命诊断；保留 UVM_FATAL raw=0 的正常合同。
+
+本次未修复产品代码。5 个定向 VCS 用例使用原有宿主产物；数值 seed 与 automatic 同时传入的疑点没有复现，NUL 后下一行的重复键仍正确拒绝。脚本替身证据不冒充 VCS 实测，未全量重跑现有 89 场景。下一步修复事项以 Beads 为准。
 
 ## 范围与用户决定
 
@@ -44,7 +53,7 @@
 
 直接实测了 driver、普通 SV 类和其中的 task/function；没有逐个实现 monitor、scoreboard 或真实 DUT 协议。帧头示例只计算长度。宿主负责句柄传递、阶段顺序、字段宽度及算术安全；只读配置接口不沙箱化用户 SV 代码。复现只承诺固定产物、环境、配置、seed、外部输入与随机化过程。
 
-后续可从独立代码审查或真实验证工程接入试点继续，不需要重做已确认的需求访谈。
+后续先处理已确认的审查缺陷，再开展真实验证工程接入试点；不需要重做已确认的需求访谈。
 
 ## Git、历史与归档
 
@@ -53,3 +62,5 @@
 `.beads/issues.jsonl` 为本轮结束时导出的事项快照，不是完整 Dolt 备份或自动同步的任务状态源；继续工作仍以本项目 Beads 为准。构建、运行产物、数据库与锁文件保持忽略，归档验收日志纳入 Git。
 
 更新前完整交接保存在 `docs/harness/handoffs/HANDOFF-before-general-consumers-20261111.md`。v1.1 规格快照 SHA-256 保持 `51708698753bef37f584226d6aae4e1d0a40ad5f606968786d3752328cf57317`；v1.1、v1.0 和早期原型证据均保留，不重写历史记录。历史报告中指向现行规格的链接已改为对应版本快照。
+
+全量审查前的交接归档为 `docs/harness/handoffs/HANDOFF-before-full-review-20261111.md`。当前正式规格仍为 v1.2；本次审查没有修改合同。
