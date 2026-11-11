@@ -1,0 +1,17 @@
+{
+  "command": "bash",
+  "args": [
+    "/home/guodz/workspace/knob/framework/adapters/vcs-compile.sh",
+    "/home/guodz/install_vcs/vcs_env.sh",
+    "/home/guodz/install_vcs/bin/vcs",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/build/baseline",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/build/baseline/sources.f",
+    "-top",
+    "hdl_top",
+    "-top",
+    "hvl_top",
+    "-top",
+    "site_banner"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/project-entry-validation/e2e"
+}

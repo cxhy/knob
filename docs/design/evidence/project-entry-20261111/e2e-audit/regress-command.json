@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/node",
+    "/home/guodz/workspace/knob/framework/bin/knob-project.mjs",
+    "regress",
+    "--root",
+    "/home/guodz/workspace/knob/build/project-entry-validation/shared",
+    "--project",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e",
+    "--build",
+    "baseline",
+    "--name",
+    "batch",
+    "--seeds",
+    "101,202"
+  ],
+  "raw_exit": 0
+}

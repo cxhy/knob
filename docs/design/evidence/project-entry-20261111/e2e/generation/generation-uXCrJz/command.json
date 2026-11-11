@@ -1,0 +1,23 @@
+{
+  "command": "/home/guodz/bin/uv",
+  "args": [
+    "run",
+    "--no-project",
+    "--offline",
+    "--python",
+    "3.12.13",
+    "python",
+    "/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/scripts/yaml2uvmf.py",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/config/ALU_bench.yaml",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/config/ALU_environment.yaml",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/config/ALU_in_interface.yaml",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/config/ALU_out_interface.yaml",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/config/ALU_util_comp_alu_predictor.yaml",
+    "-d",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-uXCrJz/fresh",
+    "-m",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-uXCrJz/candidate",
+    "--overwrite"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/project-entry-validation/e2e"
+}

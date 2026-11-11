@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "component": "framework",
+  "version": "0.1.0",
+  "content_sha256": "ea45a6bb6ec70a24a80f145aa7fe3bf1307c265c4b5cfa588924a74b64903799",
+  "files": {
+    "bin/knob-deps.mjs": "2182ddc805f34024b73a685c10f846d0d503ad1e9d0ecd11239d6ddf8c7d71a9",
+    "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "README.md": "8f513b9fadca5d55c13d9a68bea2d687674bfb52d7b3aec2b920d7a83249d6f9",
+    "release.json": "9c063a47306fe30ef8e7e7303ae7f719024a10151fbd403916d470e1204bb0bf"
+  }
+}

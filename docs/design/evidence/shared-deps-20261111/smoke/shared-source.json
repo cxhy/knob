@@ -1,0 +1,4 @@
+{
+  "uvmf": "/home/guodz/workspace/knob/build/shared-deps-validation/shared/uvmf/2023.4_2/payload",
+  "adaptation": "Base library compilation references shared release directly; project generated ALU stays private"
+}

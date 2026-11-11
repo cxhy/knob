@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "component": "knob",
+  "version": "1.2.0",
+  "content_sha256": "f05343c1208f4daf2c3e73c091a3c1524a65eea13839ba3472a5232809f24e04",
+  "files": {
+    "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+    "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed"
+  }
+}

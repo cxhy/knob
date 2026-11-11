@@ -1,0 +1,232 @@
+{
+  "checked_at": "2026-11-11T12:19:40.236Z",
+  "task": "knob-uv7.11",
+  "framework_version": "0.2.0",
+  "framework_manifest_sha256": "c7c5579dd992b760471af3b6f0743fd75dd8c13b060d791ed453942c20695b76",
+  "published_files": 8,
+  "tests": {
+    "cli_integration": 8,
+    "verdict": 7,
+    "fail": 0
+  },
+  "compiles": [
+    {
+      "project": "e2e",
+      "label": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "artifacts": {
+        "simv": "09ca333b75587bf15d6055a756681f0ba7576168b16b79d6d357793d1b8869f3",
+        "simv.daidir/_1920186_archive_1.so": "3c681a0b6f7e1e65fec7a882af021fc98f859cd171bfb40dabf42a47d87fb2ad",
+        "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+      }
+    },
+    {
+      "project": "e2e",
+      "label": "same",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "artifacts": {
+        "simv": "71e6f87f97530369bb847f9259078eb54cec4348df240ac7fee1d31d68229a6d",
+        "simv.daidir/_1921195_archive_1.so": "99608b7e9f38c17177e319bc3b282274e332aa3471f2211f4d2d7ac9ca7252e2",
+        "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+      }
+    },
+    {
+      "project": "e2e",
+      "label": "delta",
+      "fingerprint": "1cd203aed9f3f3c554522da016b85b548f07eb6317f90ce9208ea6b9d86ae4c6",
+      "artifacts": {
+        "simv": "a90c53b847aabfbd1b919443c369c5cfa6fa7eb34ebe85956e97594f2319ccc5",
+        "simv.daidir/_1922074_archive_1.so": "0da2f9c3fd7dbdbc401ec282a62b7d4adee915382b13006bb7edfae8e0f77e43",
+        "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+      }
+    },
+    {
+      "project": "e2e",
+      "label": "skeleton",
+      "fingerprint": "c0fd1f1a14ec8e919209b0e25087a4e97b796733b6ee08377673008b226c53cc",
+      "artifacts": {
+        "simv": "07e4b7a2c892aea9462d6c4e45a4232bc3740ab5aac1c7f04d6cac8c3d185228",
+        "simv.daidir/_1923123_archive_1.so": "31b67f59793c68b7c4c32aeb1f6b3a8f4042818b903b113d1073541cb6eaaa60",
+        "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+      }
+    },
+    {
+      "project": "team-project",
+      "label": "public",
+      "fingerprint": "7e558a9207daf15c5030f4ab476c40977c6c6181cb33ab518ccd192c11e2b8fe",
+      "artifacts": {
+        "simv": "2c14a7f780f0e0478a2268e8ada4eecc01837dee1a829c741aa828bf12fae015",
+        "simv.daidir/_1925240_archive_1.so": "dc02ccbd7b34e2f0c35e6b5c433defa8519702e26ccb237d27c77d17cab74e6b",
+        "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+      }
+    },
+    {
+      "project": "installed-project",
+      "label": "baseline",
+      "fingerprint": "be64acaf27a87d5af78d2c3ff09c2f731060b58a1d16df4e4596acc8e0f71b55",
+      "artifacts": {
+        "simv": "9c359dc8cfedbeb970e01a64f6a1c5c08d403fa3a36ba1c7b5b6881b140689f6",
+        "simv.daidir/_1926773_archive_1.so": "8b4a5e0fc125843b1da059066c0cc31c6877a71f7560d3f33ff5fa4afe45dba8",
+        "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "project": "e2e",
+      "name": "baseline",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "e2e",
+      "name": "replay",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "e2e",
+      "name": "batch-0",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "e2e",
+      "name": "batch-1",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "202",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 20
+    },
+    {
+      "project": "e2e",
+      "name": "same",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "same",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "e2e",
+      "name": "delta",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "delta",
+      "fingerprint": "1cd203aed9f3f3c554522da016b85b548f07eb6317f90ce9208ea6b9d86ae4c6",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "e2e",
+      "name": "skeleton",
+      "status": "skeleton_ok",
+      "functional_pass": false,
+      "reasons": [],
+      "seed": "101",
+      "build": "skeleton",
+      "fingerprint": "c0fd1f1a14ec8e919209b0e25087a4e97b796733b6ee08377673008b226c53cc",
+      "kind": "skeleton",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "team-project",
+      "name": "team-seed101",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "public",
+      "fingerprint": "7e558a9207daf15c5030f4ab476c40977c6c6181cb33ab518ccd192c11e2b8fe",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    },
+    {
+      "project": "installed-project",
+      "name": "seed101",
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "be64acaf27a87d5af78d2c3ff09c2f731060b58a1d16df4e4596acc8e0f71b55",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21
+    }
+  ],
+  "unchanged": {
+    "framework": {
+      "version": "0.1.0",
+      "manifest_sha256": "a59b22d3a1a79e82b37a2d9c2d5c8372a21a110ff6bb487180188f4986fbf9af"
+    },
+    "uvmf": {
+      "version": "2023.4_2",
+      "manifest_sha256": "9f4b7d3816d7f8cbec64655a82bc4577340843c01213c44b18e50082d7bdfa99"
+    },
+    "knob": {
+      "version": "1.2.0",
+      "manifest_sha256": "75e9ae39f8ea1c1b47f167a2dcb94241d54f30d87a12b8b8dac0614978c6f63f"
+    }
+  },
+  "prototype_differences": [
+    "README.md"
+  ],
+  "same_yaml_hdl_files": 60,
+  "delta_field": "audit_marker=17",
+  "merge_conflict_preserved_original": true,
+  "explicit_dv_repair": true,
+  "no_knob": true,
+  "local_links_checked": 5,
+  "spec_body_exact": true,
+  "source_hashes": {
+    "framework/adapters/vcs-compile.sh": "0f4ae466572b4dba91db8434bb817394483e13df25d0dbdfa9bf26f1c9332ebf",
+    "framework/adapters/vcs-run.sh": "566a4c09de0ee2d7c760fe9a08e48b77c92c21dabe1820219bdf664ea3b6ea17",
+    "framework/bin/knob-deps.mjs": "01832f37c5123a86c8e826cfedbc2de991aaf32b0aede34628557a77015f6513",
+    "framework/bin/knob-project.mjs": "3578011445c26562c6c306779b183dd545fddc2338e4813b9a4c8c5869b5af60",
+    "framework/LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "framework/README.md": "48f11d6d7eb6dd6865aa9ddf6a9bfc6770cedc67801485ed3162343387092175",
+    "framework/release.json": "81b70751d124c9efe9a0956445c6c369084d63603337f2730e672c6941d03eb0",
+    "framework/templates/alu/project.json": "32548ec94d46fef9d994506e712f7c7ad56b7af8c0b5ab9ebeac9b7328e37bb3",
+    "scripts/prepare-shared-deps.sh": "0b4630d5bad2488cb1ce3768ddc16595441aadb7d86c877c1e4b1869a442ad4a",
+    "tests/shared-deps.test.mjs": "c388a9e6a95f2e0f38243e4ce645535a03ddde72ae3cafcb25900666f8819bc9",
+    "tests/project-entry.test.mjs": "8fa7e656df8f51587dbde0ea0262c85baed1b2b31406a2680d3d41a5d515b88f",
+    "experiments/project-entry/validate.mjs": "0c6c5ad0a60b1ac0561f05e683ebba29937375b33de2217cfe5f616effde3b56"
+  },
+  "scope": "A03-A07; graph-driven wiring and optional knob remain future work"
+}

@@ -1,0 +1,17 @@
+[master (root-commit) 352e151] Candidate deployment fixture
+ 15 files changed, 2357 insertions(+)
+ create mode 100644 LICENSE
+ create mode 100644 deployment/README.md
+ create mode 100644 deployment/inputs.json
+ create mode 100644 framework/LICENSE
+ create mode 100644 framework/README.md
+ create mode 100644 framework/adapters/vcs-compile.sh
+ create mode 100644 framework/adapters/vcs-run.sh
+ create mode 100644 framework/bin/knob-deps.mjs
+ create mode 100644 framework/bin/knob-project.mjs
+ create mode 100644 framework/release.json
+ create mode 100644 framework/templates/alu/project.json
+ create mode 100644 knob.f
+ create mode 100644 scripts/deploy-shared-deps.mjs
+ create mode 100644 scripts/prepare-shared-deps.sh
+ create mode 100644 src/knob_pkg.sv

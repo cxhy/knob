@@ -1,0 +1,14 @@
+{
+  "command": "git",
+  "args": [
+    "clone",
+    "--depth",
+    "1",
+    "--no-local",
+    "file:///home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/candidate",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/clean checkout"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate",
+  "raw_exit": 0,
+  "environment_profile": "git-isolated"
+}

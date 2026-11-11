@@ -1,0 +1,14 @@
+{
+  "command": "bash",
+  "args": [
+    "/home/guodz/workspace/knob/framework/adapters/vcs-run.sh",
+    "/home/guodz/install_vcs/vcs_env.sh",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/runs/delta",
+    "60",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e/build/delta/simv",
+    "+UVM_TESTNAME=test_top",
+    "+ntb_random_seed=101",
+    "+UVM_VERBOSITY=UVM_HIGH"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/project-entry-validation/e2e"
+}

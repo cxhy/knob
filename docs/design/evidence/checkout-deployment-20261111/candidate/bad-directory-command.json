@@ -1,0 +1,11 @@
+{
+  "command": "/bin/bash",
+  "args": [
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/clean checkout/scripts/prepare-shared-deps.sh",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/bad-directory-target",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/inputs/incomplete"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate",
+  "raw_exit": 1,
+  "environment_profile": "bootstrap-tools-only"
+}

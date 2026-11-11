@@ -1,0 +1,7 @@
+{
+  "component": "framework",
+  "version": "0.3.0",
+  "stage": "portable-deployment",
+  "python": "3.12.13",
+  "node_minimum_major": 20
+}

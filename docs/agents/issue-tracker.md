@@ -15,6 +15,17 @@
 
 技术决策使用 `decision` 类型，区分建议和用户批准。Beads 不可用时报告缺口，不切换到其他项目数据库。
 
+## Wayfinding operations
+
+调用 wayfinder 时，用一个 `epic` 作为地图，标记 `wayfinder:map`；子事项通过 `--parent` 关联，创建时使用 `--no-inherit-labels`，只添加对应的 `wayfinder:research`、`wayfinder:grilling`、`wayfinder:prototype` 或 `wayfinder:task` 标签，不附加分诊标签。
+
+- 地图正文使用 skill 的 Destination、Notes、Decisions so far、Not yet specified、Out of scope 结构。只索引已解决子事项，不复制其完整结论或开放事项清单。
+- 查询子事项：`bd list --parent <map-id> --all --json`；查询可领取前沿：`bd list --parent <map-id> --status open --ready --no-assignee --json`。
+- 用 `bd dep add <后续事项> <前置事项>` 表达原生阻塞依赖。创建完成后再连依赖，不使用占位编号。
+- 开始工作前用 `bd update <id> --claim` 认领。研究可由子 agent 在独立研究分支进行；人工取舍必须取得用户回答。
+- 解决时用 `bd comments add <id> -f <结论文件>` 保存答案和证据指针，再关闭子事项；地图只添加带标题的链接与一句摘要。本地事项链接使用 `beads:<id>`，读取仍用 `bd show`，不冒充 GitHub issue URL。
+- milestone 文档描述预期交付能力，执行状态与依赖由 Beads 管理；地图规划完成不等于已实施或已验收。
+
 ## 分诊与交接
 
 分诊标签按 `triage-labels.md` 映射，使用 `bd update` 的 `--add-label` 和 `--remove-label` 更新。标签表示分诊结果；任务执行状态仍由 Beads `status` 管理。

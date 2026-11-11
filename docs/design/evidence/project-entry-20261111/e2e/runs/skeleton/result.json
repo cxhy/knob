@@ -1,0 +1,10 @@
+{
+  "status": "skeleton_ok",
+  "functional_pass": false,
+  "reasons": [],
+  "seed": "101",
+  "build": "skeleton",
+  "fingerprint": "c0fd1f1a14ec8e919209b0e25087a4e97b796733b6ee08377673008b226c53cc",
+  "kind": "skeleton",
+  "raw_exit": 0
+}

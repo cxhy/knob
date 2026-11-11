@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/node",
+    "/home/guodz/workspace/knob/framework/bin/knob-project.mjs",
+    "run",
+    "--root",
+    "/home/guodz/workspace/knob/build/project-entry-validation/shared",
+    "--project",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e",
+    "--build",
+    "skeleton",
+    "--name",
+    "skeleton",
+    "--seed",
+    "101"
+  ],
+  "raw_exit": 0
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--no-project",
+    "--offline",
+    "--python",
+    "3.12.13",
+    "python",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/upstream/scripts/yaml2uvmf.py",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/upstream/docs/generator_tutorials/alu/yaml_config_files/ALU_bench.yaml",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/upstream/docs/generator_tutorials/alu/yaml_config_files/ALU_environment.yaml",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/upstream/docs/generator_tutorials/alu/yaml_config_files/ALU_in_interface.yaml",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/upstream/docs/generator_tutorials/alu/yaml_config_files/ALU_out_interface.yaml",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/upstream/docs/generator_tutorials/alu/yaml_config_files/ALU_util_comp_alu_predictor.yaml",
+    "-d",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/merge-output",
+    "-m",
+    "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/alu",
+    "--overwrite"
+  ],
+  "env": {
+    "UV_CACHE_DIR": "/home/guodz/workspace/knob/build/shared-deps-validation/smoke/uv-cache",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "raw_exit": 1
+}

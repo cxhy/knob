@@ -1,0 +1,1 @@
+timeout 60 /home/guodz/workspace/knob/build/uvmf-knob-lifecycle/seed-check/out/simv +UVM_TESTNAME=test_top +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=202 -l run.log 

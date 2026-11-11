@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "components": {
+    "uvmf": {
+      "component": "uvmf",
+      "version": "2023.4_2",
+      "manifest_sha256": "9f4b7d3816d7f8cbec64655a82bc4577340843c01213c44b18e50082d7bdfa99",
+      "content_sha256": "c712384d83710fee97a0a0df8635663be75673f92f4218f4c9ad59a3f3429ce2"
+    },
+    "framework": {
+      "component": "framework",
+      "version": "0.2.0",
+      "manifest_sha256": "c7c5579dd992b760471af3b6f0743fd75dd8c13b060d791ed453942c20695b76",
+      "content_sha256": "43c59bfbabf6668bceaced4d6de94136265ee02a05ac19c2cc0e48209099c264"
+    }
+  }
+}

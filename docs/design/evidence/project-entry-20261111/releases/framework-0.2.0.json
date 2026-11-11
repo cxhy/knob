@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "component": "framework",
+  "version": "0.2.0",
+  "content_sha256": "43c59bfbabf6668bceaced4d6de94136265ee02a05ac19c2cc0e48209099c264",
+  "files": {
+    "adapters/vcs-compile.sh": "0f4ae466572b4dba91db8434bb817394483e13df25d0dbdfa9bf26f1c9332ebf",
+    "adapters/vcs-run.sh": "566a4c09de0ee2d7c760fe9a08e48b77c92c21dabe1820219bdf664ea3b6ea17",
+    "bin/knob-deps.mjs": "01832f37c5123a86c8e826cfedbc2de991aaf32b0aede34628557a77015f6513",
+    "bin/knob-project.mjs": "3578011445c26562c6c306779b183dd545fddc2338e4813b9a4c8c5869b5af60",
+    "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "README.md": "48f11d6d7eb6dd6865aa9ddf6a9bfc6770cedc67801485ed3162343387092175",
+    "release.json": "81b70751d124c9efe9a0956445c6c369084d63603337f2730e672c6941d03eb0",
+    "templates/alu/project.json": "32548ec94d46fef9d994506e712f7c7ad56b7af8c0b5ab9ebeac9b7328e37bb3"
+  }
+}

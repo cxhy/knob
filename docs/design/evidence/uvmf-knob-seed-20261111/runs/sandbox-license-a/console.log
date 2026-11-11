@@ -1,0 +1,14 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Nov 11 19:16 2026
+Cannot connect to the license server.
+The connect() system call failed.
+Make sure that your SNPSLMD_LICENSE_FILE is pointing to the right 
+location and that the license server is up.
+Retrying request.....
+
+
+ Failed to obtain license ...
+Note: Use +vcs+lic+wait ( or -licwait <minute> or -licqueue  in Unified Use Model ) to queue for license

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "functional_pass": true,
+  "reasons": [],
+  "seed": "101",
+  "build": "fresh",
+  "fingerprint": "90a895c3f71d48d10a7bd2723629c1f57fd88caaa63d1b4e266d0547c499e850",
+  "kind": "functional",
+  "raw_exit": 0,
+  "evidence": "/home/guodz/workspace/knob/build/checkout-deploy-validation/final-clean/new-project/runs/seed101"
+}

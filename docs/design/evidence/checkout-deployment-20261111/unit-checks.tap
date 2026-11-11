@@ -1,0 +1,85 @@
+TAP version 13
+# Subtest: a nonempty comparison and clean simulator result can pass
+ok 1 - a nonempty comparison and clean simulator result can pass
+  ---
+  duration_ms: 1.118048
+  ...
+# Subtest: raw nonzero remains a failure even with clean UVM logs
+ok 2 - raw nonzero remains a failure even with clean UVM logs
+  ---
+  duration_ms: 0.212704
+  ...
+# Subtest: fatal header is rejected even if a misleading summary says zero
+ok 3 - fatal header is rejected even if a misleading summary says zero
+  ---
+  duration_ms: 0.113771
+  ...
+# Subtest: zero-transaction checker output cannot be a functional pass
+ok 4 - zero-transaction checker output cannot be a functional pass
+  ---
+  duration_ms: 0.095848
+  ...
+# Subtest: incomplete comparison cannot be a functional pass
+ok 5 - incomplete comparison cannot be a functional pass
+  ---
+  duration_ms: 0.136586
+  ...
+# Subtest: skeleton success is explicitly not functional success
+ok 6 - skeleton success is explicitly not functional success
+  ---
+  duration_ms: 0.695432
+  ...
+# Subtest: missing summary or completion remains failure
+ok 7 - missing summary or completion remains failure
+  ---
+  duration_ms: 0.106564
+  ...
+# Subtest: same release is idempotent; differing content cannot replace it
+ok 8 - same release is idempotent; differing content cannot replace it
+  ---
+  duration_ms: 333.794779
+  ...
+# Subtest: project without knob is independent; explicit upgrade and rollback preserve old releases
+ok 9 - project without knob is independent; explicit upgrade and rollback preserve old releases
+  ---
+  duration_ms: 551.317352
+  ...
+# Subtest: missing target does not change project lock
+ok 10 - missing target does not change project lock
+  ---
+  duration_ms: 309.797094
+  ...
+# Subtest: tampered or extra payload files are rejected before use
+ok 11 - tampered or extra payload files are rejected before use
+  ---
+  duration_ms: 306.19571
+  ...
+# Subtest: manifest changes cannot silently alter a project pin
+ok 12 - manifest changes cannot silently alter a project pin
+  ---
+  duration_ms: 309.832621
+  ...
+# Subtest: source symlinks and path traversal versions are rejected
+ok 13 - source symlinks and path traversal versions are rejected
+  ---
+  duration_ms: 354.166032
+  ...
+# Subtest: external runtime missing gives an offline readiness failure
+ok 14 - external runtime missing gives an offline readiness failure
+  ---
+  duration_ms: 317.50275
+  ...
+# Subtest: shared root can relocate without editing project lock
+ok 15 - shared root can relocate without editing project lock
+  ---
+  duration_ms: 314.204157
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2888.626533

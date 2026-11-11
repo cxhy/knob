@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "functional_pass": true,
+  "reasons": [],
+  "seed": "101",
+  "build": "baseline",
+  "fingerprint": "be64acaf27a87d5af78d2c3ff09c2f731060b58a1d16df4e4596acc8e0f71b55",
+  "kind": "functional",
+  "raw_exit": 0,
+  "evidence": "/home/guodz/workspace/knob/build/project-entry-validation/installed-project/runs/seed101"
+}

@@ -42,6 +42,11 @@
 - 结束实际工作时先更新任务与检查证据，再更新交接。阶段切换或重要配置变化时，先将完整旧交接归档到 `docs/harness/handoffs/`，同名归档不得覆盖。
 - `AGENTS.md` 保持稳定规则和读取入口；阶段状态、完整日志与工具排障细节放入对应文档，不反复复制。维护资料放在 `docs/harness/`，规格、设计和验证报告放在 `docs/design/`。
 
+## 项目 MCP
+
+- `hdl-kgraph`：用于 RTL 解析结果查询，包括模块、层级、端口和连接关系；结合设计交付文档推导 DUT 连线，并保留可编辑映射及来源。实际 RTL 到位后，按设计 filelist、宏和 include 路径准备项目图；尚无 RTL 时缺图不阻塞设计收敛。入口与能力边界见 `docs/design/hdl-mcp-input-inspection.md`。
+- `xverif`：用于验证工具调用，包括设计/FSDB 调试、覆盖率查询、位运算、结构化解码、日志位置及 SVA 语义检查。调用前发现实际工具与 action schema，按接口要求管理会话；结果只支持对应输入和工具范围的结论，不替代 VCS 功能验收。
+
 ## Agent skills
 
 ### Issue tracker

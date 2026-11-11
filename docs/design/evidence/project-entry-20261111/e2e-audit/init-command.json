@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/node",
+    "/home/guodz/workspace/knob/framework/bin/knob-project.mjs",
+    "init",
+    "--root",
+    "/home/guodz/workspace/knob/build/project-entry-validation/shared",
+    "--project",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e",
+    "--template",
+    "alu"
+  ],
+  "raw_exit": 0
+}

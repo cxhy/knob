@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-11-11T11:56:45.568Z",
+  "task": "knob-uv7.10",
+  "workspace_root": "/home/guodz/workspace/verification-deps",
+  "releases": {
+    "uvmf": {
+      "version": "2023.4_2",
+      "file_count": 2112,
+      "manifest_sha256": "9f4b7d3816d7f8cbec64655a82bc4577340843c01213c44b18e50082d7bdfa99",
+      "content_sha256": "c712384d83710fee97a0a0df8635663be75673f92f4218f4c9ad59a3f3429ce2"
+    },
+    "framework": {
+      "version": "0.1.0",
+      "file_count": 4,
+      "manifest_sha256": "a59b22d3a1a79e82b37a2d9c2d5c8372a21a110ff6bb487180188f4986fbf9af",
+      "content_sha256": "ea45a6bb6ec70a24a80f145aa7fe3bf1307c265c4b5cfa588924a74b64903799"
+    },
+    "knob": {
+      "version": "1.2.0",
+      "file_count": 3,
+      "manifest_sha256": "75e9ae39f8ea1c1b47f167a2dcb94241d54f30d87a12b8b8dac0614978c6f63f",
+      "content_sha256": "f05343c1208f4daf2c3e73c091a3c1524a65eea13839ba3472a5232809f24e04"
+    }
+  },
+  "cli_tests": {
+    "pass": 8,
+    "fail": 0
+  },
+  "runtime_checks": 4,
+  "shared_smoke": {
+    "checked_at": "2026-11-11T11:53:35.460Z",
+    "shared_root": "/home/guodz/workspace/knob/build/shared-deps-validation/shared",
+    "results": {
+      "baseline": {
+        "seed": 101,
+        "matches": 21,
+        "requests": 25,
+        "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+        "artifacts": [
+          "01c62237f93eb3b20671c0f0b72e3f30463df155863993627fdd6996235f2221  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv",
+          "b519c54bf834663f519bf43e78bf9ab22a509365f03d5d3d2eab6799f079ce23  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/_1911942_archive_1.so",
+          "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/rmapats.so"
+        ]
+      },
+      "replay": {
+        "seed": 101,
+        "matches": 21,
+        "requests": 25,
+        "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+        "artifacts": [
+          "01c62237f93eb3b20671c0f0b72e3f30463df155863993627fdd6996235f2221  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv",
+          "b519c54bf834663f519bf43e78bf9ab22a509365f03d5d3d2eab6799f079ce23  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/_1911942_archive_1.so",
+          "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/rmapats.so"
+        ]
+      }
+    },
+    "compile_warning_ids": [
+      "TFIPC",
+      "TFIPC"
+    ],
+    "shared_releases_unchanged": true,
+    "no_knob": true
+  },
+  "local_links_checked": 16,
+  "spec_body_exact": true,
+  "source_hashes": {
+    "framework/bin/knob-deps.mjs": "2182ddc805f34024b73a685c10f846d0d503ad1e9d0ecd11239d6ddf8c7d71a9",
+    "framework/release.json": "9c063a47306fe30ef8e7e7303ae7f719024a10151fbd403916d470e1204bb0bf",
+    "framework/README.md": "8f513b9fadca5d55c13d9a68bea2d687674bfb52d7b3aec2b920d7a83249d6f9",
+    "scripts/prepare-shared-deps.sh": "99a08e9392fc03776289e0dc1c089ea64ec5521e1a350a10335df94a44b7b6d2",
+    "tests/shared-deps.test.mjs": "c388a9e6a95f2e0f38243e4ce645535a03ddde72ae3cafcb25900666f8819bc9",
+    "experiments/shared-deps/verify-smoke.mjs": "c146b13280da6e97b9f373bd1d00a6fad7ce7f8abd50c29e79e6cd1a38aed020"
+  },
+  "scope": "dependency-foundation; unified project commands and complete acceptance remain future work"
+}

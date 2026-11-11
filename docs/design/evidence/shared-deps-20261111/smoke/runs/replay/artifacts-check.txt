@@ -1,0 +1,3 @@
+/home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv: OK
+/home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/_1911942_archive_1.so: OK
+/home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/rmapats.so: OK

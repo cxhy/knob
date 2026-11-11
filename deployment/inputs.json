@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "uvmf": {
+    "version": "2023.4_2",
+    "archive_directory": "UVMF_2023.4_2",
+    "archive_sha256": "36e556e84960158f0d036a49881e900628d301264e647fd9789c8ebc03bd31d0",
+    "file_count": 2112,
+    "tree_sha256": "8e24ff4a4593e7c1e90591781f70bc24b5b15e25c2f1825237e7710722829117",
+    "provenance": "User supplied package; hashes identify the evaluated input, not independent publisher authentication"
+  },
+  "knob": {
+    "version": "1.2.0",
+    "files": {
+      "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed",
+      "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+      "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    }
+  },
+  "checkout_paths": [
+    "framework",
+    "deployment",
+    "scripts/prepare-shared-deps.sh",
+    "scripts/deploy-shared-deps.mjs",
+    "src/knob_pkg.sv",
+    "knob.f",
+    "LICENSE"
+  ]
+}

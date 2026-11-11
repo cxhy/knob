@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "name": "ALU",
+  "yaml": ["config/ALU_bench.yaml", "config/ALU_environment.yaml", "config/ALU_in_interface.yaml", "config/ALU_out_interface.yaml", "config/ALU_util_comp_alu_predictor.yaml"],
+  "generation": {},
+  "build": {
+    "tops": ["hdl_top", "hvl_top"],
+    "rtl_filelist": "rtl/design.f",
+    "tracked_inputs": ["rtl", "handwritten"],
+    "incdirs": ["${UVMF}/uvmf_base_pkg", "${GENERATED}/verification_ip/interface_packages/ALU_in_pkg", "${GENERATED}/verification_ip/interface_packages/ALU_out_pkg", "${GENERATED}/verification_ip/environment_packages/ALU_env_pkg", "${GENERATED}/project_benches/ALU/tb/parameters", "${GENERATED}/project_benches/ALU/tb/sequences", "${GENERATED}/project_benches/ALU/tb/tests"],
+    "sources": ["${UVMF}/uvmf_base_pkg/uvmf_base_pkg_hdl.sv", "${UVMF}/uvmf_base_pkg/uvmf_base_pkg.sv", "${GENERATED}/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg_hdl.sv", "${GENERATED}/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg_hdl.sv", "${GENERATED}/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg.sv", "${GENERATED}/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_if.sv", "${GENERATED}/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_monitor_bfm.sv", "${GENERATED}/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_driver_bfm.sv", "${GENERATED}/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg.sv", "${GENERATED}/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_if.sv", "${GENERATED}/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_monitor_bfm.sv", "${GENERATED}/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_driver_bfm.sv", "${GENERATED}/verification_ip/environment_packages/ALU_env_pkg/ALU_env_pkg.sv", "${GENERATED}/project_benches/ALU/tb/parameters/ALU_parameters_pkg.sv", "${GENERATED}/project_benches/ALU/tb/sequences/ALU_sequences_pkg.sv", "${GENERATED}/project_benches/ALU/tb/tests/ALU_tests_pkg.sv", "${GENERATED}/project_benches/ALU/tb/testbench/hdl_top.sv", "${GENERATED}/project_benches/ALU/tb/testbench/hvl_top.sv"],
+    "args": []
+  },
+  "run": {"test": "test_top", "args": [], "timeout_seconds": 60},
+  "verification": {
+    "kind": "functional",
+    "checks": [{"pattern": "SCOREBOARD_RESULTS:\\s+PREDICTED_TRANSACTIONS=(\\d+) MATCHES=(\\d+) MISMATCHES=(\\d+)", "positive_groups": [1], "zero_groups": [3], "equal_groups": [[1, 2]]}]
+  }
+}

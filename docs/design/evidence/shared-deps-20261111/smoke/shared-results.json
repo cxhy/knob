@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-11T11:53:35.460Z",
+  "shared_root": "/home/guodz/workspace/knob/build/shared-deps-validation/shared",
+  "results": {
+    "baseline": {
+      "seed": 101,
+      "matches": 21,
+      "requests": 25,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+      "artifacts": [
+        "01c62237f93eb3b20671c0f0b72e3f30463df155863993627fdd6996235f2221  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv",
+        "b519c54bf834663f519bf43e78bf9ab22a509365f03d5d3d2eab6799f079ce23  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/_1911942_archive_1.so",
+        "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/rmapats.so"
+      ]
+    },
+    "replay": {
+      "seed": 101,
+      "matches": 21,
+      "requests": 25,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+      "artifacts": [
+        "01c62237f93eb3b20671c0f0b72e3f30463df155863993627fdd6996235f2221  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv",
+        "b519c54bf834663f519bf43e78bf9ab22a509365f03d5d3d2eab6799f079ce23  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/_1911942_archive_1.so",
+        "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d  /home/guodz/workspace/knob/build/shared-deps-validation/smoke/out/simv.daidir/rmapats.so"
+      ]
+    }
+  },
+  "compile_warning_ids": [
+    "TFIPC",
+    "TFIPC"
+  ],
+  "shared_releases_unchanged": true,
+  "no_knob": true
+}

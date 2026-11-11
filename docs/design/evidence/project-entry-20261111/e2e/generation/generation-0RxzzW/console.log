@@ -1,0 +1,152 @@
+Warning: response_info YAML structure deprecated.  Slave agent response data now determined by arguments to respond_and_wait_for_next_transfer task within generated driver_bfm.
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_filelist_hvl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_monitor_bfm.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_common.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_macros.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_typedefs.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_hdl.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_monitor.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_hvl.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_driver_bfm.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_if.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_responder_sequence.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg_hdl.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/Makefile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_driver.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_typedefs_hdl.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_agent.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/compile.do
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_macros_mtlb.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_infact_coverage_strategy.csv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_filelist_hdl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_random_sequence.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/.project
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_filelist_xrtl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/.svproject
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in2reg_adapter.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg_sve.F
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_sequence_base.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_bfm.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_transaction_coverage.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_configuration.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_transaction.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg_hdl.vinfo
+Warning: response_info YAML structure deprecated.  Slave agent response data now determined by arguments to respond_and_wait_for_next_transfer task within generated driver_bfm.
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_filelist_hvl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_monitor_bfm.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_common.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_macros.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_typedefs.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_hdl.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_monitor.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_hvl.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_driver_bfm.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_if.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_responder_sequence.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg_hdl.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/Makefile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_driver.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_typedefs_hdl.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_agent.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/compile.do
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_macros_mtlb.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_infact_coverage_strategy.csv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_filelist_hdl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_random_sequence.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/.project
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_filelist_xrtl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/.svproject
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out2reg_adapter.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg_sve.F
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_sequence_base.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_bfm.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_transaction_coverage.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_configuration.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_transaction.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg_hdl.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/compile.do
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/src/ALU_env_configuration.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/.svproject
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/src/ALU_env_typedefs.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/ALU_env_pkg.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/src/ALU_env_sequence_base.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/src/ALU_environment.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/.project
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/Makefile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/ALU_env_pkg.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/ALU_env_pkg.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/ALU_env_pkg_sve.F
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/verification_ip/environment_packages/ALU_env_pkg/src/ALU_predictor.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/parameters/ALU_parameters_pkg.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/Makefile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/top_filelist_hdl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/hdl_top.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/hvl_top.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/hvl_top.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/parameters/ALU_parameters_pkg.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/docs/interfaces.csv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/hdl.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/sequences/src/example_derived_test_sequence.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/hdl.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/testlist
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/parameters/ALU_parameters_pkg.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/sequences/src/register_test_sequence.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/hdl_top.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/rtl/dut.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/.project
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/rtl/verilog/verilog_dut.v
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/hvl.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/rtl/verilog/verilog_dut.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/.svproject
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/xwaves.sigs
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/compile.do
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/viswave.do
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/bcr_testlist
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/tests/ALU_tests_pkg.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/tests/src/example_derived_test.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/wave.do
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/bcr_testlist.yaml
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/sequences/ALU_sequences_pkg.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/rtl/vhdl/vhdl_dut.vhd
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/tests/ALU_tests_pkg.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/hvl.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/tbx.config
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/tests/ALU_tests_pkg.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/sequences/src/ALU_bench_sequence_base.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/top.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/sequences/ALU_sequences_pkg.vinfo
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/testlist.yaml
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/veloce.config
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/tests/src/test_top.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/ALU_sve.F
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/hvl_top.sv
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/top_filelist_hvl.f
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/sequences/ALU_sequences_pkg.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/testbench/hdl_top.compile
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/tb/tests/src/register_test.svh
+Generating /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/fresh/project_benches/ALU/sim/run.do
+Backed up original source to /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/candidate_bak_0
+Parsing customizations from /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/candidate ...
+Merging custom code in /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/candidate with new output ...
+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/templates/python/uvmf_gen.py:263: SyntaxWarning: invalid escape sequence '\{'
+  fname = re.sub('\{\{'+key+'\}\}',templateVars[key],fname)
+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/templates/python/uvmf_gen.py:263: SyntaxWarning: invalid escape sequence '\}'
+  fname = re.sub('\{\{'+key+'\}\}',templateVars[key],fname)
+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/templates/python/uvmf_gen.py:292: SyntaxWarning: invalid escape sequence '\{'
+  symlink = os.path.abspath(os.path.expandvars(re.sub('\{\{name\}\}',self.name,template.module.symlink)))
+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/templates/python/uvmf_gen.py:299: SyntaxWarning: invalid escape sequence '\{'
+  re.sub('\{\{name\}\}',self.name,template.module.symlink)
+KeyError: 'block_used'
+
+During handling of the above exception, another exception occurred:
+
+uvmf_gen.UserError: Potential loss of hand edits:
+  File: /home/guodz/workspace/knob/build/project-entry-validation/e2e/.verification/generation-0RxzzW/candidate/project_benches/ALU/tb/tests/src/test_top.svh
+  Label: "orphan_for_conflict"
+Use --merge_skip_missing_blocks to proceed and produce list of labels at end

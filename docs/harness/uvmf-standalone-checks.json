@@ -1,0 +1,116 @@
+{
+  "created_utc": "2026-11-11T09:26:24.790Z",
+  "git_head": "8847bc73dee4bced619ee1ef526150c441e37fcd",
+  "issue": "knob-uv7.6",
+  "scope": "UVMF standalone ALU evaluation; no knob integration",
+  "tools": {
+    "uv": "0.11.21",
+    "python": "3.12.13",
+    "node": "v20.19.2",
+    "vcs": "W-2024.09-SP1",
+    "uvm": "1.2"
+  },
+  "input_archive_sha256": "36e556e84960158f0d036a49881e900628d301264e647fd9789c8ebc03bd31d0",
+  "vendor_files_verified": 2112,
+  "evidence_files_verified": 68,
+  "evidence_manifest_sha256": "27b6504a27df7129da8c7704bdcaae2b080f861a4efab730033ead6137b53480",
+  "local_links_checked": 14,
+  "checks": {
+    "bash_syntax": true,
+    "node_syntax": true,
+    "archive_copies_unchanged": true,
+    "original_package_unchanged": true,
+    "recipe_snapshot_matches": true,
+    "knob_product_unchanged": true,
+    "chi_project_accessed": false
+  },
+  "results": {
+    "evaluated_at": "2026-11-11T09:25:16.233Z",
+    "release": "2024-08-05:817b9746ddcfa2b003d5034380a9dc44a3fc14bc",
+    "results": {
+      "baseline": {
+        "raw_exit": 0,
+        "errors": 0,
+        "warnings": [
+          "COVERAGE_MODEL_REVIEW",
+          "PREDICTOR_REVIEW"
+        ],
+        "predicted": 21,
+        "matches": 21,
+        "mismatches": 0,
+        "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+        "simv_sha256": "b86beaeba226582730e8cc821c16a2f9cc932a8a4bbdb3657db6c2dd1048d0d9"
+      },
+      "replay": {
+        "raw_exit": 0,
+        "errors": 0,
+        "warnings": [
+          "COVERAGE_MODEL_REVIEW",
+          "PREDICTOR_REVIEW"
+        ],
+        "predicted": 21,
+        "matches": 21,
+        "mismatches": 0,
+        "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+        "simv_sha256": "b86beaeba226582730e8cc821c16a2f9cc932a8a4bbdb3657db6c2dd1048d0d9"
+      },
+      "seed202": {
+        "raw_exit": 0,
+        "errors": 0,
+        "warnings": [
+          "COVERAGE_MODEL_REVIEW",
+          "PREDICTOR_REVIEW"
+        ],
+        "predicted": 20,
+        "matches": 20,
+        "mismatches": 0,
+        "trace_sha256": "1923b2a227fda16e6a2792aa6c2d9c17fd0fd2a601d4427134135d883369945e",
+        "simv_sha256": "b86beaeba226582730e8cc821c16a2f9cc932a8a4bbdb3657db6c2dd1048d0d9"
+      },
+      "fault": {
+        "raw_exit": 0,
+        "errors": 21,
+        "warnings": [
+          "COVERAGE_MODEL_REVIEW",
+          "PREDICTOR_REVIEW"
+        ],
+        "predicted": 21,
+        "matches": 0,
+        "mismatches": 21,
+        "trace_sha256": "e04b3ff51aca60abfbe70c3931db52e6171b09b9313ae1463925b4a1dc462475",
+        "simv_sha256": "1aabfcaff528b0dc68439a17ce856fc43aea091ac8bded5d41546aa754ca73dd"
+      },
+      "regenerated": {
+        "raw_exit": 0,
+        "errors": 0,
+        "warnings": [
+          "COVERAGE_MODEL_REVIEW",
+          "PREDICTOR_REVIEW"
+        ],
+        "predicted": 21,
+        "matches": 21,
+        "mismatches": 0,
+        "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+        "simv_sha256": "cf9bfe0a620a02f543aa8190d24bb850fe422e8c990b93ac0e6ecaef288a0f4a"
+      }
+    },
+    "original_package_unchanged": true,
+    "working_library_unchanged": true,
+    "regeneration_hdl_equal": true,
+    "compile_warning_ids": [
+      "TFIPC",
+      "TFIPC"
+    ],
+    "no_knob_inputs": true
+  },
+  "files": {
+    "experiments/uvmf-standalone/experiment.mjs": "a959ed5bff06443660fbac80131d2057fad45f8093f831f17b8cbecbb8b658f2",
+    "experiments/uvmf-standalone/compile.sh": "15bfa7058b2768c95bf362e221a162f8f86073ee916b23815ec4c2b097a4d5f3",
+    "experiments/uvmf-standalone/run.sh": "6025ff10d38fb182f6a5db50c63fd8cc82f086ff4121135950bd7f9e558b60a7",
+    "docs/design/uvmf-standalone-evaluation.md": "d521452aee184001590be30b2e26af37a5dd610458dde5ce8fc8c8839f13c7ea",
+    "docs/design/phase2-uvmf-roadmap.md": "a29b9f9132d5c0c0a562535fb99684ddc28ca9062fb8220e7cbea0f05409420e",
+    "docs/design/phase2-goals-interview.md": "c26d5f2de6e8834030cef2bab9a30ebb3d112d8bf45feba99d2ad7d95fc0ebe5",
+    "experiments/uvmf-standalone/README.md": "112cb3b8ac85b2dcd877e220c5ecefac0069237c68d54f1e6aebe81a06658763",
+    "docs/design/evidence/uvmf-standalone-20261111/README.md": "8c67b19f0dbfc0e9ad31de6d567376b6009eff2c1c4d859a8b6469ab25a3f98b"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-11-11T14:50:55.611Z",
+  "spec_id": "uvmf-framework-v1",
+  "spec_issue": "knob-uv7.9",
+  "spec_body_exact": true,
+  "requirements": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "F10"
+  ],
+  "acceptance": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16"
+  ],
+  "question_map": {
+    "F1": [
+      7,
+      16
+    ],
+    "F2": [
+      7,
+      9,
+      12,
+      23
+    ],
+    "F3": [
+      20,
+      21,
+      24
+    ],
+    "F4": [
+      22,
+      25
+    ],
+    "F5": [
+      10,
+      13,
+      27
+    ],
+    "F6": [
+      15,
+      17,
+      18
+    ],
+    "F7": [
+      16,
+      19
+    ],
+    "F8": [
+      11
+    ],
+    "F9": [
+      4,
+      5,
+      6,
+      9,
+      14
+    ],
+    "F10": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      26
+    ]
+  },
+  "local_links_checked": 32,
+  "dependency_edges_checked": 8,
+  "dependency_cycle": false,
+  "next_ready": null,
+  "product_and_v12_spec_unchanged": true,
+  "document_hashes": {
+    "uvmf-framework-spec.md": "d4e8400cb379198871c02b6c58a4d53d9698554dd46596307e8f6f44593efe6c",
+    "uvmf-framework-acceptance.md": "65bfb028978f05450e3a00ba5ca2364a091b09131b5406e45226da9762c69c98",
+    "phase2-uvmf-roadmap.md": "2793a4c8b6486eeb11eab10ef9be79e52729622ecc29e399774868288e486142",
+    "phase2-integration-contract-interview.md": "167a5e6d968249576d7628fa8737d6b05aa8185f31418ef83867d0296aadd58d",
+    "phase2-acceptance-interview.md": "4ca7b4f3021b00ad8680ab5cc9d95efba95fa940757ed6e0aedd89a66a53c14e"
+  },
+  "spec_version": "1.2",
+  "active_task": "knob-uv7.16",
+  "delivery_pending": true
+}

@@ -1,0 +1,27 @@
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/uvmf_base_pkg
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_in_pkg
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_out_pkg
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/environment_packages/ALU_env_pkg
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/parameters
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/sequences
++incdir+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/tests
+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/uvmf_base_pkg/uvmf_base_pkg_hdl.sv
+/home/guodz/workspace/knob/build/project-entry-validation/shared/uvmf/2023.4_2/payload/uvmf_base_pkg/uvmf_base_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg_hdl.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg_hdl.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_in_pkg/ALU_in_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_if.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_monitor_bfm.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_in_pkg/src/ALU_in_driver_bfm.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_out_pkg/ALU_out_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_if.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_monitor_bfm.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/interface_packages/ALU_out_pkg/src/ALU_out_driver_bfm.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/verification_ip/environment_packages/ALU_env_pkg/ALU_env_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/parameters/ALU_parameters_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/sequences/ALU_sequences_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/tests/ALU_tests_pkg.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/testbench/hdl_top.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/generated/project_benches/ALU/tb/testbench/hvl_top.sv
+/home/guodz/workspace/knob/build/project-entry-validation/e2e/handwritten/site_banner.sv
+-F /home/guodz/workspace/knob/build/project-entry-validation/e2e/rtl/design.f

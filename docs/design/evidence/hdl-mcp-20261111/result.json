@@ -1,0 +1,533 @@
+{
+  "initialize": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "protocolVersion": "2024-11-05",
+      "capabilities": {
+        "logging": {},
+        "prompts": {
+          "listChanged": false
+        },
+        "resources": {
+          "subscribe": false,
+          "listChanged": false
+        },
+        "tools": {
+          "listChanged": true
+        }
+      },
+      "serverInfo": {
+        "name": "hdl-kgraph",
+        "version": "4.0.5"
+      },
+      "instructions": "Knowledge graph of an HDL design (SystemVerilog/Verilog/VHDL), extracted by\nhdl-kgraph. Edges carry a confidence score: 1.0 = syntactically resolved,\n0.8 = unique cross-file name match, 0.6 = ambiguous match, 0.4 = naming\nheuristic. VHDL names are stored lowercase and match case-insensitively.\nUnresolved references appear as stub nodes flagged `unresolved`. The server\nis read-only; rebuild the database with `hdl-kgraph build`/`update`.\nStart with get_hierarchy() or find_module() to orient yourself.\n"
+    }
+  },
+  "tools": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "tools": [
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "Find design units (modules/entities/interfaces) by exact name or glob\npattern, with port/parameter/instantiation counts.",
+          "inputSchema": {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "limit": {
+                "default": 20,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "find_module",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Find Module"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "Design hierarchy. Without `top`, lists the top-level (never\ninstantiated) units; with `top`, returns the instance tree below it,\ncapped at `depth` levels and `max_nodes` nodes.",
+          "inputSchema": {
+            "properties": {
+              "top": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "depth": {
+                "default": 3,
+                "type": "integer"
+              },
+              "max_nodes": {
+                "default": 500,
+                "type": "integer"
+              }
+            },
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "get_hierarchy",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Get Hierarchy"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "All instantiation sites of the design unit named `name`.",
+          "inputSchema": {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "limit": {
+                "default": 50,
+                "type": "integer"
+              },
+              "offset": {
+                "default": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "who_instantiates",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Who Instantiates"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "Ports and parameters of `module` in declaration order; with\n`instance`, also that instance's port connection bindings.",
+          "inputSchema": {
+            "properties": {
+              "module": {
+                "type": "string"
+              },
+              "instance": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              }
+            },
+            "required": [
+              "module"
+            ],
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "port_map",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Port Map"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "What breaks if `target` (a file path or design-unit name) changes:\nsummary plus the transitively affected units, nearest first.\n`max_depth` 0 means unlimited.",
+          "inputSchema": {
+            "properties": {
+              "target": {
+                "type": "string"
+              },
+              "max_depth": {
+                "default": 0,
+                "type": "integer"
+              },
+              "limit": {
+                "default": 100,
+                "type": "integer"
+              },
+              "offset": {
+                "default": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "target"
+            ],
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "impact_of_change",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Impact Of Change"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "Clock domains (with alias nets and process/signal counts) and\nclock-domain-crossing suspects.",
+          "inputSchema": {
+            "properties": {},
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "clock_domains",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Clock Domains"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "What drives (or, with readers=true, reads) signals named `signal`,\noptionally only inside design unit `module`.",
+          "inputSchema": {
+            "properties": {
+              "signal": {
+                "type": "string"
+              },
+              "module": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "readers": {
+                "default": false,
+                "type": "boolean"
+              },
+              "limit": {
+                "default": 50,
+                "type": "integer"
+              },
+              "offset": {
+                "default": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "signal"
+            ],
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "find_signal_drivers",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Find Signal Drivers"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "UVM components by role (via EXTENDS chains to uvm_* bases) and\ntestbench-to-DUT TEST_COVERS links.",
+          "inputSchema": {
+            "properties": {},
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "uvm_topology",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Uvm Topology"
+        },
+        {
+          "_meta": {
+            "fastmcp": {
+              "tags": []
+            }
+          },
+          "description": "Search graph nodes by name glob, node kind (e.g. module, signal,\nclass), and/or file glob.",
+          "inputSchema": {
+            "properties": {
+              "name": {
+                "default": "*",
+                "type": "string"
+              },
+              "kinds": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "file": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null
+              },
+              "limit": {
+                "default": 50,
+                "type": "integer"
+              },
+              "offset": {
+                "default": 0,
+                "type": "integer"
+              }
+            },
+            "type": "object",
+            "additionalProperties": false
+          },
+          "name": "search_nodes",
+          "outputSchema": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "title": "Search Nodes"
+        }
+      ]
+    }
+  },
+  "find_module": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": {
+      "content": [
+        {
+          "text": "{\"total\":2,\"offset\":0,\"count\":2,\"truncated\":false,\"items\":[{\"id\":\"probe.sv::module:probe_leaf\",\"kind\":\"module\",\"name\":\"probe_leaf\",\"qualified_name\":\"probe_leaf\",\"file\":\"probe.sv\",\"line\":1,\"language\":\"systemverilog\",\"unresolved\":false,\"port_count\":2,\"parameter_count\":1,\"instantiation_count\":1},{\"id\":\"probe.sv::module:probe_top\",\"kind\":\"module\",\"name\":\"probe_top\",\"qualified_name\":\"probe_top\",\"file\":\"probe.sv\",\"line\":4,\"language\":\"systemverilog\",\"unresolved\":false,\"port_count\":2,\"parameter_count\":0,\"instantiation_count\":0}]}",
+          "type": "text"
+        }
+      ],
+      "isError": false,
+      "structuredContent": {
+        "total": 2,
+        "offset": 0,
+        "count": 2,
+        "truncated": false,
+        "items": [
+          {
+            "id": "probe.sv::module:probe_leaf",
+            "kind": "module",
+            "name": "probe_leaf",
+            "qualified_name": "probe_leaf",
+            "file": "probe.sv",
+            "line": 1,
+            "language": "systemverilog",
+            "unresolved": false,
+            "port_count": 2,
+            "parameter_count": 1,
+            "instantiation_count": 1
+          },
+          {
+            "id": "probe.sv::module:probe_top",
+            "kind": "module",
+            "name": "probe_top",
+            "qualified_name": "probe_top",
+            "file": "probe.sv",
+            "line": 4,
+            "language": "systemverilog",
+            "unresolved": false,
+            "port_count": 2,
+            "parameter_count": 0,
+            "instantiation_count": 0
+          }
+        ]
+      }
+    }
+  },
+  "get_hierarchy": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": {
+      "content": [
+        {
+          "text": "{\"root\":{\"module_id\":\"probe.sv::module:probe_top\",\"module_name\":\"probe_top\",\"instance_name\":null,\"confidence\":1.0,\"unresolved\":false,\"architecture\":null,\"children\":[{\"module_id\":\"probe.sv::module:probe_leaf\",\"module_name\":\"probe_leaf\",\"instance_name\":\"u_leaf\",\"confidence\":1.0,\"unresolved\":false,\"architecture\":null,\"children\":[],\"truncated\":false}],\"truncated\":false},\"nodes_omitted\":0}",
+          "type": "text"
+        }
+      ],
+      "isError": false,
+      "structuredContent": {
+        "root": {
+          "module_id": "probe.sv::module:probe_top",
+          "module_name": "probe_top",
+          "instance_name": null,
+          "confidence": 1,
+          "unresolved": false,
+          "architecture": null,
+          "children": [
+            {
+              "module_id": "probe.sv::module:probe_leaf",
+              "module_name": "probe_leaf",
+              "instance_name": "u_leaf",
+              "confidence": 1,
+              "unresolved": false,
+              "architecture": null,
+              "children": [],
+              "truncated": false
+            }
+          ],
+          "truncated": false
+        },
+        "nodes_omitted": 0
+      }
+    }
+  },
+  "port_map": {
+    "jsonrpc": "2.0",
+    "id": 5,
+    "result": {
+      "content": [
+        {
+          "text": "{\"units\":[{\"unit_id\":\"probe.sv::module:probe_leaf\",\"name\":\"probe_leaf\",\"kind\":\"module\",\"file\":\"probe.sv\",\"line\":1,\"language\":\"systemverilog\",\"ports\":[{\"id\":\"probe.sv::port:probe_leaf.a\",\"name\":\"a\",\"index\":0,\"line\":1,\"attrs\":{\"direction\":\"input\",\"index\":0,\"type_text\":\"input logic [W-1:0]\"},\"direction\":\"input\"},{\"id\":\"probe.sv::port:probe_leaf.y\",\"name\":\"y\",\"index\":1,\"line\":1,\"attrs\":{\"direction\":\"output\",\"index\":1,\"type_text\":\"output logic [W-1:0]\"},\"direction\":\"output\"}],\"parameters\":[{\"id\":\"probe.sv::parameter:probe_leaf.W\",\"name\":\"W\",\"index\":0,\"line\":1,\"attrs\":{\"default\":\"8\",\"index\":0,\"is_localparam\":false},\"is_localparam\":false}],\"instances\":[{\"instance_id\":\"probe.sv::instance:probe_top.u_leaf\",\"instance_name\":\"u_leaf\",\"qualified_name\":\"probe_top.u_leaf\",\"file\":\"probe.sv\",\"line\":5,\"bindings\":[{\"port\":\"a\",\"actual\":\"a\",\"position\":null,\"wildcard\":false,\"confidence\":1.0,\"line\":5},{\"port\":\"y\",\"actual\":\"y\",\"position\":null,\"wildcard\":false,\"confidence\":1.0,\"line\":5}]}]}]}",
+          "type": "text"
+        }
+      ],
+      "isError": false,
+      "structuredContent": {
+        "units": [
+          {
+            "unit_id": "probe.sv::module:probe_leaf",
+            "name": "probe_leaf",
+            "kind": "module",
+            "file": "probe.sv",
+            "line": 1,
+            "language": "systemverilog",
+            "ports": [
+              {
+                "id": "probe.sv::port:probe_leaf.a",
+                "name": "a",
+                "index": 0,
+                "line": 1,
+                "attrs": {
+                  "direction": "input",
+                  "index": 0,
+                  "type_text": "input logic [W-1:0]"
+                },
+                "direction": "input"
+              },
+              {
+                "id": "probe.sv::port:probe_leaf.y",
+                "name": "y",
+                "index": 1,
+                "line": 1,
+                "attrs": {
+                  "direction": "output",
+                  "index": 1,
+                  "type_text": "output logic [W-1:0]"
+                },
+                "direction": "output"
+              }
+            ],
+            "parameters": [
+              {
+                "id": "probe.sv::parameter:probe_leaf.W",
+                "name": "W",
+                "index": 0,
+                "line": 1,
+                "attrs": {
+                  "default": "8",
+                  "index": 0,
+                  "is_localparam": false
+                },
+                "is_localparam": false
+              }
+            ],
+            "instances": [
+              {
+                "instance_id": "probe.sv::instance:probe_top.u_leaf",
+                "instance_name": "u_leaf",
+                "qualified_name": "probe_top.u_leaf",
+                "file": "probe.sv",
+                "line": 5,
+                "bindings": [
+                  {
+                    "port": "a",
+                    "actual": "a",
+                    "position": null,
+                    "wildcard": false,
+                    "confidence": 1,
+                    "line": 5
+                  },
+                  {
+                    "port": "y",
+                    "actual": "y",
+                    "position": null,
+                    "wildcard": false,
+                    "confidence": 1,
+                    "line": 5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

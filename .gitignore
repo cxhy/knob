@@ -11,6 +11,9 @@
 /runs/
 .venv/
 
+# User-provided UVMF distribution archives
+/UVMF_*.tar.gz
+
 # Simulator artifacts outside the standard output directories
 simv
 simv.daidir/

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/node",
+    "/home/guodz/workspace/knob/framework/bin/knob-project.mjs",
+    "compile",
+    "--root",
+    "/home/guodz/workspace/knob/build/project-entry-validation/shared",
+    "--project",
+    "/home/guodz/workspace/knob/build/project-entry-validation/e2e",
+    "--build",
+    "should-not-compile",
+    "--env",
+    "/home/guodz/install_vcs/vcs_env.sh",
+    "--vcs",
+    "/home/guodz/install_vcs/bin/vcs"
+  ],
+  "raw_exit": 1
+}

@@ -1,0 +1,15 @@
+{
+  "command": "bash",
+  "args": [
+    "/home/guodz/workspace/verification-deps/framework/0.2.0/payload/adapters/vcs-compile.sh",
+    "/home/guodz/install_vcs/vcs_env.sh",
+    "/home/guodz/install_vcs/bin/vcs",
+    "/home/guodz/workspace/knob/build/project-entry-validation/installed-project/build/baseline",
+    "/home/guodz/workspace/knob/build/project-entry-validation/installed-project/build/baseline/sources.f",
+    "-top",
+    "hdl_top",
+    "-top",
+    "hvl_top"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/project-entry-validation/installed-project"
+}

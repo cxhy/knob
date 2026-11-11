@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "functional_pass": true,
+  "reasons": [],
+  "seed": "101",
+  "build": "public",
+  "fingerprint": "7e558a9207daf15c5030f4ab476c40977c6c6181cb33ab518ccd192c11e2b8fe",
+  "kind": "functional",
+  "raw_exit": 0
+}

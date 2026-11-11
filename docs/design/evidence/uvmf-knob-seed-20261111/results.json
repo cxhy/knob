@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-11-11T11:30:18.215Z",
+  "results": {
+    "a": {
+      "count": 6,
+      "matches": 6,
+      "uvm_errors": 0,
+      "functional_pass": true,
+      "trace_sha256": "9a1875327283cd37864d823984bfd6d2a228a1b3631e191ab69503d1cc062d4d",
+      "configurations": [
+        "LC_CONFIG stage=post_randomize count=6 word=759987aa calls=2",
+        "LC_CONFIG stage=post_randomize count=6 word=759987aa calls=2",
+        "LC_CONFIG stage=initialized count=6 word=759987aa calls=2",
+        "LC_CONFIG stage=behavior count=6 word=759987aa calls=2"
+      ]
+    },
+    "replay": {
+      "count": 6,
+      "matches": 6,
+      "uvm_errors": 0,
+      "functional_pass": true,
+      "trace_sha256": "9a1875327283cd37864d823984bfd6d2a228a1b3631e191ab69503d1cc062d4d",
+      "configurations": [
+        "LC_CONFIG stage=post_randomize count=6 word=759987aa calls=2",
+        "LC_CONFIG stage=post_randomize count=6 word=759987aa calls=2",
+        "LC_CONFIG stage=initialized count=6 word=759987aa calls=2",
+        "LC_CONFIG stage=behavior count=6 word=759987aa calls=2"
+      ]
+    },
+    "b": {
+      "count": 14,
+      "matches": 11,
+      "uvm_errors": 0,
+      "functional_pass": true,
+      "trace_sha256": "a4f88ae5084691df8ad9d49d4d3156ea367a0ec33fc22bbf6234eadda31d6897",
+      "configurations": [
+        "LC_CONFIG stage=post_randomize count=14 word=759987aa calls=2",
+        "LC_CONFIG stage=post_randomize count=14 word=759987aa calls=2",
+        "LC_CONFIG stage=initialized count=14 word=759987aa calls=2",
+        "LC_CONFIG stage=behavior count=14 word=759987aa calls=2"
+      ]
+    },
+    "seed202": {
+      "count": 8,
+      "matches": 7,
+      "uvm_errors": 0,
+      "functional_pass": true,
+      "trace_sha256": "dcfbc9a21bcecaf3e67a455f97e75e7001d33c6452306df9c4893eccd436c76b",
+      "configurations": [
+        "LC_CONFIG stage=post_randomize count=8 word=5b515641 calls=2",
+        "LC_CONFIG stage=post_randomize count=8 word=5b515641 calls=2",
+        "LC_CONFIG stage=initialized count=8 word=5b515641 calls=2",
+        "LC_CONFIG stage=behavior count=8 word=5b515641 calls=2"
+      ]
+    },
+    "disabled": {
+      "count": 0,
+      "matches": 0,
+      "uvm_errors": 1,
+      "functional_pass": false,
+      "trace_sha256": "ff912639b381f576fb069511ea20a978ce8db58f495bd9518a7ae5f1ad5736e6",
+      "configurations": [
+        "LC_CONFIG stage=post_randomize count=0 word=759987aa calls=2",
+        "LC_CONFIG stage=post_randomize count=0 word=759987aa calls=2",
+        "LC_CONFIG stage=initialized count=0 word=759987aa calls=2",
+        "LC_CONFIG stage=behavior count=0 word=759987aa calls=2"
+      ]
+    },
+    "unknown": {
+      "expected_fatal": "KNOB_UNKNOWN",
+      "raw_exit": 0
+    },
+    "missing_seed": {
+      "expected_fatal": "KNOB_SEED",
+      "raw_exit": 0
+    },
+    "duplicate_seed": {
+      "expected_fatal": "KNOB_SEED",
+      "raw_exit": 0
+    }
+  },
+  "original_inputs_unchanged": true,
+  "compile_warnings": [
+    "TFIPC",
+    "TFIPC"
+  ]
+}

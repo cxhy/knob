@@ -1,0 +1,79 @@
+{
+  "evaluated_at": "2026-11-11T09:25:16.233Z",
+  "release": "2024-08-05:817b9746ddcfa2b003d5034380a9dc44a3fc14bc",
+  "results": {
+    "baseline": {
+      "raw_exit": 0,
+      "errors": 0,
+      "warnings": [
+        "COVERAGE_MODEL_REVIEW",
+        "PREDICTOR_REVIEW"
+      ],
+      "predicted": 21,
+      "matches": 21,
+      "mismatches": 0,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+      "simv_sha256": "b86beaeba226582730e8cc821c16a2f9cc932a8a4bbdb3657db6c2dd1048d0d9"
+    },
+    "replay": {
+      "raw_exit": 0,
+      "errors": 0,
+      "warnings": [
+        "COVERAGE_MODEL_REVIEW",
+        "PREDICTOR_REVIEW"
+      ],
+      "predicted": 21,
+      "matches": 21,
+      "mismatches": 0,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+      "simv_sha256": "b86beaeba226582730e8cc821c16a2f9cc932a8a4bbdb3657db6c2dd1048d0d9"
+    },
+    "seed202": {
+      "raw_exit": 0,
+      "errors": 0,
+      "warnings": [
+        "COVERAGE_MODEL_REVIEW",
+        "PREDICTOR_REVIEW"
+      ],
+      "predicted": 20,
+      "matches": 20,
+      "mismatches": 0,
+      "trace_sha256": "1923b2a227fda16e6a2792aa6c2d9c17fd0fd2a601d4427134135d883369945e",
+      "simv_sha256": "b86beaeba226582730e8cc821c16a2f9cc932a8a4bbdb3657db6c2dd1048d0d9"
+    },
+    "fault": {
+      "raw_exit": 0,
+      "errors": 21,
+      "warnings": [
+        "COVERAGE_MODEL_REVIEW",
+        "PREDICTOR_REVIEW"
+      ],
+      "predicted": 21,
+      "matches": 0,
+      "mismatches": 21,
+      "trace_sha256": "e04b3ff51aca60abfbe70c3931db52e6171b09b9313ae1463925b4a1dc462475",
+      "simv_sha256": "1aabfcaff528b0dc68439a17ce856fc43aea091ac8bded5d41546aa754ca73dd"
+    },
+    "regenerated": {
+      "raw_exit": 0,
+      "errors": 0,
+      "warnings": [
+        "COVERAGE_MODEL_REVIEW",
+        "PREDICTOR_REVIEW"
+      ],
+      "predicted": 21,
+      "matches": 21,
+      "mismatches": 0,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10",
+      "simv_sha256": "cf9bfe0a620a02f543aa8190d24bb850fe422e8c990b93ac0e6ecaef288a0f4a"
+    }
+  },
+  "original_package_unchanged": true,
+  "working_library_unchanged": true,
+  "regeneration_hdl_equal": true,
+  "compile_warning_ids": [
+    "TFIPC",
+    "TFIPC"
+  ],
+  "no_knob_inputs": true
+}

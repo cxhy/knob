@@ -1,0 +1,113 @@
+{
+  "checked_at": "2026-11-11T14:50:55.611Z",
+  "task": "knob-uv7.16",
+  "product_head": "8847bc73dee4bced619ee1ef526150c441e37fcd",
+  "product_commit_contains_runtime": false,
+  "missing_runtime_files_in_head": [
+    "deployment/README.md",
+    "deployment/inputs.json",
+    "framework/LICENSE",
+    "framework/README.md",
+    "framework/adapters/vcs-compile.sh",
+    "framework/adapters/vcs-run.sh",
+    "framework/bin/knob-deps.mjs",
+    "framework/bin/knob-project.mjs",
+    "framework/release.json",
+    "framework/templates/alu/project.json",
+    "scripts/deploy-shared-deps.mjs",
+    "scripts/prepare-shared-deps.sh"
+  ],
+  "git_delivery_pending": true,
+  "candidate_result": {
+    "checked_at": "2026-11-11T14:48:17.974Z",
+    "candidate_clone": true,
+    "product_repository_committed": false,
+    "clone": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/clean checkout",
+    "shared_root": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/selected-shared",
+    "source_archive": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/inputs/UVMF_2023.4_2.tar.gz",
+    "shallow": true,
+    "tags": [],
+    "bootstrap_without_git_uv_python_vcs": true,
+    "deployment_cases": 12,
+    "all_expected_results": true,
+    "releases": [
+      {
+        "component": "uvmf",
+        "version": "2023.4_2",
+        "manifest_sha256": "4d425be71e8329b7607d32e020722a234654aa53c653cfcf678dfa9ad5bbe468",
+        "content_sha256": "8e24ff4a4593e7c1e90591781f70bc24b5b15e25c2f1825237e7710722829117",
+        "status": "published",
+        "path": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/selected-shared/uvmf/2023.4_2"
+      },
+      {
+        "component": "framework",
+        "version": "0.3.0",
+        "manifest_sha256": "495b599ddde3079d36fb58586d872a0ce25c305c0a7272e500296fa68408b14a",
+        "content_sha256": "05232b7e494b0e4c8db4ad4106db3c5bb1d13eaa11cee3e5cef6624a6a67a4a1",
+        "status": "published",
+        "path": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/selected-shared/framework/0.3.0"
+      },
+      {
+        "component": "knob",
+        "version": "1.2.0",
+        "manifest_sha256": "14941b59640b07025ad8e6c610511349e271c5c03122c5d3de80a1317dc1829d",
+        "content_sha256": "aa36c0310bca5284ac32fe37ab789bb36b33216a220ea0a3ee0b4ce4d9af7726",
+        "status": "published",
+        "path": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/selected-shared/knob/1.2.0"
+      }
+    ],
+    "source_hashes": {
+      "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "deployment/README.md": "8dfbe0e36bf11d8d0cb27cbf8831cb99e6c7b559bf0b35504efeccfecd4b9e4a",
+      "deployment/inputs.json": "d74f50645f21a20e61355c4f334a84c1d77500094d9fecbffa7592b8acc7cb41",
+      "framework/LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "framework/README.md": "39777bc0ca116d1cc53b50da70a3db6eaa3cbd35aa566de1d3dd81bc16b20017",
+      "framework/adapters/vcs-compile.sh": "0f4ae466572b4dba91db8434bb817394483e13df25d0dbdfa9bf26f1c9332ebf",
+      "framework/adapters/vcs-run.sh": "566a4c09de0ee2d7c760fe9a08e48b77c92c21dabe1820219bdf664ea3b6ea17",
+      "framework/bin/knob-deps.mjs": "b413d8177494b2103786896e16881a6ab615db98be24d832455c3dd05f749c12",
+      "framework/bin/knob-project.mjs": "3578011445c26562c6c306779b183dd545fddc2338e4813b9a4c8c5869b5af60",
+      "framework/release.json": "0c60bd872446d0affb43054010f648653c809ed3b8b80168529b2762e46c6def",
+      "framework/templates/alu/project.json": "32548ec94d46fef9d994506e712f7c7ad56b7af8c0b5ab9ebeac9b7328e37bb3",
+      "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+      "scripts/deploy-shared-deps.mjs": "77e02aa57df048b5fe23bc196ba808d86a60b25ebeeb60e50fd6d26126b200d0",
+      "scripts/prepare-shared-deps.sh": "71f40bfd7f4afb5b92c60ad3468b8cf944f56fcd4fb25bc5250e66b65df67341",
+      "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed"
+    }
+  },
+  "runtime": {
+    "status": "passed",
+    "raw_exit": 0,
+    "requests": 25,
+    "matches": 21,
+    "uvm_errors": 0,
+    "uvm_fatals": 0,
+    "artifacts": {
+      "simv": "a54786f7b508e140d51b5272eb1c26a687ada0e2ec0a65acee04b6846d5cd4d4",
+      "simv.daidir/_1945944_archive_1.so": "50bd130e351a5f331bf0a88219d24c4243ee470eda822e5792ac65f445c973bd",
+      "simv.daidir/rmapats.so": "94f953b74f9abf10d79c067c74570f22f55a56e0d95427f69a9fcd993beeb47d"
+    }
+  },
+  "same_deployed_materials": true,
+  "unit_checks": 15,
+  "local_links_checked": 17,
+  "spec_body_exact": true,
+  "source_hashes": {
+    "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "deployment/README.md": "8dfbe0e36bf11d8d0cb27cbf8831cb99e6c7b559bf0b35504efeccfecd4b9e4a",
+    "deployment/inputs.json": "d74f50645f21a20e61355c4f334a84c1d77500094d9fecbffa7592b8acc7cb41",
+    "framework/LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "framework/README.md": "39777bc0ca116d1cc53b50da70a3db6eaa3cbd35aa566de1d3dd81bc16b20017",
+    "framework/adapters/vcs-compile.sh": "0f4ae466572b4dba91db8434bb817394483e13df25d0dbdfa9bf26f1c9332ebf",
+    "framework/adapters/vcs-run.sh": "566a4c09de0ee2d7c760fe9a08e48b77c92c21dabe1820219bdf664ea3b6ea17",
+    "framework/bin/knob-deps.mjs": "b413d8177494b2103786896e16881a6ab615db98be24d832455c3dd05f749c12",
+    "framework/bin/knob-project.mjs": "3578011445c26562c6c306779b183dd545fddc2338e4813b9a4c8c5869b5af60",
+    "framework/release.json": "0c60bd872446d0affb43054010f648653c809ed3b8b80168529b2762e46c6def",
+    "framework/templates/alu/project.json": "32548ec94d46fef9d994506e712f7c7ad56b7af8c0b5ab9ebeac9b7328e37bb3",
+    "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+    "scripts/deploy-shared-deps.mjs": "77e02aa57df048b5fe23bc196ba808d86a60b25ebeeb60e50fd6d26126b200d0",
+    "scripts/prepare-shared-deps.sh": "71f40bfd7f4afb5b92c60ad3468b8cf944f56fcd4fb25bc5250e66b65df67341",
+    "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed",
+    "tests/deployment-portability.mjs": "b6206f17702076d07d3abdc75cfefee33cdad01412164528f97b07905bdb2f92",
+    "README.md": "0640bcc866ad44988be1acb3b7d3ad8bec7426b1df8c61de6fa538d1397a3c43"
+  }
+}

@@ -1,0 +1,1 @@
+/home/guodz/install_vcs/bin/vcs -full64 -sverilog -ntb_opts uvm-1.2 -timescale=1ns/1ps -f /home/guodz/workspace/knob/build/uvmf-knob-lifecycle/seed-check/sources.f -top hdl_top -top hvl_top -o /home/guodz/workspace/knob/build/uvmf-knob-lifecycle/seed-check/out/simv -l /home/guodz/workspace/knob/build/uvmf-knob-lifecycle/seed-check/out/compile.log 

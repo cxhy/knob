@@ -29,6 +29,18 @@ link1.tx.enabled=false
 
 当前不支持运行中修改、命令行 knob 覆盖、自动发现字段、通配符、配置表达式和文件 include。配置不能改变编译期 `parameter`、位宽或 `generate` 结构。框架依赖 UVM，不提供无 UVM 运行模式。
 
+## 从新 checkout 部署公共依赖
+
+公共框架、UVMF 和可选 knob 可以从本仓库部署到显式指定的共享目录，不依赖开发机已有的共享路径、build 缓存或 Git 标签。
+
+```bash
+bash scripts/prepare-shared-deps.sh /path/to/shared /path/to/UVMF_2023.4_2.tar.gz
+```
+
+UVMF 归档需由使用者提供；本仓库不包含它，也不会自动下载。准备过程需要 Linux/Bash、Node.js 20+；使用归档时另需 GNU tar/gzip。uv/Python 和 VCS/许可证分别在生成、编译仿真阶段准备，不是复制公共材料的前提。
+
+完整前置条件、目录输入方式和验证步骤见 [新环境部署说明](deployment/README.md)。
+
 ## 环境要求
 
 | 用途 | 要求 |

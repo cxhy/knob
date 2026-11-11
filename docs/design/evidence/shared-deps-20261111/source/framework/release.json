@@ -1,0 +1,7 @@
+{
+  "component": "framework",
+  "version": "0.1.0",
+  "stage": "dependency-foundation",
+  "python": "3.12.13",
+  "node_minimum_major": 20
+}

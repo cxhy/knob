@@ -1,0 +1,171 @@
+{
+  "checked_at": "2026-11-11T12:10:36.906Z",
+  "project": "/home/guodz/workspace/knob/build/project-entry-validation/e2e",
+  "root": "/home/guodz/workspace/knob/build/project-entry-validation/shared",
+  "actions": [
+    {
+      "label": "init",
+      "status": "initialized"
+    },
+    {
+      "label": "generate-initial",
+      "status": "generated"
+    },
+    {
+      "label": "compile-baseline",
+      "status": "compiled"
+    },
+    {
+      "label": "baseline",
+      "status": "passed"
+    },
+    {
+      "label": "replay",
+      "status": "passed"
+    },
+    {
+      "label": "regress",
+      "status": "completed"
+    },
+    {
+      "label": "generate-same",
+      "status": "generated"
+    },
+    {
+      "label": "compile-same",
+      "status": "compiled"
+    },
+    {
+      "label": "same",
+      "status": "passed"
+    },
+    {
+      "label": "reject-stale-yaml",
+      "status": "expected_failure"
+    },
+    {
+      "label": "reject-unregenerated",
+      "status": "expected_failure"
+    },
+    {
+      "label": "generate-delta",
+      "status": "generated"
+    },
+    {
+      "label": "compile-delta",
+      "status": "compiled"
+    },
+    {
+      "label": "delta",
+      "status": "passed"
+    },
+    {
+      "label": "reject-merge-conflict",
+      "status": "expected_failure"
+    },
+    {
+      "label": "generate-after-dv-repair",
+      "status": "generated"
+    },
+    {
+      "label": "compile-skeleton",
+      "status": "compiled"
+    },
+    {
+      "label": "skeleton",
+      "status": "skeleton_ok"
+    }
+  ],
+  "runs": {
+    "baseline": {
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10"
+    },
+    "replay": {
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10"
+    },
+    "batch-0": {
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10"
+    },
+    "batch-1": {
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "202",
+      "build": "baseline",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 20,
+      "trace_sha256": "1923b2a227fda16e6a2792aa6c2d9c17fd0fd2a601d4427134135d883369945e"
+    },
+    "same": {
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "same",
+      "fingerprint": "fe4fc1b973c3d3be0c67a8402cd567300c71c0ff0f632d8bdf53c43d9359e4ed",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10"
+    },
+    "delta": {
+      "status": "passed",
+      "functional_pass": true,
+      "reasons": [],
+      "seed": "101",
+      "build": "delta",
+      "fingerprint": "1cd203aed9f3f3c554522da016b85b548f07eb6317f90ce9208ea6b9d86ae4c6",
+      "kind": "functional",
+      "raw_exit": 0,
+      "matches": 21,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10"
+    },
+    "skeleton": {
+      "status": "skeleton_ok",
+      "functional_pass": false,
+      "reasons": [],
+      "seed": "101",
+      "build": "skeleton",
+      "fingerprint": "c0fd1f1a14ec8e919209b0e25087a4e97b796733b6ee08377673008b226c53cc",
+      "kind": "skeleton",
+      "raw_exit": 0,
+      "matches": 21,
+      "trace_sha256": "cd4c7cdb0ff8c06d90d73133020e78b64557d906b8e444f98fdecaeba1436c10"
+    }
+  },
+  "same_yaml_hdl_files": 60,
+  "handwritten_sha256": "6a728cb21d62177d3f1ddabb7fbe054cef351aa0fd3e775f58fa6bab6a2235a1",
+  "delta_field": "audit_marker=17",
+  "merge_failure_preserved_original": true,
+  "explicit_dv_repair": true,
+  "no_knob": true
+}

@@ -1,0 +1,1 @@
+timeout 60 /home/guodz/workspace/knob/build/uvmf-standalone/repro2/fault/simv +UVM_TESTNAME=test_top +ntb_random_seed=101 +UVM_VERBOSITY=UVM_HIGH -l run.log 

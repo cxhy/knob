@@ -1,0 +1,12 @@
+{
+  "command": "git",
+  "args": [
+    "-C",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/clean checkout",
+    "rev-parse",
+    "--is-shallow-repository"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate",
+  "raw_exit": 0,
+  "environment_profile": "git-isolated"
+}

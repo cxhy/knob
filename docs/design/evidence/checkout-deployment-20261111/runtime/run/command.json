@@ -1,0 +1,14 @@
+{
+  "command": "bash",
+  "args": [
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/final-clean/selected-shared/framework/0.3.0/payload/adapters/vcs-run.sh",
+    "/home/guodz/install_vcs/vcs_env.sh",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/final-clean/new-project/runs/seed101",
+    "60",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/final-clean/new-project/build/fresh/simv",
+    "+UVM_TESTNAME=test_top",
+    "+ntb_random_seed=101",
+    "+UVM_VERBOSITY=UVM_HIGH"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/checkout-deploy-validation/final-clean/new-project"
+}

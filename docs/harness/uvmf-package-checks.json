@@ -1,0 +1,99 @@
+{
+  "checked_utc": "2026-11-11T08:49:03.671845+00:00",
+  "provenance": "User-provided archive after request for official package; upstream signature/checksum not supplied",
+  "version": "2023.4_2",
+  "release_info": "2024-08-05:817b9746ddcfa2b003d5034380a9dc44a3fc14bc",
+  "archive": {
+    "archive": "build/vendor/uvmf/incoming/UVMF_2023.4_2.tar.gz",
+    "bytes": 16247563,
+    "sha256": "36e556e84960158f0d036a49881e900628d301264e647fd9789c8ebc03bd31d0",
+    "members": 2529,
+    "file_bytes": 29040746,
+    "types": {
+      "0": 2112,
+      "5": 417
+    },
+    "roots": [
+      "UVMF_2023.4_2"
+    ],
+    "rejected": []
+  },
+  "root_archive_matches": true,
+  "extracted_regular_files_verified": 2112,
+  "extracted_manifest": "build/vendor/uvmf/audit/extracted-manifest.json",
+  "extracted_manifest_sha256": "7e8dd9b23bb275dcd44b771506c1c83a562368bcfb9da105e06829ab3cc898d7",
+  "source_files": [
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/release.INFO",
+      "sha256": "f50d4720213c08c2c3485010993bcaf56a92cbfecd1e14dc9f0173be56636f18"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/docs/uvmf.RELEASE_NOTES",
+      "sha256": "3ccb73a606c2ce25fcdd4059b6e10e700dc99feea4e20b5ccf1c286f067f4376"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/docs/UVM_Framework_Users_Guide.pdf",
+      "sha256": "cd3d96e088ccff1b48be5b124e4dd0273186c20b4ad84d06cd9cbe1c579db5b9"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/docs/UVMF_Code_Generator_YAML_Reference.pdf",
+      "sha256": "f7ea2edaf02f4dd922dc55142df9e145b32b0622692023a344ff86c45d0e066f"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/generators.README",
+      "sha256": "5ce0b76098a6c1b87e9398143240f6614f4fcba80d56452fabe6596a8e7abbf8"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/uvmf_version.py",
+      "sha256": "b909c4bb14d2e4cf3447483900cabb80222dc15603308cff1f88d5fbaec73b41"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/scripts/yaml2uvmf.py",
+      "sha256": "770625ece0345dceab9edc0baca08ff1803e2430ca68a29f8c5f8cb90ad77fa4"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/uvmf_gen.py",
+      "sha256": "9d171f409fc5fc714e8410776fa53bfaccd9db2354bd687a4c881033418220fe"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/uvmf_yaml/regen.py",
+      "sha256": "de2fdd9985d64c5201442f25833bd914e3b5aa25c94b1fe34148da1d8f5f7232"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv",
+      "sha256": "9d80fb0693f9c97fb0a1494b9c1505a64234e49eb61cb34ec4a7538cdff386cd"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/uvmf_base_pkg/src/uvmf_test_base.svh",
+      "sha256": "99d1280a93e30744dc14c1e6902fff19a4a6ec82a0d1e56d72115be6bb4b21d7"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/template_files/bench_templates/bench_tb_tests_src_test_top_svh.TMPL",
+      "sha256": "84726d336fc9653285bdc0112bfe21a8e6bc0d7241635845e2e7cb93e7c488ee"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/scripts/Makefile",
+      "sha256": "3cc701723b6ed0c815f93c6dfb183e4c2d07c2cf4262c90e8b17de61dae0750d"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/python3/jinja2/__init__.py",
+      "sha256": "353070330b040ab7479b179717bb1ebac1cbceb87a2dd9f503daa14b9703b9fd"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/python3/markupsafe/__init__.py",
+      "sha256": "afb54e4e352aec4310e2fde9e11d4ba15386260eb2b1f6119dc2ebdf895a441b"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/python3/yaml/__init__.py",
+      "sha256": "6e1974e6a49e3bed59c654918c6aef9769bd9eb5dbd67f7e1906ad4cdd0caea7"
+    },
+    {
+      "path": "build/vendor/uvmf/unpacked/UVMF_2023.4_2/templates/python/voluptuous/__init__.py",
+      "sha256": "0376dc47b86f00d159914592f3c296d9b17535893625288785c269ddb154ed56"
+    }
+  ],
+  "package_code_executed": false,
+  "uvmf_generation_tested": false,
+  "vcs_compilation_tested": false,
+  "regeneration_tested": false
+}

@@ -1,0 +1,11 @@
+{
+  "command": "/bin/bash",
+  "args": [
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/clean checkout/scripts/prepare-shared-deps.sh",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/selected-shared",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/inputs/UVMF_2023.4_2.tar.gz"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate",
+  "raw_exit": 0,
+  "environment_profile": "bootstrap-tools-only"
+}

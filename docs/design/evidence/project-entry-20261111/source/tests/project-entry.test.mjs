@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {verdict} from '../framework/bin/knob-project.mjs';
+const clean='UVM_ERROR : 0\nUVM_FATAL : 0\nSCOREBOARD_RESULTS: PREDICTED_TRANSACTIONS=3 MATCHES=3 MISMATCHES=0\n$finish at simulation time 10ns';
+const functional={kind:'functional',checks:[{pattern:'PREDICTED_TRANSACTIONS=(\\d+) MATCHES=(\\d+) MISMATCHES=(\\d+)',positive_groups:[1],zero_groups:[3],equal_groups:[[1,2]]}]};
+test('a nonempty comparison and clean simulator result can pass',()=>assert.equal(verdict(clean,0,functional).functional_pass,true));
+test('raw nonzero remains a failure even with clean UVM logs',()=>assert(verdict(clean,139,functional).reasons.includes('abnormal_process_exit')));
+test('fatal header is rejected even if a misleading summary says zero',()=>assert.equal(verdict('UVM_FATAL @ 0: reporter [BAD] failure\n'+clean,0,functional).status,'failed'));
+test('zero-transaction checker output cannot be a functional pass',()=>assert.equal(verdict(clean.replaceAll('=3','=0'),0,functional).functional_pass,false));
+test('incomplete comparison cannot be a functional pass',()=>assert(verdict(clean.replace('MATCHES=3','MATCHES=2'),0,functional).reasons.includes('comparison_check_failed')));
+test('skeleton success is explicitly not functional success',()=>assert.deepEqual(verdict(clean,0,{kind:'skeleton',checks:[]}),{status:'skeleton_ok',functional_pass:false,reasons:[]}));
+test('missing summary or completion remains failure',()=>assert.equal(verdict('SCOREBOARD_RESULTS: PREDICTED_TRANSACTIONS=3 MATCHES=3 MISMATCHES=0',0,functional).status,'failed'));

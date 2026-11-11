@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11T07:54:32.793Z",
+  "snapshot": "/home/guodz/workspace/knob/build/uvmf-pilot/chi_async_bridge-20261111",
+  "file_count": 424,
+  "manifest_sha256": "fde9a4e1eed82c79469c3067a320c47ae5db16e0dfffad615c128ca548c9d5e0",
+  "checks": {
+    "status_unchanged": true,
+    "head_unchanged": true,
+    "files_unchanged": true,
+    "git_metadata_unchanged": true,
+    "source_hashes_unchanged": true,
+    "copy_hashes_match": true,
+    "independent_regular_files": true,
+    "no_copied_git_or_environment": true
+  }
+}

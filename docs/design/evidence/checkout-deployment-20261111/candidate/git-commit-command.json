@@ -1,0 +1,17 @@
+{
+  "command": "git",
+  "args": [
+    "-C",
+    "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate/candidate",
+    "-c",
+    "user.name=Deployment fixture",
+    "-c",
+    "user.email=fixture@invalid.local",
+    "commit",
+    "-m",
+    "Candidate deployment fixture"
+  ],
+  "cwd": "/home/guodz/workspace/knob/build/checkout-deploy-validation/delivery-candidate",
+  "raw_exit": 0,
+  "environment_profile": "git-isolated"
+}

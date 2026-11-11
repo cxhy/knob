@@ -1,0 +1,4 @@
+Command: /home/guodz/workspace/knob/build/uvmf-knob-lifecycle/seed-check/out/simv +UVM_TESTNAME=test_top +UVM_VERBOSITY=UVM_HIGH +ntb_random_seed=101 -l run.log
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Nov 11 19:16 2026
