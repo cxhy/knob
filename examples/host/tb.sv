@@ -56,14 +56,41 @@ package host_pkg;
     endtask
   endclass
 
+  // Plain SystemVerilog class: no UVM or sequence inheritance is needed.
+  class host_header_policy;
+    local knob_scope cfg;
+    function new(knob_scope cfg); this.cfg = cfg; endfunction
+    function int frame_length(int payload_length);
+      int header_bytes = int'(cfg.get_int("header_bytes"));
+      bit enabled = cfg.get_bool("enabled");
+      return payload_length + (enabled ? header_bytes : 0);
+    endfunction
+  endclass
+
   class host_driver extends uvm_driver #(host_packet);
     `uvm_component_utils(host_driver)
+    knob_scope timing_cfg, header_cfg;
     function new(string name, uvm_component parent); super.new(name,parent); endfunction
+    function int configured_delay_ns();
+      return int'(timing_cfg.get_int("delay_ns"));
+    endfunction
+    task wait_for_transfer();
+      int delay_ns = configured_delay_ns();
+      realtime started = $realtime;
+      #(delay_ns * 1ns);
+      $display("HOST_TIMING port=%s delay_ns=%0d elapsed_ps=%0d",
+               get_parent().get_name(), delay_ns, longint'(($realtime-started)/1ps));
+    endtask
     task run_phase(uvm_phase phase);
+      host_header_policy header_policy = new(header_cfg);
       forever begin
+        int framed_length;
         seq_item_port.get_next_item(req);
-        #1ns;
-        $display("HOST_TX port=%s length=%0d payload=%08h", get_parent().get_name(), req.length, req.payload);
+        framed_length = header_policy.frame_length(req.length);
+        $display("HOST_FRAME port=%s input_length=%0d output_length=%0d",
+                 get_parent().get_name(), req.length, framed_length);
+        wait_for_transfer();
+        $display("HOST_TX port=%s length=%0d payload=%08h", get_parent().get_name(), framed_length, req.payload);
         seq_item_port.item_done();
       end
     endtask
@@ -109,9 +136,11 @@ package host_pkg;
     host_env env;
     knob_store knobs;
     knob_scope scopes[2];
+    knob_scope timing_scopes[2], header_scopes[2];
     function new(string name, uvm_component parent); super.new(name,parent); endfunction
     function void build_phase(uvm_phase phase);
       knob_schema schema;
+      knob_schema timing_schema, header_schema;
       host_budget_check budget_check;
       super.build_phase(phase);
       void'(validate_seed());
@@ -124,9 +153,25 @@ package host_pkg;
       schema.define_bool("enabled", 1);
       schema.require_le("min_length","max_length");
       for (int i=0; i<2; i++) scopes[i] = schema.bind_scope(knobs,$sformatf("link%0d.tx",i));
+      timing_schema = new;
+      timing_schema.define_int("delay_ns",1,0,1000);
+      header_schema = new;
+      header_schema.define_int("header_bytes",0,0,64);
+      header_schema.define_bool("enabled",1);
+      for (int i=0; i<2; i++) begin
+        timing_scopes[i] = timing_schema.bind_scope(knobs,$sformatf("link%0d.driver",i));
+        header_scopes[i] = header_schema.bind_scope(knobs,$sformatf("link%0d.header",i));
+      end
       knobs.register_int("shared.budget",16,0,2000);
       budget_check = new;
       knobs.add_validator("host_budget",budget_check);
+    endfunction
+    function void connect_phase(uvm_phase phase);
+      super.connect_phase(phase);
+      for (int i=0; i<2; i++) begin
+        env.agents[i].driver.timing_cfg = timing_scopes[i];
+        env.agents[i].driver.header_cfg = header_scopes[i];
+      end
     endfunction
     function void end_of_elaboration_phase(uvm_phase phase);
       knobs.load_and_freeze();
@@ -146,6 +191,23 @@ package host_pkg;
       knobs.report_unused();
       phase.drop_objection(this);
     endtask
+  endclass
+  class host_driver_early_read_test extends host_test;
+    `uvm_component_utils(host_driver_early_read_test)
+    function new(string name, uvm_component parent); super.new(name,parent); endfunction
+    function void end_of_elaboration_phase(uvm_phase phase);
+      void'(env.agents[0].driver.configured_delay_ns());
+      super.end_of_elaboration_phase(phase);
+    endfunction
+  endclass
+  class host_helper_early_read_test extends host_test;
+    `uvm_component_utils(host_helper_early_read_test)
+    function new(string name, uvm_component parent); super.new(name,parent); endfunction
+    function void end_of_elaboration_phase(uvm_phase phase);
+      host_header_policy helper = new(header_scopes[0]);
+      void'(helper.frame_length(64));
+      super.end_of_elaboration_phase(phase);
+    endfunction
   endclass
   // Harness fixture for native simulator failures, independent of knob diagnostics.
   class host_runtime_abort_test extends host_test;

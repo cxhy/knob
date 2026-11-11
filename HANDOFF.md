@@ -4,62 +4,52 @@
 
 ## 当前阶段
 
-用户批准按 v1.1 推进任务。本轮已完成任务拆分、首版接入框架实现、独立宿主集成和验收。Beads 母事项 `knob-be2` 已关闭；实施切片 `knob-be2.3`～`.6` 全部关闭，分别对应编译接入/声明复用、用户校验、独立宿主/文档、回归证据。此前原型 `.1`、规格整理 `.2` 已关闭。
+用户批准将 knob 扩展为验证环境中通用的运行期配置接口。规格现为 `docs/design/knob-spec.md` v1.2；实施事项 `knob-l8r` 与范围决定 `knob-vjr` 已关闭。事项 knob-l8r 的正文与现行规格逐字一致；已完成的 v1.1 母事项 knob-be2 改为引用历史 `docs/design/knob-spec-v1.1.md`，其旧规格正文保留。
 
-正式合同为 `docs/design/knob-spec.md` v1.1。本轮未改规格，Beads 正文与其逐字一致。T1～T19 已映射至 `docs/design/framework-results.md` 的可观察证据；这表示固定 VCS/UVM 环境下的规格验收场景通过，不表示所有输入被穷举或完成第三方平台认证。
+核心库没有修改，公共接口本来就不依赖 sequence 类型。本轮同步范围说明并在独立宿主验证非 sequence 使用方；独立代码审查尚未执行。
 
-## 用户决定与恢复规则
+## 范围与用户决定
 
-用户明确：UVM 日志关键字判断用例结果，VCS 非零退出码单独属于运行异常。UVM_FATAL 后原始码为 0 是允许行为，不是待修复问题。接入方无需采用项目示例脚本、汇总状态码或 KNOB_DEMO_PASS 标志。
+配置使用方可以是 sequence/item、UVM 组件、普通 SV 类，以及能够取得句柄的 task/function。每个可调值仍须显式接入，所有声明和使用位置在统一加载前登记。普通使用方只能在冻结后读取；使用方对象可在冻结后创建，重复读取返回同一冻结值。相关行为或随机化必须在配置应用后执行。
 
-继续遵守 AGENTS.md。开始时读取本文件、正式规格、GLOSSARY 和相关 ADR，按 docs/agents/issue-tracker.md 确认本项目 Beads。数据库为本项目 `.beads/embeddeddolt`、前缀 knob。没有需要重新访谈的产品边界。
+配置来自每次运行目录的 knob.cfg，永久不支持运行中动态修改，暂不支持命令行覆盖。类型仍为整数和布尔，随机化由原生 seed 控制。框架仍依赖 UVM，不修改编译期 parameter、位宽或 generate 结构。需要在 build 等更早阶段读取时，宿主必须提前完成全部登记和冻结，不能直接沿用示例 end_of_elaboration 加载后又提前取值。
 
-配置仅来自每次运行目录的 knob.cfg，永久不支持运行中动态修改；显式位置和逐项接入、整数/布尔、登记校验冻结、原生随机化、唯一显式 seed 与固定条件复现合同保持不变。
+用户关于结果判定的决定保持有效：UVM 日志关键字判断用例结果；VCS 非零退出码独立属于运行异常。UVM_FATAL 原始码为 0 允许，不是待修复问题。宿主无需使用 KNOB_DEMO_PASS 或项目示例汇总状态码。
 
-## 使用与实现入口
+范围依据为 ADR-0005，扩展 ADR-0002 的使用方范围，保留 ADR-0001/0004 的配置与冻结规则。开始工作时继续读取 AGENTS.md、正式规格、GLOSSARY 和相关 ADR，恢复本项目 Beads `.beads/embeddeddolt`，前缀 knob。
 
-- `README.md`：当前框架概览与本机命令。
-- `docs/design/quickstart.md`：在既有 UVM 环境中加入编译输入、声明/绑定、统一准备、sequence/item 接入和调参。
-- `docs/design/knob-api.md`：公共 API、生命周期、诊断、用户校验与类型扩展。
-- `knob.f`、`src/knob_pkg.sv`：独立库交付，VCS -F 相对文件列表解析，无本机绝对路径或演示依赖。
-- `knob_schema`：一组声明，可通过 bind_scope 绑定多个位置；首次绑定后声明不可修改。
-- `knob_scope`：组合到现有 sequence 的读取句柄，不要求改变宿主继承。
-- `knob_validator`/`knob_view`：冻结前的确定性用户校验及只读候选视图；返回后视图失效，普通提前读取仍失败。
-- `examples/host/`：独立宿主，保留自己的 test/sequence 基类，包含 sequence/item、sequencer/driver 握手与自有编译、运行入口。
-- `examples/minimal/`：较小示例及核心/接口错误注入。
+## 接入与实现入口
 
-本机命令：`make compile` 编译核心测试环境，`make compile-host` 复制库和宿主至另一工程目录后编译，`make test-all` 依次执行三组回归，不编译。单组入口为 make test、make test-framework、make test-host。宿主无需使用这些项目脚本。
+- `README.md`、`docs/design/quickstart.md`、`docs/design/knob-api.md`：通用接入步骤、生命周期和公共接口。
+- `knob.f`、`src/knob_pkg.sv`：独立框架库。schema 声明组绑定位置；scope 提供带类型读取；store 统一准备；validator/view 提供冻结前只读校验。
+- `examples/host/tb.sv`：既有 sequence/item 与 sequencer/driver 握手；新增 host_driver 的 delay_ns 配置及普通 SV 类 host_header_policy 的 header_bytes/enabled。driver 的 task 控制真实耗时，辅助类的 function 计算输出帧长度，无需 UVM 或 sequence 基类。
+- `examples/host/run.sh`：宿主自有判定，保存事务、sequence、timing、frames 四类轨迹及原始状态。
+- `scripts/test-host.sh`：当前 18 场景回归。
 
-## 最终验证
+本机命令：`make compile-host` 在复制的独立工程目录编译，`make test-host` 执行宿主回归。完整环境仍可使用 `make compile`、`make compile-host`、`make test-all`。编译和回归分开，回归中不编译。
 
-固定工具：VCS W-2024.09-SP1、UVM 1.2。共 82 个场景通过：
+## 当前验证与证据复用
 
-- 核心 58：`runs/regression-6sk6ZeGN`；指针 `build/poc/latest-regression.txt`。
-- 接口 13：`runs/framework-triBA7Jf`；指针 `build/poc/latest-framework.txt`。
-- 独立宿主 11：`runs/host-jQcQMQiv`；指针 `build/host-isolated/out/latest-host.txt`。
+固定 VCS W-2024.09-SP1、UVM 1.2。本轮独立宿主 18 场景全部通过，包括 11 个既有场景与 7 个新增场景。当前运行目录 `runs/host-tndInjdw`，指针 `build/host-isolated/out/latest-host.txt`。编译日志无 VCS warning/error。
 
-核心与接口最终 simv SHA：`feba9580b57e64b32521ba69c5a9d3afea90d8b6cc54c48bf849e22b7fa131d2`。宿主最终 simv SHA：`e69a10074c6358c0674dad73f548e838a143c78abf9a851df763e5155ce1dbdf`。各组运行前后可执行文件及共享库保持不变。两套最终编译日志无 VCS warning/error 诊断。
+新增消费者配置 A：两位置原始包长均 64，driver 每包等待分别为 2 ns、5 ns，输出长度分别为 72、64。配置 B：等待分别为 7 ns、0 ns，输出长度分别为 64、80。每个位置重复发送 4 包，使用位置独立且重复调用一致。相同 seed 12345 重放的四类轨迹逐字一致。driver 和普通辅助类提前读触发 KNOB_STATE；非法延迟与布尔值分别触发 KNOB_RANGE、KNOB_VALUE，均无事务。超时 124 来自外层 timeout。
 
-宿主配置 A 共 8 条事务（两位置每轮 3、1 条，重复两轮）；B 共 10 条 link0 事务、长度固定 256，link1 禁用。同 seed 的事务与 sequence 轨迹一致，选定不同 seed 的轨迹不同。配置/调用错误在预期位置终止；宿主不用原型成功标志。运行异常用真实进程超时验证，124 来自外层 timeout，不是 VCS 自身产生的状态码。
+核心 58、接口 13 场景本轮未重跑。库、最小环境、编译/运行与对应测试脚本逐文件与 v1.1 源码快照相同，复用其原始证据。当前有效集合共 89 场景：18 本轮实测、71 版本一致的历史证据；不描述为本轮运行了 89 场景。旧 v1.1 宿主证据不用于证明已修改的当前宿主。
 
-稳定证据为 `docs/design/evidence/framework-v1.1/summary.json` 及分组目录，保存全部场景输入、命令、日志、轨迹、状态、源码/产物哈希和源代码快照。报告 `docs/design/framework-results.md` 映射 T1～T19；`docs/harness/knob-framework-delivery-checks.json` 记录 21 条文档引用、源码证据一致性、规格未变及交付检查。Shell 语法、空白检查通过。
+当前宿主 simv SHA-256：`a22f583c357a73b18dd4f7b5b2e23cba14db3859bf4cc7a1c1b21c3e539a9dce`。核心库 SHA-256：`663c607666751efd144359c75b4508ea361a10cf8da4488e9af91206108a3e60`。当前宿主回归期间可执行文件及共享库均保持不变。
 
-开发中修复过测试夹具字段名 check 遮蔽 UVM 旧回调的编译警告；最终核心和接口组重新运行。宿主源代码和库未因此变化，复用对应不变版本的宿主证据。没有把中间运行当成最终证据。
+报告：`docs/design/general-consumers-results.md`，映射 T1～T21。新证据：`docs/design/evidence/general-consumers-v1.2/`，包括全部 18 场景、编译记录、源码快照、复用文件哈希与归档 manifest。检查记录：`docs/harness/knob-general-consumers-checks.json`，含 44 文档链接、21 验收项映射、257 归档文件哈希和 Beads/规格一致性。Shell 语法与空白检查通过。
 
-## 边界与后续工作
+## 限制与后续
 
-宿主示例有实际 UVM 握手，但没有具体 DUT 协议。接入真实项目仍由宿主负责初始化/激励顺序、目标字段宽度和用户校验中的算术安全。只读视图保护配置访问，不是用户 SystemVerilog 代码的沙箱；校验必须无耗时、无随机副作用。没有本轮遗留的规格实施任务；后续可按用户提供的实际环境开展接入。
+直接实测了 driver、普通 SV 类和其中的 task/function；没有逐个实现 monitor、scoreboard 或真实 DUT 协议。帧头示例只计算长度。宿主负责句柄传递、阶段顺序、字段宽度及算术安全；只读配置接口不沙箱化用户 SV 代码。复现只承诺固定产物、环境、配置、seed、外部输入与随机化过程。
+
+后续可从独立代码审查或真实验证工程接入试点继续，不需要重做已确认的需求访谈。
 
 ## Git、历史与归档
 
-用户于 2026-11-11 授权建立首个本地 Git 检查点，任务为 `knob-u2k`。分支保持 master，无 remote、无推送。源码、脚本、文档、稳定验收证据及 Beads 配置和事项导出纳入版本控制；具体提交标识以 `git log -1 --oneline` 为准。后续首次全量审查可使用 `git show --root <初始提交>`，不能假设存在父提交。
+初始本地基线为 `3fbde6a`，分支 master，无 remote、无推送。本轮变更作为其后的本地工作检查点管理；最新提交与工作区状态分别以 `git log -1 --oneline`、`git status` 为准。首次全量审查可用 `git show --root 3fbde6a`，本轮差异可与该基线比较。
 
-提交范围已核对：860 个文件，其中 801 个稳定证据文件完整；未发现二进制文件或常见凭据模式。根目录 `.gitignore` 为归档验收日志增加例外，避免全局 `*.log` 规则漏掉证据，同时忽略构建、运行目录和仿真波形等产物。未改动产品源码或重跑仿真；沿用上述对应版本的验收证据。独立代码审查尚未执行。
+`.beads/issues.jsonl` 为本轮结束时导出的事项快照，不是完整 Dolt 备份或自动同步的任务状态源；继续工作仍以本项目 Beads 为准。构建、运行产物、数据库与锁文件保持忽略，归档验收日志纳入 Git。
 
-`.beads/issues.jsonl` 是本次提交时通过 `bd export` 保存的事项快照，供迁移与审计；不是完整 Dolt 数据库备份，也不是自动同步的任务状态源。继续工作时仍使用本项目 Beads，数据库和运行锁文件保持本地忽略。Git 检查点之前的完整交接保存在 `docs/harness/handoffs/HANDOFF-before-git-checkpoint-20261111.md`。
-
-实现前完整交接与 README 分别归档为 `docs/harness/handoffs/HANDOFF-before-framework-implementation-20261111.md`、`README-before-framework-implementation-20261111.md`。原型 30 场景、v1.0 规格快照以及早期 setup/规格检查均保留为历史版本，不用于断言当前源码或工具行为。
-
-当前 v1.1 规格 SHA 为 `51708698753bef37f584226d6aae4e1d0a40ad5f606968786d3752328cf57317`。规格发布检查 JSON 是发布当时的快照；本次源码已更新，当前源码关联以 framework-v1.1 证据为准。
-
-Nowledge event `2bbd1cf8-fcbf-47a5-8a43-503ec12980f0` 已成功保存本轮实现、验证、任务状态及用户关于日志/退出码的澄清，补充了此前 v1.1 同步缺口。本轮定向线程检索无结果；记忆检索提示索引重建，结果可能不完整。
+更新前完整交接保存在 `docs/harness/handoffs/HANDOFF-before-general-consumers-20261111.md`。v1.1 规格快照 SHA-256 保持 `51708698753bef37f584226d6aae4e1d0a40ad5f606968786d3752328cf57317`；v1.1、v1.0 和早期原型证据均保留，不重写历史记录。历史报告中指向现行规格的链接已改为对应版本快照。

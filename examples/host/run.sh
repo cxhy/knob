@@ -30,6 +30,8 @@ fi
 printf 'test_result=%s\nruntime_result=%s\nprocess_status=%s\n' "$result" "$runtime" "$raw" > result.txt
 awk '/^HOST_TX / {print}' simulation.log > transactions.log
 awk '/^HOST_SEQUENCE / {print}' simulation.log > sequences.log
+awk '/^HOST_TIMING / {print}' simulation.log > timing.log
+awk '/^HOST_FRAME / {print}' simulation.log > frames.log
 awk '/^KNOB_VALUE / {print}' simulation.log > effective-config.log
 cat result.txt
 if [[ "$runtime" == error ]]; then exit 2; fi

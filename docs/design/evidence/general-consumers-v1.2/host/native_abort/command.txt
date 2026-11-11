@@ -1,0 +1,1 @@
+/home/guodz/workspace/knob/build/host-isolated/out/simv +ntb_random_seed=1 +UVM_TESTNAME=host_runtime_abort_test 

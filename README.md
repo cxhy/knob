@@ -1,13 +1,14 @@
 # knob：启动前仿真配置框架
 
-通过运行目录中的 `knob.cfg` 调整 UVM sequence 的发包数量、开关和约束参数，复用已编译的 VCS 产物。配置在激励前加载、校验并冻结；不支持运行中动态修改，也不提供命令行 knob 覆盖。
+通过运行目录中的 `knob.cfg` 调整验证环境中显式接入的运行期参数，包括 sequence 发包数量、driver 等待时长和辅助逻辑开关，复用已编译的 VCS 产物。配置在激励前加载、校验并冻结；不支持运行中动态修改，也不提供命令行 knob 覆盖。
 
-框架适用于 VCS W-2024.09-SP1 与 UVM 1.2。宿主保留自己的 test/env/sequence 基类、编译入口和日志判定流程，通过对象组合接入。
+框架适用于 VCS W-2024.09-SP1 与 UVM 1.2。宿主保留自己的 类继承关系、编译入口和日志判定流程，通过对象组合接入。
 
 - [快速接入已有环境](docs/design/quickstart.md)：需要改哪里、编译顺序、首次运行和调参。
 - [公共 API 与诊断](docs/design/knob-api.md)：声明组、使用位置、只读校验、生命周期与类型扩展。
-- [正式规格 v1.1](docs/design/knob-spec.md)：配置语法和 T1～T19 验收合同。
-- [框架验证报告](docs/design/framework-results.md)：当前实现与实测证据。
+- [正式规格 v1.2](docs/design/knob-spec.md)：配置语法和 T1～T21 验收合同。
+- [通用接入验证报告](docs/design/general-consumers-results.md)：当前实现、非 sequence 验收与历史证据复用。
+- [v1.1 框架报告](docs/design/framework-results.md)：上一版验收与原始证据。
 
 ## 框架组成
 
@@ -18,9 +19,9 @@
 | `examples/minimal/` | 较小的原型示例与错误注入用例 |
 | `scripts/`、`Makefile` | 本项目开发验证入口，宿主无需采用 |
 
-接入方定义一个 `knob_schema`，把它绑定到多个显式使用位置，得到各自的 `knob_scope`。每次仿真由一个 `knob_store` 汇总登记和校验，成功冻结后，sequence 通过 scope 读取标量值。
+接入方定义一个 `knob_schema`，把它绑定到多个显式使用位置，得到各自的 `knob_scope`。每次仿真由一个 `knob_store` 汇总登记和校验，成功冻结后，配置使用方通过 scope 读取标量值。UVM 组件、普通 SV 类及持有句柄的 task/function 使用同一接口；sequence 是其中一种使用方。
 
-用户业务校验继承 `knob_validator`。校验期间只能通过 `knob_view` 读取候选配置；返回后视图失效。普通 sequence 的提前读取仍被拒绝。
+用户业务校验继承 `knob_validator`。校验期间只能通过 `knob_view` 读取候选配置；返回后视图失效。普通配置使用方的提前读取仍被拒绝。
 
 ## 在本机编译与验证
 
@@ -52,4 +53,4 @@ bash examples/host/run.sh build/host-isolated/out runs/host-manual +ntb_random_s
 
 每次回归保存输入配置、seed、命令、日志、事务、源码与编译产物标识。构建和运行目录被 Git 忽略，稳定摘要保存在 `docs/design/evidence/`。历史 [30 场景原型报告](docs/design/minimal-implementation-results.md) 保留，不用于证明后续修改后的版本。
 
-示例展示真实 UVM sequence/item 随机化与 sequencer/driver 握手，但没有具体 DUT 协议实现。接入实际验证系统时，宿主负责激励顺序、目标字段宽度、协议约束和用户校验中的算术安全；框架不会沙箱化用户 SystemVerilog 代码，也不会改写未显式接入的字段。
+示例展示真实 UVM sequence/item 随机化、sequencer/driver 握手、driver 的可配置等待时长，以及普通 SV 类的帧长度计算，但没有具体 DUT 协议实现。接入实际验证系统时，宿主负责激励顺序、目标字段宽度、协议约束和用户校验中的算术安全；框架不会沙箱化用户 SystemVerilog 代码，也不会改写未显式接入的字段。

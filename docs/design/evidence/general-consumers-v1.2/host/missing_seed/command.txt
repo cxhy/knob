@@ -1,0 +1,1 @@
+/home/guodz/workspace/knob/build/host-isolated/out/simv +UVM_TESTNAME=host_test 

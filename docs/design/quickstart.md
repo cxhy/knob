@@ -1,6 +1,6 @@
 # 接入已有 UVM 环境
 
-目标环境为 VCS W-2024.09-SP1 和 UVM 1.2。保留现有编译、仿真脚本和类继承，只增加下面的接入点。完整公共合同见 [接口说明](knob-api.md)。
+目标环境为 VCS W-2024.09-SP1 和 UVM 1.2。保留现有编译、仿真脚本和类继承，只增加下面的接入点。sequence、UVM 组件、普通 SV 类和持有句柄的 task/function 都可作为配置使用方；框架仍依赖 UVM。完整公共合同见 [接口说明](knob-api.md)。
 
 ## 加入编译输入
 
@@ -39,7 +39,7 @@ void'(validate_seed());
 knobs.load_and_freeze();
 ```
 
-可放在 end_of_elaboration 回调。无需修改继承关系；保留宿主原有的 super 回调和其他初始化。
+若所有使用方均在此之后读取，可放在 end_of_elaboration 回调。需要更早读取时，必须提前完成全部登记和统一冻结；不能在未准备的构造函数或 build 回调中取值。无需修改继承关系；保留宿主原有的 super 回调和其他初始化。
 
 上下限关系可用 `schema.require_le()` 或 `store.require_le()` 声明。复杂业务规则通过 `knob_validator` 实现并在加载前登记，示例见接口说明和 [host_budget_check](../../examples/host/tb.sv)。
 
@@ -56,6 +56,34 @@ endfunction
 
 这里的 count 为 int，声明范围 0～1000 保证转换不丢失。创建 sequence 后调用该函数，再执行宿主的随机化和启动流程。每次 randomize 失败都应立即终止。item 的约束参数同样在其 randomize 前写入。
 
+## 应用到组件和普通 SV 类
+
+已有组件可以持有 `knob_scope`，也可以将它作为 task/function 参数传递。对象无需继承 knob 基类。所有位置仍由宿主在加载前登记并绑定；对象本身可以在冻结后创建。
+
+宿主示例为 driver 绑定 `link0.driver`、`link1.driver`，其中 `delay_ns` 是范围 0～1000 的整数，默认 1。driver 在 run 阶段的等待 task 中读取此值，并执行对应的 ns 延迟。
+
+示例还为普通 SV 类 `host_header_policy` 绑定 `link0.header`、`link1.header`。`header_bytes` 的范围为 0～64，默认 0；`enabled` 默认 true。每次调用 `frame_length()` 都读取已冻结配置，返回原始包长加上启用的头部长度。该类没有 UVM 或 sequence 基类。
+
+在两位置的原始包长均固定为 64 时，配置如下：
+
+```ini
+link0.tx.min_length=64
+link0.tx.max_length=64
+link1.tx.min_length=64
+link1.tx.max_length=64
+link0.driver.delay_ns=2
+link1.driver.delay_ns=5
+link0.header.header_bytes=8
+link1.header.header_bytes=16
+link1.header.enabled=false
+```
+
+每位置默认每轮发 2 包、重复两轮。预期 link0 每包实际等待 2 ns，输出帧长度 72；link1 每包等待 5 ns，输出帧长度 64。`HOST_TIMING` 记录实测耗时，`HOST_FRAME` 记录原始与输出长度。等待单位和长度换算由宿主定义，knob 只提供整数与布尔值。
+
+沿用同一编译产物，在新的运行目录把 link0 的等待改为 7、头部 enabled 改为 false，把 link1 的等待改为 0、头部 enabled 改为 true。预期耗时分别为 7 ns 和 0 ns，输出长度分别为 64 和 80。这里修改的是下一次运行的文件；一次运行内冻结值保持不变。
+
+这些接口控制运行期变量，不改变编译期 parameter、位宽或 generate 结构。
+
 ## 准备文件并运行
 
 每次使用独立运行目录，在该目录保存 `knob.cfg`：
@@ -71,7 +99,7 @@ link1.tx.enabled=false
 
 ## 用独立示例核对流程
 
-[宿主示例](../../examples/host/tb.sv) 包含自己的 test/env、两个 agent、sequencer、driver、sequence 和 item，并保留自己的基类。driver 在 1 ns 延迟后记录握手事务；示例没有具体 DUT 协议实现。
+[宿主示例](../../examples/host/tb.sv) 包含自己的 test/env、两个 agent、sequencer、driver、sequence 和 item，并保留自己的基类。driver 默认在 1 ns 延迟后记录握手事务，并支持上述等待与帧头配置；示例没有具体 DUT 协议实现。
 
 在本仓库中执行：
 
@@ -92,4 +120,4 @@ bash examples/host/run.sh build/host-isolated/out runs/host-manual +ntb_random_s
 
 示例配置使两个位置每轮分别发送 3、1 条事务，各启动两轮，总计 8 条。修改为 link0 的 count=5、min_length=max_length=256、link1 的 enabled=false 后，总计 10 条、长度全部 256。改为 `shared.budget=1` 时应出现 `KNOB_CHECK`，且无事务。
 
-完整运行日志、生效配置、事务与 sequence 轨迹、原始退出码和宿主分类都保存在运行目录。独立宿主的结果文件区分 `test_result` 与 `runtime_result`；这是示例策略，接入者可以沿用自己的状态表示。
+完整运行日志、生效配置、事务、sequence、时序与帧长度轨迹、原始退出码和宿主分类都保存在运行目录。独立宿主的结果文件区分 `test_result` 与 `runtime_result`；这是示例策略，接入者可以沿用自己的状态表示。

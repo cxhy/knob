@@ -4,7 +4,7 @@
 
 配置在每次启动仿真前确定；永久不支持仿真运行中动态修改参数。范围依据见 `docs/adr/0001-startup-only-configuration.md`。
 
-当前面向 UVM sequence 的可配置参数，每个可调值显式接入 knob 后统一编译。配置仅从专用文件提供，暂不支持命令行覆盖，见 `docs/adr/0002-explicit-sequence-knobs-from-file.md`。规划、实现或验证前读取正式规格 `docs/design/knob-spec.md`；需求确认过程保留于 `docs/design/knob-requirements-notes.md`。
+面向 UVM 验证环境中显式接入的运行期参数，sequence、组件和普通 SV 辅助代码均可使用，范围见 `docs/adr/0005-general-runtime-consumers.md`。每个可调值显式接入后统一编译。配置仅从专用文件提供，暂不支持命令行覆盖，见 `docs/adr/0002-explicit-sequence-knobs-from-file.md`。规划、实现或验证前读取正式规格 `docs/design/knob-spec.md`；需求确认过程保留于 `docs/design/knob-requirements-notes.md`。
 
 开始工作时读取 `HANDOFF.md`，核对 Git 工作区，并恢复本项目 Beads 上下文。详细规格、设计和验证资料放在 `docs/design/`。
 

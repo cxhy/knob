@@ -1,6 +1,6 @@
 # knob 公共接口
 
-适用：VCS W-2024.09-SP1、UVM 1.2，规格 v1.1。框架通过 `knob_pkg` 导出以下接口；接入者保留自己的 UVM 基类和运行流程。源文件只有 [knob_pkg.sv](../../src/knob_pkg.sv)，编译入口为 [knob.f](../../knob.f)。
+适用：VCS W-2024.09-SP1、UVM 1.2，规格 v1.2。框架通过 `knob_pkg` 导出以下接口；接入者保留自己的 UVM 基类和运行流程。源文件只有 [knob_pkg.sv](../../src/knob_pkg.sv)，编译入口为 [knob.f](../../knob.f)。
 
 ## 对象与职责
 
@@ -20,7 +20,7 @@
 
 `scope.key(name)` 生成完整配置键，适合校验函数使用。`scope.get_int(name)`、`scope.get_bool(name)` 读取对应位置的生效值。`scope.is_ready()` 和 `store.is_ready()` 表示配置是否已经冻结，不会触发加载。
 
-宿主统一持有 store，sequence 持有对应 scope。框架不强制使用单例、config_db 或某种对象传递方式。需要通过 config_db 传递 scope 时，由宿主沿用已有方式完成。
+宿主统一持有 store，配置使用方持有或接收对应 scope。scope 不要求使用方继承 sequence 或 UVM 基类；可用于 UVM 组件、普通 SV 类和能够传入句柄的 task/function。框架本身仍依赖 UVM。框架不强制使用单例、config_db 或某种对象传递方式。需要通过 config_db 传递 scope 时，由宿主沿用已有方式完成。
 
 ## 直接登记与准备
 
@@ -52,9 +52,17 @@ endfunction
 
 返回 1 表示通过；返回 0 时框架使用校验名称和 reason 发出 `KNOB_CHECK` 致命诊断。函数不能等待时间，也不应产生激励、取随机数、重新播种或通过外部句柄修改配置。这些是校验作者的接口约定；框架并不沙箱化用户 SystemVerilog 代码。
 
-框架按登记顺序执行校验，传入独立复制的标量视图。视图没有写接口，也不暴露登记表；每次校验返回后关闭该视图。不得保存后用于 sequence 取值。校验中通过普通 store/scope 取值依然失败，防止提前开放激励端读取。校验读取不计作 sequence 使用，因此仅被校验读取的项仍会出现在 unused 信息中。
+框架按登记顺序执行校验，传入独立复制的标量视图。视图没有写接口，也不暴露登记表；每次校验返回后关闭该视图。不得保存后用于普通配置使用方取值。校验中通过普通 store/scope 取值依然失败，防止提前开放激励端读取。校验读取不计作普通配置使用方的使用，因此仅被校验读取的项仍会出现在 unused 信息中。
 
 声明范围应限制算术规模；校验作者负责自己业务表达式中的溢出。例如两个有界计数的和可以安全检查，不要把两个任意 signed64 值无检查地相加。
+
+## 非 sequence 接入
+
+`host_driver` 在 connect 阶段接收已登记的 timing/header scope，在 run 阶段由 `wait_for_transfer()` 调用 `configured_delay_ns()` 读取整数，控制实际仿真延迟。普通 SV 类 `host_header_policy` 在冻结后创建，其 `frame_length()` 直接读取整数 `header_bytes` 和布尔 `enabled`，计算发送帧长度。它不继承 UVM 或 sequence 类。完整代码见 [宿主示例](../../examples/host/tb.sv)。
+
+使用方对象可以晚于冻结创建，但它使用的键和位置必须提前登记。多次读取返回同一冻结值；不会重新加载文件或新增登记。未知键、提前读取、类型不匹配等诊断对所有使用方相同。
+
+若某参数要在 build 阶段使用，必须先安排全部登记与统一冻结，不能沿用 end_of_elaboration 加载又在 build 提前取值。框架不替宿主重排 phase，也不提供编译期 parameter、位宽或 generate 调整能力。
 
 ## 随机化接入
 

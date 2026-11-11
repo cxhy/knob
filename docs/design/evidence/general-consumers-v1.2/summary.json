@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-11",
+  "spec": "1.2",
+  "environment": {
+    "vcs": "W-2024.09-SP1",
+    "uvm": "1.2"
+  },
+  "current_host_run": "/home/guodz/workspace/knob/runs/host-tndInjdw",
+  "current_run_cases": 18,
+  "new_cases": 7,
+  "rerun_previous_host_cases": 11,
+  "reused_cases": 71,
+  "combined_cases": 89,
+  "tests": [
+    {
+      "name": "config_a",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "replay",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "other_seed",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "config_b",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "defaults",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "callback_rejected",
+      "expected": "KNOB_CHECK",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "unknown",
+      "expected": "KNOB_UNKNOWN",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "unsatisfiable",
+      "expected": "KNOB_RANDOMIZE",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "missing_seed",
+      "expected": "KNOB_SEED",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "native_abort",
+      "expected": "native_fatal",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "consumers_a",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "consumers_replay",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "consumers_b",
+      "expected": "pass",
+      "host_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "driver_early_read",
+      "expected": "KNOB_STATE",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "helper_early_read",
+      "expected": "KNOB_STATE",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "driver_range",
+      "expected": "KNOB_RANGE",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "helper_bool",
+      "expected": "KNOB_VALUE",
+      "host_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "timed_out",
+      "expected": "runtime_error",
+      "host_status": 2,
+      "simulator_status": 124
+    }
+  ],
+  "source_hashes": {
+    "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+    "src/knob_pkg.sv": "663c607666751efd144359c75b4508ea361a10cf8da4488e9af91206108a3e60",
+    "examples/host/tb.sv": "de495dd6a43b8dc9159d15438ce97951a2a89a322dcbcfd3efae7571deae49fd",
+    "examples/host/compile.sh": "2405df239653de5b4d983b1efa1dbfa1edbddc2680c9fafb51d4a1dc98c1ee32",
+    "examples/host/run.sh": "316688cea751c212c13923ff07869ec81aab906d9bd6cb942e0813d495b2d1ea",
+    "examples/host/knob.cfg": "41bc807852f9c364aa3dfc59bdae036902bde5fa946207f102d8a8d81fe7f822",
+    "scripts/compile.sh": "afedbdb4611379e93bc64c7cc0ce7a0104030509d237590e862bac2cafb8bac4",
+    "scripts/test-host.sh": "054cc85a5d614f0e54d12228c3f2cd786408f739f0103b2a87d9fd844729e90b",
+    "Makefile": "d348c3f064781eae36ce4690de857871331087b49a7bb32a88fe6d697b36de03",
+    "docs/design/knob-spec.md": "803bc5814066f91c3b12489c0ecd527919659495d0dc0630e5931eae02516a2a",
+    "docs/design/quickstart.md": "3f5599b334af16a56e7df19b1d5d79f8b1e52973ac22dd52b975cdd1ff1f7bc4",
+    "docs/design/knob-api.md": "46dc292f26b0f30ab2ab1e80aa2e23d2952d2cacb645e5c8b6d614ac7295aade",
+    "docs/adr/0005-general-runtime-consumers.md": "8e94a9db1bc60fbb6c10428cee8c0b5dfc3dd748539536c2caf723b0b46908ab",
+    "GLOSSARY.md": "813a4d493537fd4a10a9921518e4093782aeb6b4b5ea6a35c26d32daa2cc94db",
+    "README.md": "78e7f4e6d26f016233f0f24218b54cfbbfd164753ff7cdc22b46b64020efea3c"
+  },
+  "reused_source_checks": [
+    {
+      "path": "knob.f",
+      "sha256": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/knob.f"
+    },
+    {
+      "path": "src/knob_pkg.sv",
+      "sha256": "663c607666751efd144359c75b4508ea361a10cf8da4488e9af91206108a3e60",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/src/knob_pkg.sv"
+    },
+    {
+      "path": "examples/minimal/tb.sv",
+      "sha256": "9399c71c18ee3b7e471720e074d738d6e99de61e3262a8c5c7a6a40456925530",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/examples/minimal/tb.sv"
+    },
+    {
+      "path": "examples/minimal/knob.cfg",
+      "sha256": "cce46f156e449c290e3bb209e2ab326ccd01779879605052731670a029823203",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/examples/minimal/knob.cfg"
+    },
+    {
+      "path": "scripts/compile.sh",
+      "sha256": "afedbdb4611379e93bc64c7cc0ce7a0104030509d237590e862bac2cafb8bac4",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/scripts/compile.sh"
+    },
+    {
+      "path": "scripts/run.sh",
+      "sha256": "481cbd3d9fbd76f4477b420c25b0af53edcedd1eac67f576567578757380f00a",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/scripts/run.sh"
+    },
+    {
+      "path": "scripts/test.sh",
+      "sha256": "1b1bfada086aedf1ff1290a1bf50328fd2f76547068d22007576204ed38efd84",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/scripts/test.sh"
+    },
+    {
+      "path": "scripts/test-framework.sh",
+      "sha256": "b9196dd5153d0e6109448d2b2b426af665a6bc077e55d34faaface486378f993",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/scripts/test-framework.sh"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "d348c3f064781eae36ce4690de857871331087b49a7bb32a88fe6d697b36de03",
+      "identical_to": "docs/design/evidence/framework-v1.1/source-snapshot/Makefile"
+    }
+  ],
+  "reused_groups": [
+    {
+      "name": "core",
+      "cases": 58,
+      "evidence": "../framework-v1.1/core/results.tsv"
+    },
+    {
+      "name": "interfaces",
+      "cases": 13,
+      "evidence": "../framework-v1.1/interfaces/results.tsv"
+    }
+  ],
+  "limits": [
+    "Core and interface evidence reused by byte-identical inputs; not rerun this turn.",
+    "No cross-build random-stream guarantee.",
+    "UVM required; no compile-time constant modification.",
+    "Host has UVM handshake and frame-length model, no concrete DUT protocol.",
+    "Timeout status 124 belongs to timeout wrapper."
+  ]
+}
