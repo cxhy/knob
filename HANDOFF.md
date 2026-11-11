@@ -4,6 +4,10 @@
 
 ## 当前阶段
 
+用户已明确授权将项目推送到 https://github.com/cxhy/knob，并要求统一使用 master。事项 knob-3bj 已完成：远端原 main 已重命名为 master，GitHub 默认分支为 master；本地 master 跟踪 origin/master。远端原初始化提交 0f7f7b1 只有 LICENSE，已通过合并提交 03d4c2d 保留双方历史与原 LICENSE，随后普通推送成功，未强制推送。交接和事项导出更新后继续同步到同一远端。
+
+本轮只变更 Git 远端、分支和交接状态，未修改产品代码，未重新执行仿真。Beads 数据库仍为本地管理；Git 中的 issues.jsonl 是导出快照，本次未配置或推送 Dolt 数据库远端。推送前交接已归档到 docs/harness/handoffs/HANDOFF-before-github-push-20261111.md。
+
 用户要求面向验证开发人员编写接入说明，事项 knob-ail 已完成。新增 docs/design/integration-guide.md，覆盖接入职责、生命周期、编译输入、声明/绑定/冻结、sequence/item 随机化顺序、组件及普通类、业务校验、运行、seed 和排错。README 与 quickstart 已加入入口。文档面向现行 v1.2，不改变产品接口或行为。
 
 本轮核对 API 与宿主源码，检查 2 个 Bash 代码块语法和 24 个文档链接。复用源码与构建输入均一致的 95744e3 产物，按指南执行 4 次实际 VCS 运行：配置 A 发出 8 条事务；配置 B 发出 10 条、均来自 link0 且长度 256；同 seed 重放四类轨迹一致；未知键在零事务时触发 KNOB_UNKNOWN，原始码仍为 0。产物哈希未变。本轮未重新编译，未重跑完整回归。
@@ -58,6 +62,6 @@
 
 继续工作时读取 AGENTS.md、正式规格、GLOSSARY 和相关 ADR，恢复本项目 Beads（.beads/embeddeddolt，前缀 knob）。.beads/issues.jsonl 已导出本轮事项状态；它不是完整数据库备份或自动同步源。
 
-分支 master，无 remote、无推送。实现修复提交为 95744e3（基线 96b737e），本轮文档以 95744e3 为基线；最新本地提交与工作区状态分别以 git log -1 --oneline、git status 为准。构建、运行产物和数据库保持忽略；验收证据纳入 Git。
+分支 master，origin 为 https://github.com/cxhy/knob.git，已按用户授权推送并跟踪 origin/master。实现修复提交为 95744e3（基线 96b737e），本轮文档以 95744e3 为基线；最新本地提交与工作区状态分别以 git log -1 --oneline、git status 为准。构建、运行产物和数据库保持忽略；验收证据纳入 Git。
 
 修复阶段更新前的完整交接保存在 docs/harness/handoffs/HANDOFF-before-review-fixes-20261111.md。历史规格、验收报告和原始证据均保留。
