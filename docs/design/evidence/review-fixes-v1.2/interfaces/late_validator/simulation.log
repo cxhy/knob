@@ -1,0 +1,58 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Nov 11 14:01 2026
+UVM_INFO /home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test late_validator_test...
+KNOB_SEED value=12345
+KNOB_VALUE agent0.tx.enabled=true source=default
+KNOB_VALUE agent0.tx.max_length=128 source=default
+KNOB_VALUE agent0.tx.min_length=64 source=default
+KNOB_VALUE agent0.tx.packet_count=3 source=default
+KNOB_VALUE agent1.tx.enabled=true source=default
+KNOB_VALUE agent1.tx.max_length=128 source=default
+KNOB_VALUE agent1.tx.min_length=64 source=default
+KNOB_VALUE agent1.tx.packet_count=3 source=default
+KNOB_VALUE shared.unused=0 source=default
+UVM_FATAL @ 0: reporter [KNOB_STATE] registration is closed
+UVM_INFO /home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    2
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[KNOB_STATE]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "/home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh", line 135.
+$finish at simulation time                    0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      0.200 seconds;       Data structure size:   0.2Mb
+Wed Nov 11 14:01:54 2026

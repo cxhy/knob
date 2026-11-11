@@ -1,0 +1,15 @@
+KNOB_VALUE link0.driver.delay_ns=1 source=default
+KNOB_VALUE link0.header.enabled=true source=default
+KNOB_VALUE link0.header.header_bytes=0 source=default
+KNOB_VALUE link0.tx.count=3 source=file
+KNOB_VALUE link0.tx.enabled=true source=default
+KNOB_VALUE link0.tx.max_length=96 source=file
+KNOB_VALUE link0.tx.min_length=64 source=file
+KNOB_VALUE link1.driver.delay_ns=1 source=default
+KNOB_VALUE link1.header.enabled=true source=default
+KNOB_VALUE link1.header.header_bytes=0 source=default
+KNOB_VALUE link1.tx.count=1 source=file
+KNOB_VALUE link1.tx.enabled=true source=default
+KNOB_VALUE link1.tx.max_length=160 source=file
+KNOB_VALUE link1.tx.min_length=128 source=file
+KNOB_VALUE shared.budget=8 source=file

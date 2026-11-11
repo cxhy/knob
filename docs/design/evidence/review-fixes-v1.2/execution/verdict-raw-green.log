@@ -1,0 +1,3 @@
+PASS core warning_timeout
+PASS interfaces warning_timeout
+Evidence: /home/guodz/workspace/knob/runs/verdict-zhQdI7WJ

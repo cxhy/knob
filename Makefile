@@ -1,4 +1,4 @@
-.PHONY: compile test compile-host test-host test-framework test-all
+.PHONY: compile test compile-host test-host test-framework test-verdict test-all
 compile:
 	bash scripts/compile.sh
 
@@ -15,4 +15,7 @@ test-host:
 test-framework:
 	bash scripts/test-framework.sh
 
-test-all: test test-framework test-host
+test-verdict:
+	bash scripts/test-verdict.sh
+
+test-all: test-verdict test test-framework test-host

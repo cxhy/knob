@@ -17,7 +17,8 @@ run_case() {
     [[ $status -eq 0 ]] || { tail -30 "$dir/simulation.log"; exit 1; }
   else
     [[ $status -eq 1 ]]
-    rg -q "\[$expected\]" "$dir/simulation.log"
+    [[ $(cat "$dir/process-status.txt") == 0 ]] || { printf 'Runtime error is not an expected interface failure: %s\n' "$name"; exit 1; }
+    rg -q "^UVM_FATAL .*@[^:]*: [^ ]+ \[$expected\]" "$dir/simulation.log"
     [[ ! -s "$dir/transactions.log" ]]
     if rg -q '^KNOB_DEMO_PASS$' "$dir/simulation.log"; then exit 1; fi
   fi

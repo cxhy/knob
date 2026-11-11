@@ -1,0 +1,17 @@
+suite	mode	expected	accepted	cli_status
+core	warning_timeout	no	no	1
+core	warning_zero	no	no	1
+core	info_zero	no	no	1
+core	wrong_fatal	no	no	1
+core	fatal_message_id	no	no	1
+core	fatal_timeout	no	no	1
+core	fatal_crash	no	no	1
+core	fatal_zero	yes	yes	1
+interfaces	warning_timeout	no	no	1
+interfaces	warning_zero	no	no	1
+interfaces	info_zero	no	no	1
+interfaces	wrong_fatal	no	no	1
+interfaces	fatal_message_id	no	no	1
+interfaces	fatal_timeout	no	no	1
+interfaces	fatal_crash	no	no	1
+interfaces	fatal_zero	yes	yes	1

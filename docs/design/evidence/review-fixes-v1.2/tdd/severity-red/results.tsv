@@ -1,0 +1,5 @@
+suite	mode	expected	accepted	cli_status
+core	warning_timeout	reject	no	1
+core	warning_zero	reject	yes	1
+interfaces	warning_timeout	reject	no	1
+interfaces	warning_zero	reject	yes	1

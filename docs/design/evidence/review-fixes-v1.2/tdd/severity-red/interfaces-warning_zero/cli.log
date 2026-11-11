@@ -1,0 +1,4 @@
+PASS schema_values
+PASS schema_defaults
+PASS duplicate_bind
+STUB_END: target case already passed

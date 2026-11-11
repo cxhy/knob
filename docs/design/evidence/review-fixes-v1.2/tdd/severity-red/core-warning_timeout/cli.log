@@ -1,0 +1,11 @@
+Evidence: /home/guodz/workspace/knob/runs/verdict-BEdAsOEp/core-warning_timeout/runs/regression-bJWFC8H9
+PASS config_a
+PASS replay
+PASS other_seed
+PASS config_b
+PASS defaults
+PASS hex_min_crlf
+PASS max_value
+PASS negative_seed
+PASS maximum_seed
+Runtime error is not an expected configuration failure: missing

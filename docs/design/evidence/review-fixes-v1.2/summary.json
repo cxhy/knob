@@ -1,0 +1,679 @@
+{
+  "date": "2026-11-11",
+  "baseline_commit": "96b737e",
+  "spec": "1.2 (unchanged)",
+  "issues": [
+    "knob-zkf",
+    "knob-8nh"
+  ],
+  "environment": {
+    "vcs": "W-2024.09-SP1",
+    "uvm": "1.2"
+  },
+  "vcs_cases": 100,
+  "shell_cases": 16,
+  "reused_vcs_cases": 0,
+  "groups": [
+    {
+      "name": "core",
+      "run": "/home/guodz/workspace/knob/runs/regression-uK7Mlvbb",
+      "cases": 58,
+      "tests": [
+        {
+          "name": "config_a",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "replay",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "other_seed",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "config_b",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "defaults",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "hex_min_crlf",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "max_value",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "negative_seed",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "maximum_seed",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "missing",
+          "expected": "KNOB_FILE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "unknown",
+          "expected": "KNOB_UNKNOWN",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "duplicate",
+          "expected": "KNOB_DUPLICATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "overflow",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "underflow",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "long_number",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "trailing_garbage",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "invalid_bool",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "range",
+          "expected": "KNOB_RANGE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "syntax",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "cross",
+          "expected": "KNOB_CROSS",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "unsatisfiable",
+          "expected": "KNOB_RANDOMIZE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "no_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "duplicate_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "invalid_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "overflow_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "early_read",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "duplicate_registration",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "late_registration",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "reload",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "wrong_type",
+          "expected": "KNOB_TYPE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_30",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_31",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_32",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_33",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_34",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_35",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_36",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_integer_37",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_syntax_38",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_syntax_39",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_syntax_40",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_syntax_41",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_syntax_42",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bad_syntax_43",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bool_case",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "key_case",
+          "expected": "KNOB_UNKNOWN",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "comment_defaults",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "decimal_min",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "hex_max",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "empty_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "bare_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "hex_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "fractional_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "underflow_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "invalid_default",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "invalid_range",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "invalid_key",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "unapplied_sequence",
+          "expected": "KNOB_APPLY",
+          "runner": 1,
+          "raw": 0
+        }
+      ]
+    },
+    {
+      "name": "interfaces",
+      "run": "/home/guodz/workspace/knob/runs/framework-3MK5QqDX",
+      "cases": 13,
+      "tests": [
+        {
+          "name": "schema_values",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "schema_defaults",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "duplicate_bind",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "callback_valid",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "callback_rejected",
+          "expected": "KNOB_CHECK",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "callback_early_read",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "callback_expired_view",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "callback_type",
+          "expected": "KNOB_TYPE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "callback_mutation",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "sealed_schema",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "null_validator",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "duplicate_validator",
+          "expected": "KNOB_REGISTER",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "late_validator",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        }
+      ]
+    },
+    {
+      "name": "host",
+      "run": "/home/guodz/workspace/knob/runs/host-nLSxIow4",
+      "cases": 29,
+      "tests": [
+        {
+          "name": "nul_numeric_suffix",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_numeric_middle",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_key",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_boolean",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_leading",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_comment",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_second_line",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "nul_eof",
+          "expected": "KNOB_SYNTAX",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "no_final_lf",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "crlf_comments",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "long_utf8_comment",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "config_a",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "replay",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "other_seed",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "config_b",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "defaults",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "callback_rejected",
+          "expected": "KNOB_CHECK",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "unknown",
+          "expected": "KNOB_UNKNOWN",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "unsatisfiable",
+          "expected": "KNOB_RANDOMIZE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "missing_seed",
+          "expected": "KNOB_SEED",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "native_abort",
+          "expected": "native_fatal",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "consumers_a",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "consumers_replay",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "consumers_b",
+          "expected": "pass",
+          "runner": 0,
+          "raw": 0
+        },
+        {
+          "name": "driver_early_read",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "helper_early_read",
+          "expected": "KNOB_STATE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "driver_range",
+          "expected": "KNOB_RANGE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "helper_bool",
+          "expected": "KNOB_VALUE",
+          "runner": 1,
+          "raw": 0
+        },
+        {
+          "name": "timed_out",
+          "expected": "runtime_error",
+          "runner": 2,
+          "raw": 124
+        }
+      ]
+    }
+  ],
+  "verdict_run": "/home/guodz/workspace/knob/runs/verdict-zKNgTuvl",
+  "source_hashes": {
+    "src/knob_pkg.sv": "03fb4758719501d9f8642dbf901813eb74420ce87502ed84b96d706c6dcc95ed",
+    "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+    "examples/minimal/tb.sv": "9399c71c18ee3b7e471720e074d738d6e99de61e3262a8c5c7a6a40456925530",
+    "examples/minimal/knob.cfg": "cce46f156e449c290e3bb209e2ab326ccd01779879605052731670a029823203",
+    "examples/host/tb.sv": "de495dd6a43b8dc9159d15438ce97951a2a89a322dcbcfd3efae7571deae49fd",
+    "examples/host/knob.cfg": "41bc807852f9c364aa3dfc59bdae036902bde5fa946207f102d8a8d81fe7f822",
+    "examples/host/compile.sh": "2405df239653de5b4d983b1efa1dbfa1edbddc2680c9fafb51d4a1dc98c1ee32",
+    "examples/host/run.sh": "316688cea751c212c13923ff07869ec81aab906d9bd6cb942e0813d495b2d1ea",
+    "scripts/compile.sh": "afedbdb4611379e93bc64c7cc0ce7a0104030509d237590e862bac2cafb8bac4",
+    "scripts/run.sh": "481cbd3d9fbd76f4477b420c25b0af53edcedd1eac67f576567578757380f00a",
+    "scripts/test.sh": "8f3bd1fb179bfdc285a22252ab2a538bd6235d18ea36967ecdd895b367d679c8",
+    "scripts/test-framework.sh": "fa9aa54b855705fa2fecff12daa2de4372929663f1fbb9b548f79a4b4e34b217",
+    "scripts/test-host.sh": "5340b2437a90388c09c0ba5b110c58fc56fcc19d9c35b0630492c91a97f20b50",
+    "scripts/test-verdict.sh": "09f821fad1e2a3386322fa9d2111495046eabc53d91f9ca0c99df307c04f6d28",
+    "Makefile": "b7b8c7226ff6d20135f5d056970ef11bf2fc0e494104ac33625e5391cb387549",
+    "README.md": "42637f7214ee4e3d41437c88a43341e9fda6af13c8b689af155e06ea71352678",
+    "docs/design/knob-spec.md": "803bc5814066f91c3b12489c0ecd527919659495d0dc0630e5931eae02516a2a",
+    "docs/design/knob-api.md": "cb7d77e163899b99056518ca62c74bca3dedc8de60feaa65436dda5f42222ab6",
+    "docs/design/quickstart.md": "3f5599b334af16a56e7df19b1d5d79f8b1e52973ac22dd52b975cdd1ff1f7bc4",
+    "docs/design/review-fixes-results.md": "22df0da47a5cac633822e355fbd76cf4ad1257d9ef30c90d7713d09ca3628109"
+  },
+  "tdd": {
+    "raw_status_red_exit": 1,
+    "severity_red_exit": 1,
+    "nul_red_suite_exit": 1,
+    "nul_red_observed": "raw0, pass, 6 transactions",
+    "first_nul_green_observed": "KNOB_SYNTAX line1, raw0, zero transactions",
+    "final_suites_exit": 0
+  },
+  "reviews": {
+    "standards_new_findings": 0,
+    "spec_new_findings": 0
+  },
+  "limitations": [
+    "Script stand-ins produce synthetic 124/139; not actual VCS crashes/timeouts.",
+    "Two fatal_zero verdict controls deliberately stop on the next simulated case; target acceptance is checked.",
+    "Existing host timeout case uses actual timeout wrapper; raw124 belongs to wrapper."
+  ]
+}

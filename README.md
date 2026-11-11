@@ -7,7 +7,8 @@
 - [快速接入已有环境](docs/design/quickstart.md)：需要改哪里、编译顺序、首次运行和调参。
 - [公共 API 与诊断](docs/design/knob-api.md)：声明组、使用位置、只读校验、生命周期与类型扩展。
 - [正式规格 v1.2](docs/design/knob-spec.md)：配置语法和 T1～T21 验收合同。
-- [通用接入验证报告](docs/design/general-consumers-results.md)：当前实现、非 sequence 验收与历史证据复用。
+- [审查缺陷修复验收](docs/design/review-fixes-results.md)：当前实现的完整回归与脚本判定验证。
+- [通用接入验证报告](docs/design/general-consumers-results.md)：通用使用方引入时的历史验收。
 - [v1.1 框架报告](docs/design/framework-results.md)：上一版验收与原始证据。
 
 ## 框架组成
@@ -33,7 +34,7 @@ make compile-host
 make test-all
 ```
 
-`compile-host` 把库和宿主复制到另一个工程目录后编译；`test-all` 依次执行核心、框架接口和独立宿主回归，不触发编译。单独执行时可使用 `make test`、`make test-framework`、`make test-host`。依赖为 Bash、GNU coreutils、rg 和可用的 VCS 许可证；没有 Python 依赖。
+`compile-host` 把库和宿主复制到另一个工程目录后编译；`test-all` 先执行脚本判定测试，再执行核心、框架接口和独立宿主回归，不触发编译。单独执行时可使用 `make test`、`make test-framework`、`make test-host`。`make test-verdict` 单独检查回归脚本判定：以录制日志和模拟仿真器进程验证异常不会被误判为预期失败，不占用 VCS 许可证，不替代真实仿真。该检查使用仓库内的历史成功日志作为前置场景录制数据，无 Python 依赖。全部测试依赖 Bash、GNU coreutils、awk、rg；VCS 回归另需可用的 VCS 许可证。
 
 调参时只创建新运行目录并准备配置文件，无需重新编译：
 

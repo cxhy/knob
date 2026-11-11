@@ -1,0 +1,18 @@
+PASS core warning_timeout
+PASS core warning_zero
+PASS core info_zero
+PASS core wrong_fatal
+PASS core fatal_message_id
+PASS core fatal_timeout
+PASS core fatal_crash
+PASS core fatal_zero
+PASS interfaces warning_timeout
+PASS interfaces warning_zero
+PASS interfaces info_zero
+PASS interfaces wrong_fatal
+PASS interfaces fatal_message_id
+PASS interfaces fatal_timeout
+PASS interfaces fatal_crash
+PASS interfaces fatal_zero
+Evidence: /home/guodz/workspace/knob/runs/verdict-zKNgTuvl
+PASS 16 shell verdict scenarios (simulator stand-in, no VCS)

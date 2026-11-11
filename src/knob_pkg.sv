@@ -239,19 +239,27 @@ package knob_pkg;
     endfunction
 
     function void load_and_freeze();
-      int fd, line_number = 0, error_code;
+      int fd, line_number = 1, error_code, character;
       string line, error_message;
       require_registration();
       loading = 1;
       fd = $fopen("knob.cfg", "r");
       if (fd == 0) knob_fail("KNOB_FILE", "cannot open knob.cfg");
-      while ($fgets(line, fd) != 0) begin
-        line_number++;
-        parse_line(line, line_number);
+      // Check bytes before conversion to string: VCS can discard a NUL suffix
+      // in $fgets(string), hiding invalid input from the strict line parser.
+      while ((character = $fgetc(fd)) != -1) begin
+        if (character == 0)
+          knob_fail("KNOB_SYNTAX", $sformatf("knob.cfg:%0d: NUL byte is not valid text", line_number));
+        if (character == 8'h0a) begin
+          parse_line(line, line_number);
+          line = "";
+          line_number++;
+        end else line = {line, byte'(character)};
       end
       error_code = $ferror(fd, error_message);
       $fclose(fd);
       if (error_code != 0) knob_fail("KNOB_FILE", error_message);
+      if (line != "") parse_line(line, line_number);
       foreach (lower_keys[i])
         if (entries[lower_keys[i]].value > entries[upper_keys[i]].value)
           knob_fail("KNOB_CROSS", {lower_keys[i], " must be <= ", upper_keys[i]});

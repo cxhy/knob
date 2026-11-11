@@ -1,0 +1,1 @@
+/home/guodz/workspace/knob/runs/verdict-zKNgTuvl/core-fatal_zero/build/poc/simv +UVM_TESTNAME=knob_demo_test +ntb_random_seed=1 

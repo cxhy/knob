@@ -40,7 +40,7 @@ run_case() {
       [[ ! -s "$dir/transactions.log" ]] ;;
     *)
       [[ $status -eq 1 ]]
-      rg -q "\[$expected\]" "$dir/simulation.log"
+      rg -q "^UVM_FATAL .*@[^:]*: [^ ]+ \[$expected\]" "$dir/simulation.log"
       rg -q '^test_result=fail$' "$dir/result.txt"
       rg -q '^runtime_result=ok$' "$dir/result.txt"
       [[ $(cat "$dir/process-status.txt") -eq 0 ]]
@@ -52,6 +52,28 @@ run_case() {
   cases=$((cases+1))
   printf 'PASS host %s\n' "$name"
 }
+run_case nul_numeric_suffix KNOB_SYNTAX +ntb_random_seed=12345 < <(printf 'link0.tx.count=1\0junk\n')
+rg -q 'knob.cfg:1:.*NUL' "$suite/nul_numeric_suffix/simulation.log"
+run_case nul_numeric_middle KNOB_SYNTAX +ntb_random_seed=1 < <(printf 'link0.tx.count=1\0002\n')
+run_case nul_key KNOB_SYNTAX +ntb_random_seed=1 < <(printf 'link0.tx.co\0unt=1\n')
+run_case nul_boolean KNOB_SYNTAX +ntb_random_seed=1 < <(printf 'link0.tx.enabled=true\0junk\n')
+run_case nul_leading KNOB_SYNTAX +ntb_random_seed=1 < <(printf '\0link0.tx.count=1\n')
+run_case nul_comment KNOB_SYNTAX +ntb_random_seed=1 < <(printf '# comment\0hidden\n')
+run_case nul_second_line KNOB_SYNTAX +ntb_random_seed=1 < <(printf 'link0.tx.count=1\r\nlink1.tx.enabled=false\0junk\r\n')
+rg -q 'knob.cfg:2:.*NUL' "$suite/nul_second_line/simulation.log"
+run_case nul_eof KNOB_SYNTAX +ntb_random_seed=1 < <(printf 'link0.tx.count=1\0junk')
+run_case no_final_lf pass +ntb_random_seed=1 < <(printf 'link0.tx.count=1\nlink1.tx.enabled=false')
+run_case crlf_comments pass +ntb_random_seed=1 < <(printf '# CRLF\r\n link0.tx.count = 1 # = comment\r\nlink1.tx.enabled=false\r\n')
+run_case long_utf8_comment pass +ntb_random_seed=1 < <(
+  printf '# 配置说明 '
+  printf '%8192s' '' | tr ' ' x
+  printf '\nlink0.tx.count=1\nlink1.tx.enabled=false\n'
+)
+for name in no_final_lf crlf_comments long_utf8_comment; do
+  [[ $(wc -l < "$suite/$name/transactions.log") -eq 2 ]]
+  [[ $(rg -c '^HOST_TX port=link0 ' "$suite/$name/transactions.log") -eq 2 ]]
+  rg -q '^KNOB_VALUE link0.tx.count=1 source=file$' "$suite/$name/effective-config.log"
+done
 run_case config_a pass +ntb_random_seed=12345 < examples/host/knob.cfg
 run_case replay pass +ntb_random_seed=12345 < examples/host/knob.cfg
 cmp "$suite/config_a/transactions.log" "$suite/replay/transactions.log"

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-11",
+  "baseline": "96b737e",
+  "archive": "docs/design/evidence/review-fixes-v1.2",
+  "manifest_entries_verified": 1540,
+  "current_source_hashes_verified": 20,
+  "documentation_links_verified": 29,
+  "vcs_cases": 100,
+  "shell_verdict_cases": 16,
+  "reused_vcs_cases": 0,
+  "spec_sha256": "803bc5814066f91c3b12489c0ecd527919659495d0dc0630e5931eae02516a2a",
+  "reviews": {
+    "standards_new_findings": 0,
+    "spec_new_findings": 0
+  },
+  "beads_spec_issue": "knob-l8r",
+  "beads_spec_matches": true
+}

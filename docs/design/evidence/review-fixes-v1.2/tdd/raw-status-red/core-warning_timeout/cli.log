@@ -1,0 +1,12 @@
+Evidence: /home/guodz/workspace/knob/runs/verdict-IqEeWTmY/core-warning_timeout/runs/regression-Do47xwEI
+PASS config_a
+PASS replay
+PASS other_seed
+PASS config_b
+PASS defaults
+PASS hex_min_crlf
+PASS max_value
+PASS negative_seed
+PASS maximum_seed
+PASS missing
+STUB_END: target case already passed

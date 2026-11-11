@@ -25,7 +25,8 @@ run_case() {
     [[ $status -eq 0 ]] || { cat "$dir/runner.log"; tail -30 "$dir/simulation.log"; exit 1; }
   else
     [[ $status -eq 1 ]] || { printf 'Unexpected runner status %s: %s\n' "$status" "$name"; exit 1; }
-    rg -q "\[$expected\]" "$dir/simulation.log" || { tail -30 "$dir/simulation.log"; exit 1; }
+    [[ $(cat "$dir/process-status.txt") == 0 ]] || { printf 'Runtime error is not an expected configuration failure: %s\n' "$name"; exit 1; }
+    rg -q "^UVM_FATAL .*@[^:]*: [^ ]+ \[$expected\]" "$dir/simulation.log" || { tail -30 "$dir/simulation.log"; exit 1; }
     [[ ! -s "$dir/transactions.log" ]] || { printf 'Transactions before failure: %s\n' "$name"; exit 1; }
     if rg -q '^KNOB_DEMO_PASS$' "$dir/simulation.log"; then exit 1; fi
   fi

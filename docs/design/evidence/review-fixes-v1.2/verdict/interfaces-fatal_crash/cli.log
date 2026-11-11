@@ -1,0 +1,3 @@
+PASS schema_values
+PASS schema_defaults
+Runtime error is not an expected interface failure: duplicate_bind

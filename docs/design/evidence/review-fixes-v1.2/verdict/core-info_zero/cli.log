@@ -1,0 +1,11 @@
+Evidence: /home/guodz/workspace/knob/runs/verdict-zKNgTuvl/core-info_zero/runs/regression-aXTCsz8O
+PASS config_a
+PASS replay
+PASS other_seed
+PASS config_b
+PASS defaults
+PASS hex_min_crlf
+PASS max_value
+PASS negative_seed
+PASS maximum_seed
+UVM_INFO @ 0: reporter [KNOB_FILE] not fatal

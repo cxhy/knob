@@ -1,0 +1,93 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Nov 11 14:00 2026
+UVM_INFO /home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test host_test...
+KNOB_SEED value=54321
+KNOB_VALUE link0.driver.delay_ns=1 source=default
+KNOB_VALUE link0.header.enabled=true source=default
+KNOB_VALUE link0.header.header_bytes=0 source=default
+KNOB_VALUE link0.tx.count=3 source=file
+KNOB_VALUE link0.tx.enabled=true source=default
+KNOB_VALUE link0.tx.max_length=96 source=file
+KNOB_VALUE link0.tx.min_length=64 source=file
+KNOB_VALUE link1.driver.delay_ns=1 source=default
+KNOB_VALUE link1.header.enabled=true source=default
+KNOB_VALUE link1.header.header_bytes=0 source=default
+KNOB_VALUE link1.tx.count=1 source=file
+KNOB_VALUE link1.tx.enabled=true source=default
+KNOB_VALUE link1.tx.max_length=160 source=file
+KNOB_VALUE link1.tx.min_length=128 source=file
+KNOB_VALUE shared.budget=8 source=file
+HOST_SEQUENCE tag=151 count=3 enabled=1
+HOST_FRAME port=link0 input_length=94 output_length=94
+HOST_TIMING port=link0 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link0 length=94 payload=27302820
+HOST_FRAME port=link0 input_length=66 output_length=66
+HOST_TIMING port=link0 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link0 length=66 payload=5b90efe8
+HOST_FRAME port=link0 input_length=88 output_length=88
+HOST_TIMING port=link0 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link0 length=88 payload=4d38e991
+HOST_SEQUENCE tag=16 count=1 enabled=1
+HOST_FRAME port=link1 input_length=146 output_length=146
+HOST_TIMING port=link1 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link1 length=146 payload=99bc546c
+HOST_SEQUENCE tag=169 count=3 enabled=1
+HOST_FRAME port=link0 input_length=72 output_length=72
+HOST_TIMING port=link0 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link0 length=72 payload=7e07aa37
+HOST_FRAME port=link0 input_length=86 output_length=86
+HOST_TIMING port=link0 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link0 length=86 payload=2f5865b4
+HOST_FRAME port=link0 input_length=64 output_length=64
+HOST_TIMING port=link0 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link0 length=64 payload=91191710
+HOST_SEQUENCE tag=92 count=1 enabled=1
+HOST_FRAME port=link1 input_length=150 output_length=150
+HOST_TIMING port=link1 delay_ns=1 elapsed_ps=1000
+HOST_TX port=link1 length=150 payload=b1b27847
+KNOB_UNUSED shared.budget
+UVM_INFO /home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 8000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_report_server.svh(904) @ 8000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    3
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+
+$finish called from file "/home/guodz/synopsys/vcs/W-2024.09-SP1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                 8000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 8000 ps
+CPU Time:      0.200 seconds;       Data structure size:   0.3Mb
+Wed Nov 11 14:00:56 2026

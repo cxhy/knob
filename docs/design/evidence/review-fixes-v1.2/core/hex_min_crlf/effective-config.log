@@ -1,0 +1,9 @@
+KNOB_VALUE agent0.tx.enabled=true source=default
+KNOB_VALUE agent0.tx.max_length=128 source=default
+KNOB_VALUE agent0.tx.min_length=64 source=default
+KNOB_VALUE agent0.tx.packet_count=2 source=file
+KNOB_VALUE agent1.tx.enabled=true source=default
+KNOB_VALUE agent1.tx.max_length=128 source=default
+KNOB_VALUE agent1.tx.min_length=64 source=default
+KNOB_VALUE agent1.tx.packet_count=3 source=default
+KNOB_VALUE shared.unused=-9223372036854775808 source=file

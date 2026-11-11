@@ -1,0 +1,5 @@
+PASS core warning_timeout
+FAIL core warning_zero: warning accepted as expected fatal
+PASS interfaces warning_timeout
+FAIL interfaces warning_zero: warning accepted as expected fatal
+Evidence: /home/guodz/workspace/knob/runs/verdict-BEdAsOEp

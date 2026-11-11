@@ -75,7 +75,7 @@ endfunction
 | 标识 | 含义 |
 | --- | --- |
 | `KNOB_FILE` | 文件缺失或读取错误 |
-| `KNOB_SYNTAX` | 行结构或配置键语法错误 |
+| `KNOB_SYNTAX` | 行结构、配置键语法错误或输入含 NUL 字节；NUL 在注释内也会被拒绝，并报告文件行号 |
 | `KNOB_UNKNOWN` / `KNOB_DUPLICATE` | 未登记键或重复文件键 |
 | `KNOB_VALUE` / `KNOB_RANGE` | 非法字面量、类型范围溢出或超出声明范围 |
 | `KNOB_REGISTER` | 重复声明、非法默认值/范围/绑定或校验对象登记错误 |
