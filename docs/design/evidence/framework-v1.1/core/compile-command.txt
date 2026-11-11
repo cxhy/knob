@@ -1,0 +1,1 @@
+/home/guodz/install_vcs/bin/vcs -full64 -sverilog -ntb_opts uvm-1.2 -timescale=1ns/1ps -F /home/guodz/workspace/knob/knob.f /home/guodz/workspace/knob/examples/minimal/tb.sv -top tb -o /home/guodz/workspace/knob/build/poc/simv -l /home/guodz/workspace/knob/build/poc/compile.log 

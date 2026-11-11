@@ -1,0 +1,175 @@
+{
+  "kind": "framework_spec_documentation_checks",
+  "date_utc": "2026-11-11T03:56:59.438Z",
+  "passed": true,
+  "version": "1.1",
+  "sections": [
+    "Problem Statement",
+    "Solution",
+    "User Stories",
+    "Implementation Decisions",
+    "Testing Decisions",
+    "Out of Scope",
+    "Further Notes"
+  ],
+  "user_story_count": 43,
+  "acceptance_cases": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T18",
+    "T19"
+  ],
+  "original_contracts_R1_R5_unchanged": true,
+  "original_stories_and_T1_T14_preserved": true,
+  "checked_links": [
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "knob-requirements-notes.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../../GLOSSARY.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0001-startup-only-configuration.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0002-explicit-sequence-knobs-from-file.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0003-native-randomization-and-explicit-seed.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0004-register-validate-freeze-before-stimulus.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "randomization-evidence.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "vcs-feasibility.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "minimal-implementation-results.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "knob-spec-v1.0.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "knob-requirements-notes.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "../../GLOSSARY.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "../adr/0001-startup-only-configuration.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "../adr/0002-explicit-sequence-knobs-from-file.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "../adr/0003-native-randomization-and-explicit-seed.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "../adr/0004-register-validate-freeze-before-stimulus.md"
+    },
+    {
+      "file": "docs/design/knob-spec-v1.0.md",
+      "target": "randomization-evidence.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/design/knob-spec.md"
+    },
+    {
+      "file": "README.md",
+      "target": "src/knob_pkg.sv"
+    },
+    {
+      "file": "README.md",
+      "target": "examples/minimal/tb.sv"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/design/minimal-implementation-results.md"
+    },
+    {
+      "file": "docs/design/knob-requirements-notes.md",
+      "target": "knob-spec.md"
+    },
+    {
+      "file": "docs/design/minimal-implementation-results.md",
+      "target": "vcs-feasibility.md"
+    },
+    {
+      "file": "docs/design/minimal-implementation-results.md",
+      "target": "knob-spec-v1.0.md"
+    },
+    {
+      "file": "docs/design/minimal-implementation-results.md",
+      "target": "../../README.md"
+    },
+    {
+      "file": "docs/design/minimal-implementation-results.md",
+      "target": "evidence/minimal-poc/results.tsv"
+    },
+    {
+      "file": "docs/design/minimal-implementation-results.md",
+      "target": "evidence/minimal-poc/summary.json"
+    }
+  ],
+  "sha256": {
+    "docs/design/knob-spec.md": "51708698753bef37f584226d6aae4e1d0a40ad5f606968786d3752328cf57317",
+    "docs/design/knob-spec-v1.0.md": "d0502ab68ed6ef2f4056c6a6cb4b6ef851af4c3ca429429ac93e9e85289c7776"
+  },
+  "unchanged_implementation_inputs": [
+    "src/knob_pkg.sv",
+    "examples/minimal/tb.sv",
+    "examples/minimal/knob.cfg",
+    "scripts/compile.sh",
+    "scripts/run.sh",
+    "scripts/test.sh",
+    "Makefile"
+  ],
+  "beads": {
+    "id": "knob-be2",
+    "body_matches_spec": true,
+    "spec_id": "docs/design/knob-spec.md",
+    "labels": [
+      "ready-for-agent"
+    ],
+    "status": "open"
+  },
+  "limitations": [
+    "文档/引用/同步检查，不代表新增框架能力已实现",
+    "本轮未重新编译或运行仿真；30场景证据属于v1.0原型"
+  ]
+}

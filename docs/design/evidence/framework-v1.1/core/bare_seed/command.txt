@@ -1,0 +1,1 @@
+/home/guodz/workspace/knob/build/poc/simv +UVM_TESTNAME=knob_demo_test +ntb_random_seed 

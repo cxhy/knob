@@ -1,0 +1,23 @@
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*
+
+# Local build and simulation output
+/build/
+/runs/
+.venv/
+
+# Simulator artifacts outside the standard output directories
+simv
+simv.daidir/
+csrc/
+*.fsdb
+*.vcd
+*.vpd
+
+# Keep archived verification logs despite machine-wide *.log exclusions
+!/docs/design/evidence/**/*.log

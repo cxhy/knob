@@ -1,0 +1,555 @@
+{
+  "date_utc": "2026-11-11T04:39:22.646Z",
+  "tool": "VCS W-2024.09-SP1",
+  "uvm": "1.2",
+  "spec_version": "1.1",
+  "git_commit": null,
+  "total_cases": 82,
+  "groups": [
+    {
+      "name": "core",
+      "cases": 58,
+      "run_directory": "/home/guodz/workspace/knob/runs/regression-6sk6ZeGN",
+      "tests": [
+        {
+          "name": "config_a",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "replay",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "other_seed",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "config_b",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "defaults",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "hex_min_crlf",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "max_value",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "negative_seed",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "maximum_seed",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "missing",
+          "expected": "KNOB_FILE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "unknown",
+          "expected": "KNOB_UNKNOWN",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "duplicate",
+          "expected": "KNOB_DUPLICATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "overflow",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "underflow",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "long_number",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "trailing_garbage",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "invalid_bool",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "range",
+          "expected": "KNOB_RANGE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "syntax",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "cross",
+          "expected": "KNOB_CROSS",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "unsatisfiable",
+          "expected": "KNOB_RANDOMIZE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "no_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "duplicate_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "invalid_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "overflow_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "early_read",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "duplicate_registration",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "late_registration",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "reload",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "wrong_type",
+          "expected": "KNOB_TYPE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_30",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_31",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_32",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_33",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_34",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_35",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_36",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_integer_37",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_syntax_38",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_syntax_39",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_syntax_40",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_syntax_41",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_syntax_42",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bad_syntax_43",
+          "expected": "KNOB_SYNTAX",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bool_case",
+          "expected": "KNOB_VALUE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "key_case",
+          "expected": "KNOB_UNKNOWN",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "comment_defaults",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "decimal_min",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "hex_max",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "empty_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "bare_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "hex_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "fractional_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "underflow_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "invalid_default",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "invalid_range",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "invalid_key",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "unapplied_sequence",
+          "expected": "KNOB_APPLY",
+          "status": 1,
+          "process_status": 0
+        }
+      ],
+      "artifacts_manifest_sha256": "453c75ef6865735b9c67ffc207b226dd1ba70c4658daa5c076ca78106d9447ae"
+    },
+    {
+      "name": "interfaces",
+      "cases": 13,
+      "run_directory": "/home/guodz/workspace/knob/runs/framework-triBA7Jf",
+      "tests": [
+        {
+          "name": "schema_values",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "schema_defaults",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "duplicate_bind",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "callback_valid",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "callback_rejected",
+          "expected": "KNOB_CHECK",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "callback_early_read",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "callback_expired_view",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "callback_type",
+          "expected": "KNOB_TYPE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "callback_mutation",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "sealed_schema",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "null_validator",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "duplicate_validator",
+          "expected": "KNOB_REGISTER",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "late_validator",
+          "expected": "KNOB_STATE",
+          "status": 1,
+          "process_status": 0
+        }
+      ],
+      "artifacts_manifest_sha256": "453c75ef6865735b9c67ffc207b226dd1ba70c4658daa5c076ca78106d9447ae"
+    },
+    {
+      "name": "host",
+      "cases": 11,
+      "run_directory": "/home/guodz/workspace/knob/runs/host-jQcQMQiv",
+      "tests": [
+        {
+          "name": "config_a",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "replay",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "other_seed",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "config_b",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "defaults",
+          "expected": "pass",
+          "status": 0,
+          "process_status": 0
+        },
+        {
+          "name": "callback_rejected",
+          "expected": "KNOB_CHECK",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "unknown",
+          "expected": "KNOB_UNKNOWN",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "unsatisfiable",
+          "expected": "KNOB_RANDOMIZE",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "missing_seed",
+          "expected": "KNOB_SEED",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "native_abort",
+          "expected": "native_fatal",
+          "status": 1,
+          "process_status": 0
+        },
+        {
+          "name": "timed_out",
+          "expected": "runtime_error",
+          "status": 2,
+          "process_status": 124
+        }
+      ],
+      "artifacts_manifest_sha256": "18a4ffbb970fa25f5ecb17559e598879b2c15f1ee0e25ab5a76495d62e582def"
+    }
+  ],
+  "source_sha256": {
+    "knob.f": "1b099f32884098d14b10a4d529e7c1f166c1890c3f14b393dd90c61c4e7d5da1",
+    "src/knob_pkg.sv": "663c607666751efd144359c75b4508ea361a10cf8da4488e9af91206108a3e60",
+    "examples/minimal/tb.sv": "9399c71c18ee3b7e471720e074d738d6e99de61e3262a8c5c7a6a40456925530",
+    "examples/minimal/knob.cfg": "cce46f156e449c290e3bb209e2ab326ccd01779879605052731670a029823203",
+    "examples/host/tb.sv": "36d618f30272b5e49f7a8f2e590652cb2481d6b8cb3e92fe67eee4fe7b7d4322",
+    "examples/host/compile.sh": "2405df239653de5b4d983b1efa1dbfa1edbddc2680c9fafb51d4a1dc98c1ee32",
+    "examples/host/run.sh": "e15eb65e053a4b68e5d5d29160fa5d905f0688ad881bacc530b8ee1f5aa8a858",
+    "examples/host/knob.cfg": "41bc807852f9c364aa3dfc59bdae036902bde5fa946207f102d8a8d81fe7f822",
+    "scripts/compile.sh": "afedbdb4611379e93bc64c7cc0ce7a0104030509d237590e862bac2cafb8bac4",
+    "scripts/run.sh": "481cbd3d9fbd76f4477b420c25b0af53edcedd1eac67f576567578757380f00a",
+    "scripts/test.sh": "1b1bfada086aedf1ff1290a1bf50328fd2f76547068d22007576204ed38efd84",
+    "scripts/test-framework.sh": "b9196dd5153d0e6109448d2b2b426af665a6bc077e55d34faaface486378f993",
+    "scripts/test-host.sh": "6a83f4c254758a728e72c60c84e975c909cdd1bb82b017c9c81f1d50ac4ca600",
+    "Makefile": "d348c3f064781eae36ce4690de857871331087b49a7bb32a88fe6d697b36de03",
+    "README.md": "0df4f4985bda9f72c94c8bc786d1c1fc5be276ad10d0a203086e5c5306ff4a41",
+    "docs/design/knob-api.md": "fcb781bb39d00b3a305cd949a59d9e148db5ad34fcafef0b54b589f30f413339",
+    "docs/design/quickstart.md": "1212b4b7efa1e9d70e47dba90cbdfbbf7857bec4fd7b92a82753b6be771dc0fd",
+    "docs/design/knob-spec.md": "51708698753bef37f584226d6aae4e1d0a40ad5f606968786d3752328cf57317"
+  },
+  "passed": true,
+  "all_artifacts_verified": true,
+  "final_compile_warning_error_diagnostics": 0,
+  "limitations": [
+    "固定VCS/UVM版本的验收场景覆盖，并非穷举所有输入或第三方平台认证",
+    "宿主示例有sequencer/driver握手，无具体DUT协议实现",
+    "运行异常场景为外层timeout返回124，不是VCS自身产生124",
+    "用户校验函数的无副作用约定不是任意SV代码的沙箱"
+  ]
+}

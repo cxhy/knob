@@ -1,0 +1,3 @@
+test_result=pass
+runtime_result=ok
+process_status=0

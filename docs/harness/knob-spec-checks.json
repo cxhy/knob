@@ -1,0 +1,90 @@
+{
+  "kind": "documentation_structure_and_links",
+  "date": "2026-11-11T03:15:57.478Z",
+  "passed": true,
+  "required_sections": [
+    "Problem Statement",
+    "Solution",
+    "User Stories",
+    "Implementation Decisions",
+    "Testing Decisions",
+    "Out of Scope",
+    "Further Notes"
+  ],
+  "user_story_count": 31,
+  "acceptance_cases": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14"
+  ],
+  "checked_links": [
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "knob-requirements-notes.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../../GLOSSARY.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0001-startup-only-configuration.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0002-explicit-sequence-knobs-from-file.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0003-native-randomization-and-explicit-seed.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "../adr/0004-register-validate-freeze-before-stimulus.md"
+    },
+    {
+      "file": "docs/design/knob-spec.md",
+      "target": "randomization-evidence.md"
+    },
+    {
+      "file": "docs/design/knob-requirements-notes.md",
+      "target": "knob-spec.md"
+    }
+  ],
+  "sha256": {
+    "docs/design/knob-spec.md": "d0502ab68ed6ef2f4056c6a6cb4b6ef851af4c3ca429429ac93e9e85289c7776",
+    "AGENTS.md": "32edf00b5d8a503836f30670a21ffa355febf2390a6512e721718a81bc6da4eb",
+    "GLOSSARY.md": "5bbea4389e068cf8f50db886a1510fdbdbbe0b492732199ed2759d0514710772",
+    "docs/design/knob-requirements-notes.md": "9cf56c98a5ec13738ced24c25f2e3ac70390fc3d1b12c2e0f7b294176ad5beba",
+    "docs/design/randomization-evidence.md": "f773d9aa49248581c8914e6ce5df942af09160aef0e2928c48c8b8939bccf963",
+    "docs/adr/0001-startup-only-configuration.md": "d18cf8c9cfed1b079f005ea2ddcb4238355524e53b9d99c6a4cc6e3a5eced17b",
+    "docs/adr/0002-explicit-sequence-knobs-from-file.md": "6034260b1f20a886c8cfaf65baab97329bb41a2890a3ec9275c95e870fd92798",
+    "docs/adr/0003-native-randomization-and-explicit-seed.md": "f5f61102dea3be606a7dccf1de2f45cbf3c30bc648b298fa26c67a2df019f99d",
+    "docs/adr/0004-register-validate-freeze-before-stimulus.md": "812f8ff65b2791370ebf52a9e74ddf987e3946975d6f9404834d1368d56f534f"
+  },
+  "limitations": [
+    "结构、引用与文档版本检查，不证明产品行为或独立审阅通过",
+    "尚未执行 VCS 编译、许可证探测或仿真"
+  ],
+  "beads": {
+    "id": "knob-be2",
+    "body_matches_spec": true,
+    "spec_id": "docs/design/knob-spec.md",
+    "labels": [
+      "ready-for-agent"
+    ],
+    "status": "open"
+  },
+  "agent_spec_pointer_exists": true
+}

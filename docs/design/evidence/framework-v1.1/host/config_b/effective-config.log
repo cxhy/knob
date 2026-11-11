@@ -1,0 +1,9 @@
+KNOB_VALUE link0.tx.count=5 source=file
+KNOB_VALUE link0.tx.enabled=true source=default
+KNOB_VALUE link0.tx.max_length=256 source=file
+KNOB_VALUE link0.tx.min_length=256 source=file
+KNOB_VALUE link1.tx.count=2 source=default
+KNOB_VALUE link1.tx.enabled=false source=file
+KNOB_VALUE link1.tx.max_length=128 source=default
+KNOB_VALUE link1.tx.min_length=64 source=default
+KNOB_VALUE shared.budget=16 source=default

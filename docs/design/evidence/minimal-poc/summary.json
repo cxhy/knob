@@ -1,0 +1,227 @@
+{
+  "date_utc": "2026-11-11T03:48:02.143Z",
+  "tool": "VCS W-2024.09-SP1",
+  "uvm": "1.2",
+  "regression_command": "bash scripts/test.sh",
+  "regression_exit": 0,
+  "run_directory": "/home/guodz/workspace/knob/runs/regression-sMhGe8xW",
+  "tests": [
+    {
+      "name": "config_a",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "replay",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "other_seed",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "config_b",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "defaults",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "hex_min_crlf",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "max_value",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "negative_seed",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "maximum_seed",
+      "expected": "pass",
+      "runner_status": 0,
+      "simulator_status": 0
+    },
+    {
+      "name": "missing",
+      "expected": "KNOB_FILE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "unknown",
+      "expected": "KNOB_UNKNOWN",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "duplicate",
+      "expected": "KNOB_DUPLICATE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "overflow",
+      "expected": "KNOB_VALUE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "underflow",
+      "expected": "KNOB_VALUE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "long_number",
+      "expected": "KNOB_VALUE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "trailing_garbage",
+      "expected": "KNOB_VALUE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "invalid_bool",
+      "expected": "KNOB_VALUE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "range",
+      "expected": "KNOB_RANGE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "syntax",
+      "expected": "KNOB_SYNTAX",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "cross",
+      "expected": "KNOB_CROSS",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "unsatisfiable",
+      "expected": "KNOB_RANDOMIZE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "no_seed",
+      "expected": "KNOB_SEED",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "duplicate_seed",
+      "expected": "KNOB_SEED",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "invalid_seed",
+      "expected": "KNOB_SEED",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "overflow_seed",
+      "expected": "KNOB_SEED",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "early_read",
+      "expected": "KNOB_STATE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "duplicate_registration",
+      "expected": "KNOB_REGISTER",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "late_registration",
+      "expected": "KNOB_STATE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "reload",
+      "expected": "KNOB_STATE",
+      "runner_status": 1,
+      "simulator_status": 0
+    },
+    {
+      "name": "wrong_type",
+      "expected": "KNOB_TYPE",
+      "runner_status": 1,
+      "simulator_status": 0
+    }
+  ],
+  "source_sha256": {
+    "src/knob_pkg.sv": "dcf2946412949056476dfcb714572b1084e666147759c60efdf099793c9c9492",
+    "examples/minimal/tb.sv": "391595c782ee2eb9208e3f69389189f37efd49d02b4dfc8d4f2e42b2926a5414",
+    "examples/minimal/knob.cfg": "cce46f156e449c290e3bb209e2ab326ccd01779879605052731670a029823203",
+    "scripts/compile.sh": "40e19d17d431d3aa742a84b4c9563b0a3056d9ce0af4cd51e5f8cbd35f2c8b99",
+    "scripts/run.sh": "481cbd3d9fbd76f4477b420c25b0af53edcedd1eac67f576567578757380f00a",
+    "scripts/test.sh": "a6b8a7e500e005249524f36b5c524b16973c3b02c1431c73d16d1d4cc45a4122",
+    "Makefile": "9f854dcdf2cd87f6dcf04b187c670c635303ec6c0a10637ce0689da9e8e937db",
+    "docs/design/knob-spec.md": "d0502ab68ed6ef2f4056c6a6cb4b6ef851af4c3ca429429ac93e9e85289c7776"
+  },
+  "evidence_sha256": {
+    "results.tsv": "f9617e503d26533b861ba0ba47102e1d5a6d97d4bd64c4258e69c247a2a1128c",
+    "summary.txt": "c5238ea0da8a9c1afdadc59f40f4f0bd725ec82231e3f68af69ac5ad0a55e72c",
+    "artifacts.sha256": "2682b7b715465bb4cde144507d16a097ed6cb066fcbda03901f3a5ef2fcda990",
+    "sources.sha256": "d51f47568dcb41ac2821570f5b9a0f13c4eb91e1edd9ace9a0c4fe1c70821f7f",
+    "compile.log": "1e598efe96aca0d2a9f0ab7568d02caf42aad322470c1e63dbbe87743017954e",
+    "config-a.cfg": "cce46f156e449c290e3bb209e2ab326ccd01779879605052731670a029823203",
+    "config-b.cfg": "5b0c72597d97a297091e43bff0aaf1ab8d20dc04b7dea5e69bef8b4014985c2d",
+    "config-a.transactions.log": "f6f634b2460b6d2ba99cc1fe7c7f9812663c08002455d3a75b3092fc8aa31ef1",
+    "replay.transactions.log": "f6f634b2460b6d2ba99cc1fe7c7f9812663c08002455d3a75b3092fc8aa31ef1",
+    "config-b.transactions.log": "b9c21f340caac6d6b78aed9e0f39903af7050de699c39935a722dbafaa30181f",
+    "other-seed.transactions.log": "8df8b995af93b96c5ce7cd7cabf93260d896e6bde35b0bb5aa610eec26c0a5d7",
+    "config-a.effective.log": "acd09788ff63169d2d3a5373435e21eae03efdab6f98196aeaeca904fcf152f2",
+    "config-b.effective.log": "6fa5a442d838ca9b795bba763661e2212215c5b442ee179d0f9184f900106a29",
+    "missing-file.simulation.log": "1a9ea2291cec4695131c84ed8ee85d09546ffa9c118bf9cf65909cedf1546e47",
+    "unsatisfiable.simulation.log": "11d5e31341ea3baf5f5073948308c8f54fcb923838def25e90e7b8feb332030a",
+    "invalid-seed.simulation.log": "37a2cdaaf34a0732e20f465e686b9ed6f9ff37689265c1453d7cb137c000f93d"
+  },
+  "same_seed_trace_equal": true,
+  "different_selected_seed_trace_differs": true,
+  "artifacts_unchanged": true,
+  "limitations": [
+    "最小sequence日志示例，无DUT/driver协议集成",
+    "跨参数检查目前仅require_le",
+    "不等于正式规格T1至T14全量验收"
+  ],
+  "git_commit": null
+}

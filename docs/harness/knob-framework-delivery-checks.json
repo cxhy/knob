@@ -1,0 +1,97 @@
+{
+  "date_utc": "2026-11-11T04:40:24.973Z",
+  "passed": true,
+  "spec_unchanged": true,
+  "issue_body_matches_spec": true,
+  "source_evidence_matches": true,
+  "acceptance_mapping_count": 19,
+  "checked_links": [
+    {
+      "file": "README.md",
+      "target": "docs/design/quickstart.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/design/knob-api.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/design/knob-spec.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/design/framework-results.md"
+    },
+    {
+      "file": "README.md",
+      "target": "docs/design/minimal-implementation-results.md"
+    },
+    {
+      "file": "docs/design/quickstart.md",
+      "target": "knob-api.md"
+    },
+    {
+      "file": "docs/design/quickstart.md",
+      "target": "../../knob.f"
+    },
+    {
+      "file": "docs/design/quickstart.md",
+      "target": "../../src/knob_pkg.sv"
+    },
+    {
+      "file": "docs/design/quickstart.md",
+      "target": "../../examples/host/tb.sv"
+    },
+    {
+      "file": "docs/design/quickstart.md",
+      "target": "../../examples/host/tb.sv"
+    },
+    {
+      "file": "docs/design/quickstart.md",
+      "target": "../../examples/host/knob.cfg"
+    },
+    {
+      "file": "docs/design/knob-api.md",
+      "target": "../../src/knob_pkg.sv"
+    },
+    {
+      "file": "docs/design/knob-api.md",
+      "target": "../../knob.f"
+    },
+    {
+      "file": "docs/design/knob-api.md",
+      "target": "../../examples/host/tb.sv"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "knob-spec.md"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "evidence/framework-v1.1/summary.json"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "evidence/framework-v1.1/core/results.tsv"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "evidence/framework-v1.1/interfaces/results.tsv"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "evidence/framework-v1.1/host/results.tsv"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "quickstart.md"
+    },
+    {
+      "file": "docs/design/framework-results.md",
+      "target": "knob-api.md"
+    }
+  ],
+  "total_scenarios": 82,
+  "compile_diagnostics": 0,
+  "scope": "fixed VCS W-2024.09-SP1 and UVM 1.2"
+}
